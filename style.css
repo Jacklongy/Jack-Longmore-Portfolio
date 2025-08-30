@@ -1,0 +1,220 @@
+/* ==== Base & Variables ==== */
+:root{
+  --accent:#7ca67e;
+  --dark:#547456;
+  --nav-height:72px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#333;
+  background:#fefadc;
+  line-height:1.6;
+}
+
+/* ==== Top Navigation ==== */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--dark);
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:24px;
+  margin:0 auto;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:8px;
+  transition:background .25s,color .25s;
+  font-weight:700;
+}
+nav a:hover{background:var(--accent);color:#222}
+nav a.current{background:var(--accent);color:#222}
+
+/* ==== Banner ==== */
+.banner{
+  height:36vh;
+  min-height:260px;
+  background:url("images/banner.jpg") center / cover no-repeat fixed;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  text-shadow:2px 2px 6px rgba(0,0,0,.6);
+}
+.banner h1{font-size:3rem}
+.banner p{font-size:1.2rem;margin-top:8px}
+
+/* ==== Sections ==== */
+section{
+  max-width:900px;
+  margin:40px auto;
+  padding:100px 20px;
+  border:4px solid var(--accent); /* thicker border */
+  border-radius:16px;
+  background:#fefadc; /* uniform background */
+  scroll-margin-top:calc(var(--nav-height) + 16px);
+}
+
+section h2{font-size:2rem;margin-bottom:16px}
+
+/* ==== Footer ==== */
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:24px 16px;
+  margin-top:20px;
+}
+
+/* ==== Sidebar ==== */
+.sidebar{
+  position:fixed;
+  top:50%;
+  left:6px;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:999;
+}
+.sidebar a{
+  background:var(--dark);
+  color:#222;
+  text-decoration:none;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  overflow:hidden;
+  transition:width .28s ease, background .28s ease, border-radius .28s ease, padding .28s ease;
+  border-radius:50%;
+}
+.sidebar a span{
+  opacity:0;
+  margin-left:10px;
+  white-space:nowrap;
+  transition:opacity .15s linear .25s;
+}
+.sidebar a:hover{
+  width:150px;
+  padding:8px 14px;
+  background:var(--accent);
+  border-radius:20px;
+  justify-content:flex-start;
+}
+.sidebar a:hover span{
+  opacity:1;
+  color:#222;
+}
+.sidebar a.active{
+  background:var(--accent);
+  color:#222;
+}
+@media (max-width:700px){.sidebar{left:4px}}
+
+/* ==== Cards ==== */
+.card{
+  background:#fffbe5;
+  margin:12px 0;
+  padding:16px 18px;
+  border-radius:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.05);
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.6s ease-out;
+}
+.card.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ==== Skills list ==== */
+#skills ul{
+  list-style:none;
+  padding-left:0;
+}
+#skills li{
+  background:#fffbe5;
+  margin:12px 0;
+  padding:14px 18px;
+  border-radius:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.05);
+}
+#skills li strong{color:var(--accent)}
+
+/* ==== Contact Form Styling ==== */
+.form-card {
+  background: #fff8e1; /* slightly different than normal cards for emphasis */
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+form {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size:1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--accent);
+  box-shadow:0 0 6px rgba(124,166,126,0.3);
+  outline: none;
+}
+
+form button {
+  padding:14px 20px;
+  border-radius:12px;
+  border:none;
+  background: var(--accent);
+  color:#222;
+  font-weight:700;
+  cursor:pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+form button:hover {
+  background: #6b9565;
+  transform: scale(1.05);
+}
+
+/* ==== Pricing Section Cards ==== */
+#pricing .card {
+  background: #fffbe5;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+#pricing .card p {
+  margin: 8px 0;
+  font-weight: 600;
+}
