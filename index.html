@@ -20,19 +20,23 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-       <li><a href="blog.html">Blog</a></li>
-       <li><a href="freelance.html">Freelance</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="freelance.html">Freelance</a></li>
     </ul>
   </nav>
 
   <!-- Banner -->
   <header class="banner">
-    <h1>Jack Longmore</h1>
-    <p>AKA Longy Dev</p>
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h1>Jack Longmore</h1>
+      <p>AKA Longy Dev</p>
+    </div>
+    <div class="scroll-indicator"></div>
   </header>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="fade-item">
     <h2>About Me</h2>
     <div class="card">
       <p>Hi, I’m Jack 👋 I’m a game developer who’s been creating and experimenting with games for years. What started as a hobby quickly became my passion, I love turning ideas into playable worlds.</p>
@@ -46,7 +50,7 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <section id="skills" class="fade-item">
     <h2>Skills & Highlights</h2>
     <ul>
       <li class="card"><strong>Unity & C#</strong> – creating polished 2D & 3D games</li>
@@ -57,18 +61,24 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="fade-item">
     <h2>Contact</h2>
-    <div class="card">
-      <p>Email: Jacklongmore@outlook.com</p>
-      <p>Phone: +44 07306100223</p>
+    <div class="card form-card">
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Your message or game idea" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Jack Longmore</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

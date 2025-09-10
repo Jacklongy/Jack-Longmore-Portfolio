@@ -6,7 +6,7 @@
   <title>Portfolio - Jack Longmore</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="portfolio-page">
 
   <!-- Sidebar (Portfolio sections) -->
   <div class="sidebar">
@@ -25,43 +25,176 @@
   </ul>
 </nav>
 
-  <!-- Banner -->
-  <header class="banner">
+<header class="banner">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
     <h1>Portfolio</h1>
-    <p>All My Work And Projects
+    <p>All My Work And Projects — Game Designer, Level Designer, Programmer, Tech Artist</p>
+  </div>
+  <div class="scroll-indicator"></div>
+</header>
 
-      State the roles im looking for and show how i fit that role. - Game Designer, Level Designer, Programmer and Tech Artist
+
+   <section id="youtube" class="fade-item">
+  <h2>YouTube</h2>
+
+<!-- Intro text card -->
+  <div class="card fade-item">
+    <p>
+      YouTube is a great way to see who I am as a person and visually explore what I’ve created. 
+      I post a mix of game development tutorials, project Development logs and topic videos.
     </p>
-  </header>
+  </div>
 
-    <section id="YouTube">
-    <h2>YouTube</h2>
-    <p> Is a great way to start to see who i am as a person and visual see what ive made. </p>
-  </section>
-
-  <!-- Sections -->
-  <section id="games">
-    <h2>Games</h2>
-    <p>All of the games i have made are on my Itch.io page. "Insert link"
-
-      Most projects on my Itch.io page are games i have made at Uni and game jams. Some are not finsihed but they all mark a milestone and show progress. 
-      I leave everything i make on there. All work outside of uni and on work exeperience will be shown on this page!
+    <div class="card fade-item">
+    <p>
+      YouTube is something im very passionate about and i love documenting my Journey through game development!
     </p>
-  </section>
+  </div>
 
-  <section id="Uni Projects">
+  <div class="youtube-snippets">
+    <!-- Video Snippet 1 -->
+    <div class="card fade-item">
+      <h3>Making My Fist Mobile Game!</h3>
+     <iframe class="youtube-video" src="https://www.youtube.com/embed/l04swKVTowc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <p>In this video i show the process of creating my first mobile game! This is one of my proudest projects. Overall one of my most polished products.</p>
+    </div>
+
+    <!-- Video Snippet 2 -->
+    <div class="card fade-item">
+      <h3>My 2D Game Character Workflow - Procreate to Unity!</h3>
+     <iframe class="youtube-video" src="https://www.youtube.com/embed/SHiM3BHJBTM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <p>This video is my most popular video, where i go through how to import and get your 2D character game engine ready!</p>
+    </div>
+  </div>
+
+  <div class="youtube-cards">
+    <!-- Card 1 -->
+    <div class="card fade-item">
+      <h3>The Journey</h3>
+      <p>I document my learning path, from creating games with Unity and C# to making my own game engine. This gives a behind-the-scenes look at how I approach game development. 
+        And the wide range of topics i discover along the way!</p>
+    </div>
+
+  <!-- Card 2 -->
+<div class="card fade-item">
+  <h3>Community Engagement</h3>
+  <p>I interact with viewers to provide value and help other aspiring developers. It's a space to connect and learn together.</p>
+
+  <!-- Centered Discord Button -->
+  <div class="button-container">
+    <a href="https://discord.gg/YOUR_SERVER_LINK" target="_blank" class="btn discord-btn">
+      <img src="Images/discord-icon-png-4.png" alt="Discord" style="width:20px; height:20px; margin-right:8px; vertical-align:middle;">
+      Join Discord
+    </a>
+  </div>
+</div>
+</section>
+
+
+<section id="games" class="fade-item">
+  <h2>Games</h2>
+
+  <!-- Intro text card -->
+  <div class="card fade-item">
+    <p>
+      Here are some of my highlighted games! Most of my projects and game jams are available on my Itch.io page. 
+      Not all projects are there, they will be shown in later sections. 
+    </p>
+  </div>
+
+    <div class="card fade-item">
+    <p>
+      I wanted to hightlight 2 of my favourite projects in this section. They both show great progress and mark the Journey into different areas of game dev. 
+      Mobile games and game audio.
+    </p>
+  </div>
+
+   <div class="card fade-item">
+    <p>
+      Im proud of all the projects ive made, they all add to my personal development. Some other games to look out for when you browse my Itch.io page are, the VR ward 
+      Which explored an area outside of games and and one of my personal favourites and game jam award winner Yang and Ying a simple platformer with a twist!
+    </p>
+
+     <!-- Button to Itch.io -->
+<div class="fade-item" style="text-align:center;">
+  <a href="https://your-itch-link" target="_blank" class="btn itch-btn">
+    <img src="Images/Itch.io.png" alt="Itch.io" style="width:20px; height:20px; margin-right:8px; vertical-align:middle;">
+    Visit My Itch.io
+  </a>
+</div>
+  </div>
+
+  <div class="game-snippets">
+    <!-- Game Snippet 1 -->
+    <div class="card fade-item">
+      <h3>Treat Time!</h3>
+      <img src="Images/mobile game web.png" alt="Mobile Game"/>
+      <p>This is my first mobile game. You can currently only play it on my itch.io page through the Crome Browser. But, I have gone through the testing
+        phase on the google play store, A few bug were discovered so release was delayed. But all good experience and ill be releasing this game early next year potentially.
+        depending on my current job status. Its my main project and focus outside of freelance work. The mobile game industry is the idustry and sector i want to explore the most,
+        as i think it suits my style and game ideas, simple, adictive and coherent games! 
+      </p>
+
+        <!-- Code snippet dropdown -->
+      <details class="code-snippet">
+        <summary>View highlighted Code</summary>
+        <pre><code>
+// Example: Player jump logic
+void Update() {
+    if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+        Jump();
+    }
+}
+
+void Jump() {
+    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    isGrounded = false;
+}
+        </code></pre>
+      </details>
+    </div>
+    </div>
+
+    <!-- Game Snippet 2 -->
+    <div class="card fade-item">
+      <h3>VR Exploration Demo</h3>
+      <img src="Images/game2.gif" alt="VR Demo GIF"/>
+      <p>A virtual reality prototype exploring immersive interactions. This project highlights my work with VR systems and Unity XR tools.</p>
+    </div>
+  </div>
+
+  <div class="game-cards">
+    <!-- Card 1 -->
+    <div class="card fade-item">
+      <h3>Game Development Journey</h3>
+      <p>I continually experiment with gameplay systems, mechanics, and interactive storytelling. Each project shows a step forward in my skills.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card fade-item">
+      <h3>Extra Info</h3>
+      <p>Some games were made as personal experiments or university projects. Not everything is hosted online, but you can see the process and outcomes here.</p>
+    </div>
+  </div>
+
+ 
+</section>
+
+
+  <section id="Uni Projects" class="fade-item">
     <h2>Games Related Uni Projects</h2>
     <p> in this section show C++, Computer Graphics, Game Engine and all the other subjects i didnt create a "Game" for.
     </p>
   </section>
 
-  <section id="Work Experience">
+  <section id="Work Experience" class="fade-item">
     <h2>Work Experience</h2>
     <p>My Time at Birmingham Open Media -
       And my Time as a VR Developer on Microplacement -  </p>
   </section>
 
-  <section id="Events And Extra acolades">
+  <section id="Events And Extra acolades" class="fade-item">
     <h2>Events</h2>
     <p>Graduation, BCU awards, Comunity events at GDC, Hatchery program and Presentations and socials. </p>
   </section>

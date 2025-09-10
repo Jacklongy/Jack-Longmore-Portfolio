@@ -1,58 +1,93 @@
-/* ===== ScrollSpy + Current Page Highlight ===== */
-(function highlightCurrentPage() {
-  const here = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll("nav a").forEach(a => {
-    const href = a.getAttribute("href");
-    if (href === here) a.classList.add("current");
+/* ===== Helpers ===== */
+function onVisible(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
   });
+}
+
+/* ===== Card / fade reveal using IntersectionObserver ===== */
+(function revealObserver() {
+  const items = document.querySelectorAll('.card, .fade-item, .gallery-item');
+  if (!items.length) return;
+
+  const obs = new IntersectionObserver(onVisible, {
+    root: null,
+    threshold: 0.18
+  });
+
+  items.forEach(i => obs.observe(i));
 })();
 
-/* ===== ScrollSpy for sidebar sections ===== */
+/* ===== ScrollSpy: highlight sidebar link for current section ===== */
 (function sectionSpy() {
-  const sections = Array.from(document.querySelectorAll("section"));
-  const links = Array.from(document.querySelectorAll(".sidebar a"));
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const links = Array.from(document.querySelectorAll('.sidebar a'));
   if (!sections.length || !links.length) return;
 
-  function setActive() {
-    const midY = window.scrollY + window.innerHeight / 2;
-    let currentId = sections[0].id;
+  function update() {
+    const mid = window.scrollY + window.innerHeight / 2;
+    let current = sections[0].id;
 
     for (const s of sections) {
       const top = s.offsetTop;
       const bottom = top + s.offsetHeight;
-      if (midY >= top && midY < bottom) {
-        currentId = s.id;
+      if (mid >= top && mid < bottom) {
+        current = s.id;
         break;
       }
-      if (midY >= bottom) { currentId = s.id; }
+      if (mid >= bottom) current = s.id;
     }
 
     links.forEach(l => {
-      l.classList.toggle("active", l.getAttribute("href").replace('#', '') === currentId);
+      const href = l.getAttribute('href').replace('#', '');
+      l.classList.toggle('active', href === current);
     });
   }
 
-  ["load", "scroll", "resize"].forEach(evt => window.addEventListener(evt, setActive, { passive: true }));
-  setActive();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
+  update();
 })();
 
-/* ===== Scroll-triggered card animations ===== */
-(function animateCardsOnScroll() {
-  const cards = document.querySelectorAll(".card");
+/* ===== Nav current page highlight (based on filename) ===== */
+(function highlightCurrentPage() {
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    // compare normalized
+    const name = href.split('/').pop();
+    if (name === here) a.classList.add('current');
+  });
+})();
 
-  function revealCards() {
-    const triggerBottom = window.innerHeight * 0.85;
+/* ===== Parallax banner (smooth via rAF) ===== */
+(function parallaxBanner() {
+  const banner = document.querySelector('.banner');
+  if (!banner) return;
 
-    cards.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
-      if (cardTop < triggerBottom) {
-        card.classList.add("active");
-      } else {
-        card.classList.remove("active");
-      }
-    });
+  let latestScroll = 0;
+  let ticking = false;
+
+  function onScroll() {
+    latestScroll = window.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
   }
 
-  window.addEventListener("scroll", revealCards);
-  window.addEventListener("load", revealCards);
+  function update() {
+    const offset = latestScroll * 0.4; // tweak speed here
+    banner.style.backgroundPosition = `center ${-offset}px`;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // set initial position in case page loaded scrolled
+  update();
 })();
