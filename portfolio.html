@@ -125,18 +125,61 @@
 </div>
   </div>
 
-  <div class="game-snippets">
-    <!-- Game Snippet 1 -->
-    <div class="card fade-item">
-      <h3>Treat Time!</h3>
-      <img src="Images/mobile game web.png" alt="Mobile Game"/>
-      <p>This is my first mobile game. You can currently only play it on my itch.io page through the Crome Browser. But, I have gone through the testing
-        phase on the google play store, A few bug were discovered so release was delayed. But all good experience and ill be releasing this game early next year potentially.
-        depending on my current job status. Its my main project and focus outside of freelance work. The mobile game industry is the idustry and sector i want to explore the most,
-        as i think it suits my style and game ideas, simple, adictive and coherent games! 
-      </p>
+<div class="game-snippets">
+  <!-- Game Snippet 1 -->
+  <div class="card fade-item">
+    <h3>Treat Time!</h3>
 
-        <!-- Code snippet dropdown -->
+    <!-- Centered Itch.io embed -->
+    <div class="itch-embed-container">
+      <iframe frameborder="0" src="https://itch.io/embed/3250437?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e" width="206" height="165">
+        <a href="https://longy-dev.itch.io/treat-time">Treat Time! by Longy Dev</a>
+      </iframe>
+    </div>
+
+    <p>This is my first mobile game. You can currently only play it on my itch.io page through the Chrome Browser. But, I have gone through the testing
+      phase on the Google Play store. A few bugs were discovered so release was delayed. But all good experience and I’ll be releasing this game early next year potentially,
+      depending on my current job status. It's my main project and focus outside of freelance work. The mobile game industry is the sector I want to explore the most,
+      as I think it suits my style and game ideas — simple, addictive, and coherent games! 
+    </p>
+
+    <!-- Code snippet dropdown -->
+    <details class="code-snippet">
+      <summary>View highlighted Code</summary>
+      <pre><code>
+// Example: Player jump logic
+void Update() {
+    if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+        Jump();
+    }
+}
+
+void Jump() {
+    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    isGrounded = false;
+}
+      </code></pre>
+    </details>
+  </div>
+</div>
+<!-- Game Audio Snippet -->
+<div class="game-snippets">
+  <div class="card fade-item">
+    <h3>My Game Audio Project</h3>
+
+    <!-- Centered Itch.io embed -->
+    <div class="itch-embed-container">
+<iframe frameborder="0" src="https://itch.io/embed/3576648?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e" width="206" height="165">
+  <a href="https://longy-dev.itch.io/new-caves-and-ladders">New Caves And Ladders by Longy Dev, Martoneaudio</a></iframe>
+    </div>
+
+    <p>
+      This project I'm extra proud of. I worked in a group of 4 to recreate the audio of one of my existing games. 
+      I added another layer of mechanics ready to implement new audio. The game was very barebones before this project, 
+      it was desperate for an upgrade. I would like to explore game audio more in the future.
+    </p>
+
+       <!-- Code snippet dropdown -->
       <details class="code-snippet">
         <summary>View highlighted Code</summary>
         <pre><code>
@@ -153,16 +196,9 @@ void Jump() {
 }
         </code></pre>
       </details>
-    </div>
-    </div>
-
-    <!-- Game Snippet 2 -->
-    <div class="card fade-item">
-      <h3>VR Exploration Demo</h3>
-      <img src="Images/game2.gif" alt="VR Demo GIF"/>
-      <p>A virtual reality prototype exploring immersive interactions. This project highlights my work with VR systems and Unity XR tools.</p>
-    </div>
   </div>
+</div>
+
 
     <div class="game-cards">
     <!-- Card 1 -->

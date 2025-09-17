@@ -327,6 +327,23 @@ footer{
 }
 
 
+/* Responsive Itch.io embed */
+.itch-embed-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin: 20px 0;          /* spacing from text above/below */
+  width: 100%;
+  max-width: 800px;        /* controls maximum width */
+}
+
+.itch-embed-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;    /* keeps 16:9 ratio */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+
 
 /* ==== Buttons ==== */
 .btn {
