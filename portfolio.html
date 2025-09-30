@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Jack Longmore</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Temporary debug: remove after testing if you don't need it -->
   <!-- <style>#games{display:block!important;visibility:visible!important;opacity:1!important;transform:none!important}</style> -->
 </head>
@@ -20,14 +21,19 @@
   </div>
 
   <!-- Top navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="freelance.html">Freelance</a></li>
-    </ul>
-  </nav>
+ <nav>
+  <div class="nav-left">Jack Longmore</div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="freelance.html">Freelance</a>
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</nav>
 
   <header class="banner">
     <div class="banner-overlay"></div>
@@ -39,7 +45,7 @@
   </header>
 
   <!-- ================= YOUTUBE ================= -->
-  <section id="youtube" class="fade-item">
+  <section id="youtube">
     <h2>YouTube</h2>
 
     <div class="card">
@@ -96,7 +102,7 @@
   </section>
 
   <!-- ================= GAMES ================= -->
-  <section id="games" class="fade-item">
+  <section id="games">
     <h2>Games</h2>
 
     <div class="card">
@@ -424,7 +430,7 @@
 
 
   <!-- ================= WORK EXPERIENCE ================= -->
-  <section id="work-experience" class="fade-item">
+  <section id="work-experience">
     <h2>Work Experience</h2>
 
     <div class="card">
@@ -458,7 +464,7 @@
   </section>
 
   <!-- ================= EVENTS & ACCOLADES ================= -->
-  <section id="events" class="fade-item">
+  <section id="events">
     <h2>Events & Accolades</h2>
 
     <div class="card">
