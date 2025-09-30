@@ -6,8 +6,8 @@
    BASE & VARIABLES
 ========================================================= */
 :root {
-  --accent: #7ca67e;
-  --dark: #547456;
+  --accent: #547456;
+  --dark: #415a43;
   --nav-height: 72px;
   --page-pad: 100px;
 }
@@ -22,7 +22,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: #ffffff;
   background: #292929;
   line-height: 1.6;
 }
@@ -167,9 +167,9 @@ section {
   max-width: 900px;
   margin: 40px auto;
   padding: var(--page-pad) 20px;
-  border: 6px solid var(--accent);   /* Thicker border */
+  border: 10px solid var(--accent);   /* Thicker border */
   border-radius: 16px;
-  background: #fefadc;
+  background: #313131;
   scroll-margin-top: calc(var(--nav-height) + 16px);
 }
 
@@ -195,49 +195,55 @@ footer {
 .sidebar {
   position: fixed;
   top: 50%;
-  left: 6px;
+  left: 20px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  z-index: 999;
+  gap: 20px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif; /* Match your global font */
 }
 
-.sidebar a,
-.sidebar a:visited,
-.sidebar a:active {
-  background: var(--dark);
-  color: #fff;
+.sidebar a {
   text-decoration: none;
-  width: 40px;
-  height: 40px;
+  color: #ffffffcc; /* subtle white */
+  font-size: 14px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 8px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Add dot before each link */
+.sidebar a::before {
+  content: "";
+  display: inline-block;
+  width: 6px;   /* smaller inactive dot */
+  height: 6px;
   border-radius: 50%;
-  overflow: hidden;
-  transition: width .28s ease, background .28s ease, border-radius .28s ease, padding .28s ease;
+  background-color: #aaa; /* subtle grey */
+  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
-.sidebar a span {
-  opacity: 0;
-  margin-left: 10px;
-  white-space: nowrap;
-  transition: opacity .15s linear .25s;
-}
-
+/* Hover state */
 .sidebar a:hover {
-  width: 150px;
-  padding: 8px 14px;
-  background: var(--accent);
-  border-radius: 20px;
-  justify-content: flex-start;
-  color: #222;
+  color: #7ca67e; /* green */
+}
+.sidebar a:hover::before {
+  background-color: #7ca67e;
 }
 
-.sidebar a:hover span { opacity: 1; color: #222; }
-.sidebar a.active { background: var(--accent); color: #222; }
+/* Active section highlight */
+.sidebar a.active {
+  color: #6b9565;
+  font-weight: 600;
+}
+.sidebar a.active::before {
+  width: 10px;   /* bigger active dot */
+  height: 10px;
+  background-color: #7ca67e;
+}
 
 @media (max-width: 700px) {
   .sidebar { left: 4px; }
@@ -247,11 +253,12 @@ footer {
    CARDS
 ========================================================= */
 .card {
-  background: #fffbe5;
+  background: transparent;          /* remove fill */
+  border: 6px solid var(--dark);  /* match section border */
   margin: 12px 0;
   padding: 16px 18px;
   border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  box-shadow: none;                 /* optional: remove shadow */
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease-out;
@@ -260,8 +267,8 @@ footer {
 .card.active { opacity: 1; transform: translateY(0); }
 
 .card.highlight {
-  border: 2px solid var(--dark);
-  background-color: #f8fff8;
+  border: 6px solid var(--dark);   /* darker border for emphasis */
+  background: white;          /* still no fill */
 }
 
 .card.highlight h4 {
@@ -374,40 +381,7 @@ footer {
   margin-bottom: 12px;
 }
 
-/* =========================================================
-   CODE SNIPPETS
-========================================================= */
-.code-snippet {
-  margin-top: 12px;
-  background: #1e1e1e;
-  color: #f5f5f5;
-  border-radius: 8px;
-  padding: 10px;
-  font-family: "Courier New", monospace;
-  font-size: 0.9rem;
-  overflow-x: auto;
-}
 
-.code-snippet summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.code-snippet pre {
-  margin: 0;
-  padding: 8px;
-  background: #252526;
-  border-radius: 6px;
-  overflow-x: auto;
-}
-
-.code-snippet code {
-  color: #dcdcdc;
-  display: block;
-  white-space: pre;
-}
 
 /* =========================================================
    ITCH.IO EMBED
