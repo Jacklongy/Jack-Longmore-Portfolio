@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home - Jack Longmore</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="slideshow.css"/>
+  <link rel="stylesheet" href="expandable.css"/>
+  <link rel="stylesheet" href="contact.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+  <!-- Preview Follower -->
+  <div class="preview-follower" id="previewFollower">
+    <img id="previewImage" src="" alt="Preview">
+  </div>
 
   <!-- Sidebar -->
   <div class="sidebar">
@@ -17,64 +25,188 @@
   </div>
 
   <!-- Top navigation -->
- <nav>
-  <div class="nav-left">Jack Longmore</div>
-  <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="freelance.html">Freelance</a>
-    <div class="socials">
-      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <nav>
+    <div class="nav-left">Jack Longmore</div>
+    <div class="nav-right">
+      <a href="index.html" class="current">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="freelance.html">Freelance</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Banner -->
-  <header class="banner">
+  <header class="banner" style="background-image: url('Images/home.JPG');">
     <div class="banner-overlay"></div>
     <div class="banner-content">
       <h1>Jack Longmore</h1>
-      <p>AKA Longy Dev</p>
+      <p>Freelance Game Developer</p>
     </div>
     <div class="scroll-indicator"></div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="fade-item">
+  <section id="about">
     <h2>About Me</h2>
+      
     <div class="card">
-      <p>Hi, I’m Jack 👋 I’m a game developer who’s been creating and experimenting with games for years. What started as a hobby quickly became my passion, I love turning ideas into playable worlds.</p>
+      <p>Hi, I'm Jack 👋 Or Longy dev. I'm a game developer who's been creating and experimenting with games for years. What started as a hobby quickly became my passion, I love turning ideas into playable worlds.</p>
     </div>
+    
     <div class="card">
-      <p>I’m especially into Unity, level design, and gameplay systems, but what drives me most is the creativity of bringing fun concepts to life.</p>
+      <p>I'm especially into Unity, level design, and gameplay systems, but what drives me most is the creativity of bringing fun concepts to life.</p>
     </div>
+    
     <div class="card">
-      <p>Outside of coding, I enjoy playing games, exploring new mechanics, and learning from different studios’ approaches to design.</p>
+      <p>Outside of coding, I enjoy playing games, exploring new mechanics, and learning from different studios' approaches to design.</p>
+    </div>
+
+    <!-- Stats Blocks -->
+    <div class="stats">
+      <div class="stat-card">
+        <span class="number">5+</span>
+        <span class="label">Years Experience</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">20+</span>
+        <span class="label">Projects Completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">10+</span>
+        <span class="label">Game Jams</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">1st</span>
+        <span class="label">Class Degree</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slideshow Section -->
+  <section id="slideshow">
+    <h2>My Journey</h2>
+    <p class="slideshow-intro">A glimpse into my game development journey over the years</p>
+    
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="Images/graduation1.jpg" alt="Graduation">
+      </div>
+      <div class="slide fade">
+        <img src="Images/graduation2.jpg" alt="Graduation">
+      </div>
+      <div class="slide fade">
+        <img src="Images/award1.jpg" alt="Award">
+      </div>
+      <div class="slide fade">
+        <img src="Images/showcase1.jpg" alt="Showcase">
+      </div>
+      <div class="slide fade">
+        <img src="Images/ggj2022.jpg" alt="Game Jam">
+      </div>
+      
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="fade-item">
-    <h2>Skills & Highlights</h2>
-    <ul>
-      <li class="card"><strong>Unity & C#</strong> – creating polished 2D & 3D games</li>
-      <li class="card"><strong>Level Design</strong> – designing engaging gameplay flow</li>
-      <li class="card"><strong>Gameplay Systems</strong> – turning ideas into interactive systems</li>
-      <li class="card"><strong>VR & AR Experience</strong> – immersive simulations and experimental projects</li>
-    </ul>
+  <section id="skills">
+    <h2>Main Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><i class="fas fa-gamepad"></i> Game Development</h3>
+        <div class="skills-list">
+          <div class="skill-card">
+            <h4>Unity & C#</h4>
+            <p>Creating polished 2D & 3D games with industry-standard tools and best practices.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Gameplay Systems</h4>
+            <p>Turning ideas into interactive systems that are fun and engaging.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Game Architecture</h4>
+            <p>Building scalable, maintainable code structures for complex game projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-map"></i> Design</h3>
+        <div class="skills-list">
+          <div class="skill-card">
+            <h4>Level Design</h4>
+            <p>Designing engaging gameplay flow and memorable player experiences.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Player Psychology & Mobile</h4>
+            <p>Crafting engaging experiences optimized for mobile platforms.</p>
+          </div>
+          <div class="skill-card">
+            <h4>User Experience</h4>
+            <p>Creating intuitive interfaces and engaging player interactions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-vr-cardboard"></i> Immersive Tech</h3>
+        <div class="skills-list">
+          <div class="skill-card">
+            <h4>VR & AR Experience</h4>
+            <p>Building immersive simulations and experimental interactive projects.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Project Management</h4>
+            <p>Coordinating teams and delivering quality on freelance projects.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Technical Leadership</h4>
+            <p>Guiding projects from concept through delivery with technical expertise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+
   <!-- Contact Section -->
-  <section id="contact" class="fade-item">
+  <section id="contact">
     <h2>Contact</h2>
-    <div class="card form-card">
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" rows="5" placeholder="Your message or game idea" required></textarea>
-        <button type="submit">Send Message</button>
+    <div class="contact-wrapper">
+      <p>Have a project in mind or just want to chat? Feel free to reach out!</p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message or game idea..." required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="cta-btn">Send Message</button>
+        </div>
       </form>
     </div>
   </section>

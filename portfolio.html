@@ -5,38 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Jack Longmore</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="slideshow.css" />
+  <link rel="stylesheet" href="expandable.css" />
+  <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Temporary debug: remove after testing if you don't need it -->
-  <!-- <style>#games{display:block!important;visibility:visible!important;opacity:1!important;transform:none!important}</style> -->
 </head>
-<body class="portfolio-page">
+<body>
 
-  <!-- Sidebar (Portfolio sections) -->
+  <!-- Sidebar -->
   <div class="sidebar">
+    <a href="#featured"><span>Featured</span></a>
     <a href="#youtube"><span>YouTube</span></a>
     <a href="#games"><span>Games</span></a>
-    <a href="#uni-projects"><span>Uni Projects</span></a>
-    <a href="#work-experience"><span>Work Experience</span></a>
-    <a href="#events"><span>Events & Accolades</span></a>
+    <a href="#uni-projects"><span>Uni</span></a>
+    <a href="#work"><span>Work</span></a>
+    <a href="#events"><span>Events</span></a>
   </div>
 
   <!-- Top navigation -->
- <nav>
-  <div class="nav-left">Jack Longmore</div>
-  <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="freelance.html">Freelance</a>
-    <div class="socials">
-       <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <nav>
+    <div class="nav-left">Jack Longmore</div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="current">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="freelance.html">Freelance</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <header class="banner">
+  <!-- Banner -->
+  <header class="banner" style="background-image: url('Images/Newbanner.JPG');">
     <div class="banner-overlay"></div>
     <div class="banner-content">
       <h1>Portfolio</h1>
@@ -45,34 +48,84 @@
     <div class="scroll-indicator"></div>
   </header>
 
-  <!-- ================= YOUTUBE ================= -->
+  <!-- FEATURED PROJECTS - SIDE SCROLLING CAROUSEL -->
+  <section id="featured">
+    <h2>Featured Projects</h2>
+
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <!-- Treat Time -->
+        <div class="carousel-item">
+          <a href="#games" class="featured-card">
+            <img src="Images/TreatTime/Untitled design (6).png" alt="Treat Time">
+            <div class="featured-card-overlay">
+              <h3>Treat Time!</h3>
+              <p>Mobile Game | 2025</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- VR Ward Project -->
+        <div class="carousel-item">
+          <a href="#uni-projects" class="featured-card">
+            <img src="Images/UniWork/VR Ward/Untitled design (5).png" alt="VR Ward">
+            <div class="featured-card-overlay">
+              <h3>VR Ward Project</h3>
+              <p>VR Simulation | Final Year</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Game Audio Project -->
+        <div class="carousel-item">
+          <a href="#games" class="featured-card">
+            <img src="Images/UniWork/GameAudio/Untitled design (3).png" alt="Game Audio Project">
+            <div class="featured-card-overlay">
+              <h3>Game Audio Project</h3>
+              <p>Audio Design | 2025</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- VFX Showcase -->
+        <div class="carousel-item">
+          <a href="#work" class="featured-card">
+            <img src="Images/vfx-showcase.jpg" alt="VFX Showcase">
+            <div class="featured-card-overlay">
+              <h3>VFX Showcase</h3>
+              <p>Visual Effects | BOM 2023</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
   <section id="youtube">
     <h2>YouTube</h2>
-
+    
     <div class="card">
-      <p>
-        YouTube is a great way to see who I am as a person and visually explore what I’ve created.
-        I post a mix of game development tutorials, project development logs and topic videos.
-      </p>
+      <p>YouTube is a great way to see who I am as a person and visually explore what I've created. I post a mix of game development tutorials, project development logs and topic videos.</p>
     </div>
 
     <div class="card">
-      <p>
-        YouTube is something I'm very passionate about and I love documenting my journey through game development!
-      </p>
+      <p>YouTube is something I'm very passionate about and I love documenting my journey through game development!</p>
     </div>
 
     <div class="youtube-snippets">
-      
-
-    
       <div class="card">
         <h3>AI Sheep Dog!</h3>
         <iframe class="youtube-video" src="https://www.youtube.com/embed/-KtcWmoTKhY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         <p>An AI project where I used machine learning to train a dog to herd sheep into a pen.</p>
       </div>
 
-       <div class="card">
+      <div class="card">
         <h3>My 2D Game Character Workflow - Procreate to Unity!</h3>
         <iframe class="youtube-video" src="https://www.youtube.com/embed/SHiM3BHJBTM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         <p>My most popular video: how to import and get your 2D character game engine ready.</p>
@@ -94,16 +147,11 @@
       <div class="card">
         <h3>Community Engagement</h3>
         <p>I interact with viewers to provide value and help other aspiring developers. It's a space to connect and learn together.</p>
-        <div class="button-container">
-          <a href="https://discord.gg/YOUR_SERVER_LINK" target="_blank" class="btn discord-btn">
-            <img src="Images/discord-icon-png-4.png" alt="Discord" style="width:20px; height:20px; margin-right:8px; vertical-align:middle;"> Join Discord
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= GAMES ================= -->
+  <!-- GAMES -->
   <section id="games">
     <h2>Games</h2>
 
@@ -118,116 +166,88 @@
     <div class="card">
       <p>I'm proud of all the projects I've made — some other games on my Itch.io are award winner Yang and Ying and A Tower Tale.</p>
       <div style="text-align:center; margin-top:12px;">
-        <a href="https://your-itch-link" target="_blank" class="btn itch-btn">
-          <img src="Images/Itch.io.png" alt="Itch.io" style="width:20px; height:20px; margin-right:8px; vertical-align:middle;"> Visit My Itch.io
+        <a href="https://longydev.itch.io/" target="_blank" class="btn itch-btn">
+          <i class="fas fa-gamepad"></i> Visit My Itch.io
         </a>
       </div>
     </div>
 
-    <!-- Treat Time -->
-    <div class="game-snippets">
+    <!-- TREAT TIME -->
+    <div class="youtube-snippets">
       <div class="card">
-        <h3>Treat Time! 2025</h3>
-        <div class="itch-embed-container">
-          <iframe frameborder="0" src="https://itch.io/embed/3250437?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e" width="206" height="165"></iframe>
+        <h4>Treat Time! 2025</h4>
+        <p>This is my first mobile game. You can currently play it on itch.io via Chrome. I tested on Google Play but a few bugs delayed release — valuable experience.</p>
+        
+        <div class="video-itch-container">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/l04swKVTowc" frameborder="0" allowfullscreen></iframe>
+          <iframe frameborder="0" src="https://itch.io/embed/3250437?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e"></iframe>
         </div>
 
-        <div class="game-cards">
-          <div class="card">
-            <p>This is my first mobile game. You can currently play it on itch.io via Chrome. I tested on Google Play but a few bugs delayed release — valuable experience.</p>
-          </div>
-
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>Keeping code organised is crucial for long-term projects.</li>
-              <li>Understanding player psychology and flow — good difficulty curve, clear goals, responsive feedback.</li>
-            </ul>
-          </div>
-
-          <div class="card highlight">
-            <h4>Key Takeaway</h4>
-            <p>Mobile games suit my style: simple, addictive, and coherent. Functionality and fun matter most.</p>
-          </div>
+        <div class="card highlight">
+          <h4>What I Learned</h4>
+          <ul>
+            <li>Keeping code organised is crucial for long-term projects.</li>
+            <li>Understanding player psychology and flow — good difficulty curve, clear goals, responsive feedback.</li>
+          </ul>
         </div>
-
-        <div class="youtube-snippets">
-          <div class="card">
-            <h4>Video On Development</h4>
-            <iframe src="https://www.youtube.com/embed/l04swKVTowc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-          </div>
+        <div class="card highlight">
+          <h4>Key Takeaway</h4>
+          <p>Mobile games suit my style: simple, addictive, and coherent. Functionality and fun matter most.</p>
         </div>
       </div>
     </div>
 
-    <!-- Game Audio Project -->
-    <div class="game-snippets">
+    <!-- GAME AUDIO PROJECT -->
+    <div class="youtube-snippets">
       <div class="card">
-        <h3>My Game Audio Project 2025</h3>
-        <div class="itch-embed-container">
-          <iframe frameborder="0" src="https://itch.io/embed/3576648?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e" width="206" height="165"></iframe>
+        <h4>My Game Audio Project 2025</h4>
+        <p>I worked in a group of four to recreate and extend the audio for an existing game. The result added a necessary layer of polish.</p>
+        
+        <div class="video-itch-container">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/3qQ3YovsNgA" frameborder="0" allowfullscreen></iframe>
+          <iframe frameborder="0" src="https://itch.io/embed/3576648?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e"></iframe>
         </div>
 
-        <div class="game-cards">
-          <div class="card">
-            <p>I worked in a group of four to recreate and extend the audio for an existing game. The result added a necessary layer of polish.</p>
-          </div>
-
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <p><li>Game audio adds another layer that can transform a basic prototype into something memorable.</li></p>
-          </div>
-
-          <div class="card highlight">
-            <h4>Key Takeaway</h4>
-            <p>Never leave audio until the end.</p>
-          </div>
-
-          <div class="youtube-snippets">
-            <div class="card">
-              <h4>Link to video on game audio</h4>
-              <iframe src="https://www.youtube.com/embed/3qQ3YovsNgA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
+        <div class="card highlight">
+          <h4>What I Learned</h4>
+          <ul>
+            <li>Game audio adds another layer that can transform a basic prototype into something memorable.</li>
+          </ul>
+        </div>
+        <div class="card highlight">
+          <h4>Key Takeaway</h4>
+          <p>Never leave audio until the end.</p>
         </div>
       </div>
     </div>
 
-    <!-- Space Man -->
-    <div class="game-snippets">
+    <!-- SPACE MAN -->
+    <div class="youtube-snippets">
       <div class="card">
-        <h3>Space Man Game 2022 (Unreal Engine)</h3>
-        <div class="itch-embed-container">
-          <iframe frameborder="0" src="https://itch.io/embed/1744069?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e" width="206" height="165"></iframe>
+        <h4>Space Man Game 2022 (Unreal Engine)</h4>
+        <p>I explored UE4/5, Blueprints, and 3D modelling (Maya & Blender). A useful learning experience exploring a new game engine!</p>
+        
+        <div class="video-itch-container">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/7LRejMd5Z2Q?si=Y_g9h_L6F87IZW1N" frameborder="0" allowfullscreen></iframe>
+          <iframe frameborder="0" src="https://itch.io/embed/1744069?border_width=0&amp;bg_color=7ca67e&amp;fg_color=ffffff&amp;link_color=547456&amp;border_color=7ca67e"></iframe>
         </div>
 
-          <div class="game-cards">
-          <div class="card">
-            <p>I explored UE4/5, Blueprints, and 3D modelling (Maya & Blender). A useful learning experience exploring a new game engine!</p>
-          </div>
-
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <p><li>How to use blueprints to program game mechanics and features.</li>
-              <li>And how to naviagate my way around a new game engine.</li>
-            </p>
-          </div>
-
-          <div class="card highlight">
-            <h4>Key Takeaway</h4>
-            <p>Opened my eyes to new graphical capabilites and a new way of programming!</p>
-          </div>
-
-        <div class="youtube-snippets">
-          <div class="card">
-            <h4>Video On Development</h4>
-            <iframe src="https://www.youtube.com/embed/7LRejMd5Z2Q?si=Y_g9h_L6F87IZW1N" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-          </div>
+        <div class="card highlight">
+          <h4>What I Learned</h4>
+          <ul>
+            <li>How to use blueprints to program game mechanics and features.</li>
+            <li>How to navigate my way around a new game engine.</li>
+          </ul>
+        </div>
+        <div class="card highlight">
+          <h4>Key Takeaway</h4>
+          <p>Opened my eyes to new graphical capabilities and a new way of programming!</p>
         </div>
       </div>
     </div>
 
-    <div class="game-cards">
+    <!-- GAME DEVELOPMENT JOURNEY -->
+    <div class="youtube-snippets">
       <div class="card">
         <h3>Game Development Journey</h3>
         <p>I continually experiment with gameplay systems, mechanics, and interactive storytelling. Each project shows a step forward.</p>
@@ -238,40 +258,32 @@
         <p>I want to experiment with gameplay systems and make the development process more efficient. Big passion for mobile games, but I'd love to help create larger titles.</p>
       </div>
     </div>
-
   </section>
 
+  <!-- UNI PROJECTS -->
+  <section id="uni-projects">
+    <h2>Games Related Uni Projects</h2>
 
-
-<!-- ================= UNI PROJECTS ================= -->
-<section id="uni-projects">
-  <h2>Games Related Uni Projects</h2>
-
-  <div class="card">
-    <p>Here are some of my main university projects: VR, custom engines, graphics experimentation, AI, and C++ game development.</p>
-  </div>
-
-  <!-- VR Ward Project -->
-  <div class="game-snippets">
     <div class="card">
-      <h3>VR Ward Project - Final Year Project</h3>
-      <div class="itch-embed-container">
-        <iframe frameborder="0" src="https://itch.io/embed/3088843?bg_color=ddf3f8&amp;fg_color=45a6cf&amp;link_color=5b91fa&amp;border_color=9abec6" width="206" height="165"></iframe>
-      </div>
+      <p>Here are some of my main university projects: VR, custom engines, graphics experimentation, AI, and C++ game development.</p>
+    </div>
 
-      <div class="game-cards">
-        <div class="card">
-          <p>I explored VR development further and also a whole new industry — the medical sector.  
-          The simulation helps students train in ward environments by diagnosing patients with different conditions.</p>
+    <!-- VR WARD PROJECT -->
+    <div class="youtube-snippets">
+      <div class="card">
+        <h4>VR Ward Project - Final Year Project</h4>
+        <p>I explored VR development further and also a whole new industry — the medical sector. The simulation helps students train in ward environments by diagnosing patients with different conditions.</p>
+        <div style="text-align:center; margin: 1rem 0;">
+          <iframe frameborder="0" src="https://itch.io/embed/3088843?bg_color=ddf3f8&amp;fg_color=45a6cf&amp;link_color=5b91fa&amp;border_color=9abec6" width="300" height="240"></iframe>
         </div>
-
         <div class="gallery">
           <div class="gallery-item"><img src="Images/FinalDemoMenigitisProject - frame at 1m4s.jpg" alt="VR Screenshot 1"></div>
           <div class="gallery-item"><img src="Images/MenigitisWalkthrough - frame at 1m52s.jpg" alt="VR Screenshot 2"></div>
           <div class="gallery-item"><img src="Images/Ai_pVL.jpg" alt="VR Screenshot 3"></div>
           <div class="gallery-item"><img src="Images/1746024877014.jpeg" alt="VR Screenshot 4"></div>
         </div>
-
+        <h3 style="text-align: center; margin-top: 1.5rem;">Demo / Walkthrough Video</h3>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/3KL-1lTK0-o" frameborder="0" allowfullscreen></iframe>
         <div class="card highlight">
           <h4>What I Learned</h4>
           <ul>
@@ -280,7 +292,6 @@
             <li>Integrating external datasets into gameplay systems.</li>
           </ul>
         </div>
-
         <div class="card highlight">
           <h4>Key Takeaways</h4>
           <ul>
@@ -289,35 +300,16 @@
             <li>Cross-discipline collaboration is crucial for serious simulations.</li>
           </ul>
         </div>
-
-        <div class="youtube-snippets">
-          <div class="card">
-            <h4>Demo / Walkthrough Video</h4>
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Game Engine Project -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Game Engine Project</h3>
-
-       <div class="card">
-   <p>I created a small custom engine to understand low-level game systems, memory management, and rendering pipelines using C++ and OpenGL/DirectX.</p>
-
-       </div>
-      
-      <div class="youtube-snippets">
-        <div class="card">
-          <h4>Engine Development Video</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/DJIC25p2p14" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="game-cards">
+    <!-- GAME ENGINE PROJECT -->
+    <div class="youtube-snippets">
+      <div class="card">
+        <h4>Game Engine Project</h4>
+        <p>I created a small custom engine to understand low-level game systems, memory management, and rendering pipelines using C++ and OpenGL/DirectX.</p>
+        <h3 style="text-align: center; margin-top: 1.5rem;">Engine Development Video</h3>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/DJIC25p2p14" frameborder="0" allowfullscreen></iframe>
         <div class="card highlight">
           <h4>What I Learned</h4>
           <ul>
@@ -334,22 +326,14 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Graphics Experimentation -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Graphics Experimentation</h3>
-      <p>I explored shaders, lighting, and procedural generation to create visually interesting effects for games.</p>
-
-      <div class="youtube-snippets">
-        <div class="card">
-          <h4>Graphics Experiment Video</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/srArk0R27VU" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="game-cards">
+    <!-- GRAPHICS EXPERIMENTATION -->
+    <div class="youtube-snippets">
+      <div class="card">
+        <h4>Graphics Experimentation</h4>
+        <p>I explored shaders, lighting, and procedural generation to create visually interesting effects for games.</p>
+        <h3 style="text-align: center; margin-top: 1.5rem;">Graphics Experiment Video</h3>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/srArk0R27VU" frameborder="0" allowfullscreen></iframe>
         <div class="card highlight">
           <h4>What I Learned</h4>
           <ul>
@@ -366,23 +350,14 @@
         </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- C++ Game Project -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>C++ Game Project</h3>
-      <p>A solo project to create a small desktop game entirely in C++, focusing on memory management, performance, and architecture.</p>
-
-      <div class="youtube-snippets">
-        <div class="card">
-          <h4>C++ Game Demo</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/bpjejLSwnm4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="game-cards">
+    <!-- C++ GAME PROJECT -->
+    <div class="youtube-snippets">
+      <div class="card">
+        <h4>C++ Game Project</h4>
+        <p>A solo project to create a small desktop game entirely in C++, focusing on memory management, performance, and architecture.</p>
+        <h3 style="text-align: center; margin-top: 1.5rem;">C++ Game Demo</h3>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/bpjejLSwnm4" frameborder="0" allowfullscreen></iframe>
         <div class="card highlight">
           <h4>What I Learned</h4>
           <ul>
@@ -399,215 +374,202 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-</section>
-
-
-  <!-- ================= WORK EXPERIENCE ================= -->
-  <section id="work-experience">
+  <!-- WORK EXPERIENCE -->
+  <section id="work">
     <h2>Work Experience</h2>
 
     <div class="card">
-      <p>This section will cover all relivent game development work expereince ive had so far.</p>
+      <p>This section covers all relevant game development work experience I've had so far.</p>
     </div>
 
-    <div class="game-snippets">
-
-    <!-- Birmingham Open Media -->
+    <!-- BIRMINGHAM OPEN MEDIA -->
     <div class="card">
-      <h3>Birmingham Open Media-2023</h3>
+      <h4>Birmingham Open Media - 2023</h4>
       <p>I worked on VFX, VR projects, AR projects, Unity courseware projects, and team bootcamps. It was a chance to combine technical and creative work in a professional environment.</p>
 
-      <!-- Videos -->
-      <div class="youtube-snippets">
-         <H3>Projects</H3>
-        <div class="card">
-          <h4>VFX Showcase</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/6GskK7eLHlw" frameborder="0" allowfullscreen></iframe>
-          <p>I worked on VFX within Unity. It was my main focus while on this placement. I was given access to lots of learning material to go through and learn all aspects on VFX.
-            It was a massive step up from the basic Unity particle system, it really opened my eyes to the possiblities of in game effects.
-          </p>
-        </div>
-         <div class="card">
-          <h4>VFX Heartbond project</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          <p> This was a very intresting and uniuqe project, i worked with my first client to create a VR anxiety relaxation game where there would be a murmeration VFX display that would
-            React and change based on your heart rate and heart activities. I worked with someone from the company HeartMath who provided the Inner Balance Coherenece Plus to provide reading i could take and use for the VFX. 
-            Unfourtnatly this project folded quite early on, but i was able to use some of the cool take and help bring the early stages of this idea to life.
-          </p>
-        </div>
-        <div class="card">
-          <h4>AR Project work</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-           <p> This was my first time working and creating an AR app. It was great to look into a new area, and will be something ill be using in my future games.
-          </p>
-        </div>
-         <div class="card">
-          <h4>Unity Courseware Work</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-           <p> I worked through some Unity Associate courseware in order to take the test and earn the qualification. Although i completed and studied for the exam, my time at the placement came
-            to an end and i could not get the funding to take the exam. However this i learnt some valuable things.
-          </p>
-        </div>
+      <h3 style="margin-top: 1.5rem;">VFX Showcase</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/6GskK7eLHlw" frameborder="0" allowfullscreen></iframe>
+      <p>I worked on VFX within Unity. It was my main focus while on this placement. I was given access to lots of learning material to go through and learn all aspects on VFX. It was a massive step up from the basic Unity particle system, it really opened my eyes to the possibilities of in game effects.</p>
 
-         <H3>Events</H3>
+      <h3 style="margin-top: 1.5rem;">Heartbond VR Project</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <p>This was a very interesting and unique project, I worked with my first client to create a VR anxiety relaxation game where there would be a murmuration VFX display that would react and change based on your heart rate and heart activities. I worked with someone from the company HeartMath who provided the Inner Balance Coherence Plus to provide reading I could take and use for the VFX. Unfortunately this project folded quite early on, but I was able to use some of the cool take and help bring the early stages of this idea to life.</p>
 
-        <div class="card">
-          <h4>Baths workshop event - 3D Scaning and Printing</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          <p> This event took place inside a swimming pool! an abannoned swimming baths turned creative space. We explored the world of 3D scanning and printing. 
-            I helped the BOM CTO present this technology to students! 
-          </p>
-        </div>
-         <div class="card">
-          <h4>Unreal Engine BootCamps</h4>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          <p> At these bootcamps i got to help teach others Unreal Engine 5, and Blender to create 3D envrioments or games to then show to industy people at a locally hosted event. 
-            I got to attend these events, meet great people and see people grow on their journey! 
-          </p>
-        </div>
-         
-      </div>
+      <h3 style="margin-top: 1.5rem;">AR Project Work</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <p>This was my first time working and creating an AR app. It was great to look into a new area, and will be something I'll be using in my future games.</p>
 
-        <H3>Pics and Highlights!</H3>
+      <h3 style="margin-top: 1.5rem;">Unity Courseware Work</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <p>I worked through some Unity Associate courseware in order to take the test and earn the qualification. Although I completed and studied for the exam, my time at the placement came to an end and I could not get the funding to take the exam. However this I learnt some valuable things.</p>
 
-      <!-- Gallery - in person events at bom, bootcamp showcases -->
-      <div class="gallery">
+      <h3 style="margin-top: 1.5rem;">Baths Workshop Event - 3D Scanning and Printing</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <p>This event took place inside a swimming pool! an abandoned swimming baths turned creative space. We explored the world of 3D scanning and printing. I helped the BOM CTO present this technology to students!</p>
+
+      <h3 style="margin-top: 1.5rem;">Unreal Engine BootCamps</h3>
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <p>At these bootcamps I got to help teach others Unreal Engine 5, and Blender to create 3D environments or games to then show to industry people at a locally hosted event. I got to attend these events, meet great people and see people grow on their journey!</p>
+
+      <div class="gallery" style="margin-top: 1.5rem;">
         <div class="gallery-item"><img src="Images/bom1.jpg" alt="BOM Work 1"></div>
         <div class="gallery-item"><img src="Images/bom2.jpg" alt="BOM Work 2"></div>
         <div class="gallery-item"><img src="Images/bom3.jpg" alt="BOM Work 3"></div>
-         <div class="gallery-item"><img src="Images/bom3.jpg" alt="BOM Work 4"></div>
+        <div class="gallery-item"><img src="Images/bom4.jpg" alt="BOM Work 4"></div>
       </div>
 
-      <!-- Learnings -->
-      <div class="game-cards">
-        <div class="card highlight">
-          <h4>What I Learned</h4>
-          <ul>
-            <li>How to collaborate with a multidisciplinary team(artists, developers and community managers).</li>
-            <li>Practice VFX skills!</li>
-            <li>Improved Unity workflow under real project deadlines.</li>
-          </ul>
-        </div>
-        <div class="card highlight">
-          <h4>Key Takeaways</h4>
-          <ul>
-            <li>Colaboration and community is the key to growth, not only as a person but as a developer.</li>
-            <li>Improved commication skills and teaching skills.</li>
-            <li>Professional projects prepared me for freelance and studio work. gaining an insight into finances and studio workflow.</li>
-          </ul>
-        </div>
+      <div class="card highlight" style="margin-top: 1.5rem;">
+        <h4>What I Learned</h4>
+        <ul>
+          <li>How to collaborate with a multidisciplinary team (artists, developers and community managers).</li>
+          <li>Practice VFX skills!</li>
+          <li>Improved Unity workflow under real project deadlines.</li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h4>Key Takeaways</h4>
+        <ul>
+          <li>Collaboration and community is the key to growth, not only as a person but as a developer.</li>
+          <li>Improved communication skills and teaching skills.</li>
+          <li>Professional projects prepared me for freelance and studio work, gaining an insight into finances and studio workflow.</li>
+        </ul>
       </div>
     </div>
 
+    <!-- VR HOSPITAL MICROPLACEMENT -->
+    <div class="youtube-snippets">
       <div class="card">
-        <h3>VR Hospital Microplacement-2024</h3>
-        <p>Before my Final year project at Uni, i spent the previous summer working with the Uni to build fix and and expand upon an existing VR project.
-          It was a project that i would later change and take forward for my Final Year Project.
-        </p>
+        <h4>VR Hospital Microplacement - 2024</h4>
+        <p>Before my Final year project at Uni, I spent the previous summer working with the Uni to build, fix and expand upon an existing VR project. It was a project that I would later change and take forward for my Final Year Project.</p>
       </div>
+    </div>
 
-       <div class="youtube-snippets">
-         <div class="card">
-        <h3>Video Editing-2025</h3>
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/EGfBfL-zl_0" frameborder="0" allowfullscreen></iframe>
-          <p>Recorded tutorials for my uni for new students.</p>
-        </div>
-       </div>
-
+    <!-- VIDEO EDITING -->
+    <div class="youtube-snippets">
       <div class="card">
-        <h3>Freelance Game Developer-Current</h3>
+        <h3>Video Editing - 2025</h3>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/EGfBfL-zl_0" frameborder="0" allowfullscreen></iframe>
+        <p>Recorded tutorials for my uni for new students.</p>
+      </div>
+    </div>
+
+    <!-- FREELANCE -->
+    <div class="youtube-snippets">
+      <div class="card">
+        <h4>Freelance Game Developer - Current</h4>
         <p>Working on a freelance game project. Current Job. Progress update soon to come!</p>
       </div>
     </div>
   </section>
 
- <!-- ================= EVENTS & ACCOLADES ================= -->
-<section id="events">
-  <h2>Events & Accolades</h2>
+  <!-- EVENTS & ACCOLADES - SIDE SCROLLING CAROUSEL -->
+  <section id="events">
+    <h2>Events & Accolades</h2>
 
-  <div class="card">
-    <p>I’ve participated in game jams, community events, and academic programs.</p>
-  </div>
+    <div class="carousel-container">
+      <div class="carousel-track">
 
-  <!-- Graduation -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Graduation!</h3>
-      <div class="gallery">
-        <div class="gallery-item"><img src="Images/graduation1.jpg" alt="Graduation 1"></div>
-        <div class="gallery-item"><img src="Images/graduation2.jpg" alt="Graduation 2"></div>
-        <div class="gallery-item"><img src="Images/graduation3.jpg" alt="Graduation 3"></div>
+        <!-- Graduation -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>Graduation! 🎓</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/graduation1.jpg" alt="Graduation"></div>
+              <div class="gallery-item"><img src="Images/graduation2.jpg" alt="Graduation"></div>
+              <div class="gallery-item"><img src="Images/graduation3.jpg" alt="Graduation"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BCU Awards -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>BCU Awards</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/award1.jpg" alt="Award"></div>
+              <div class="gallery-item"><img src="Images/award2.jpg" alt="Award"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hatchery Program -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>Hatchery Program Award!</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/hatchery1.jpg" alt="Hatchery Award"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BCU Showcase -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>BCU Showcase & Games Academy Opening!</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/showcase1.jpg" alt="Showcase Event"></div>
+              <div class="gallery-item"><img src="Images/showcase2.jpg" alt="Showcase Event"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Game Jam 2022 -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>Global Game Jam 2022</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/ggj2022.jpg" alt="GGJ 2022"></div>
+            </div>
+            <p>48-hour game jam event where I collaborated with other developers to create a complete game from scratch.</p>
+          </div>
+        </div>
+
+        <!-- Global Game Jam 2023 -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>Global Game Jam 2023</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/ggj2023.jpg" alt="GGJ 2023"></div>
+            </div>
+            <p>Another year, another 48-hour challenge! Excited to participate and create something amazing.</p>
+          </div>
+        </div>
+
+         <!-- Global Game Jam 2023 -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>Game Showcase Events</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/ggj2023.jpg" alt="GGJ 2023"></div>
+            </div>
+            <p>2-3 Showcase events at the uni, providing an opportunity to present projects and network with industry professionals.</p>
+          </div>
+        </div>
+
+        <!-- GDC/Playground Games Event -->
+        <div class="carousel-item">
+          <div class="card">
+            <h3>GDG Playground Games Event!</h3>
+            <div class="carousel-gallery">
+              <div class="gallery-item"><img src="Images/gdc1.jpg" alt="GDC Event"></div>
+              <div class="gallery-item"><img src="Images/gdc2.jpg" alt="GDC Event"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
 
-  <!-- BCU Awards -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>BCU Awards!</h3>
-      <div class="gallery">
-        <div class="gallery-item"><img src="Images/award1.jpg" alt="Award 1"></div>
-        <div class="gallery-item"><img src="Images/award2.jpg" alt="Award 2"></div>
-      </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
     </div>
-  </div>
+  </section>
 
-  <!-- Hatchery Program -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Hatchery Program Award!</h3>
-      <div class="gallery">
-        <div class="gallery-item"><img src="Images/hatchery1.jpg" alt="Hatchery Award"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BCU Showcase -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>BCU Showcase Events & Opening of Games Academy!</h3>
-      <div class="gallery">
-        <div class="gallery-item"><img src="Images/showcase1.jpg" alt="Showcase Event"></div>
-        <div class="gallery-item"><img src="Images/showcase2.jpg" alt="Showcase Event"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Global Game Jam 2022 -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Global Game Jam 2022</h3>
-      <div class="youtube-snippets">
-        <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_GGJ2022_VIDEO" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- Global Game Jam 2023 -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>Global Game Jam 2023</h3>
-      <div class="youtube-snippets">
-        <iframe class="youtube-video" src="https://www.youtube.com/embed/YOUR_GGJ2023_VIDEO" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- GDC Event -->
-  <div class="game-snippets">
-    <div class="card">
-      <h3>GDG Playground Games Event!</h3>
-      <div class="gallery">
-        <div class="gallery-item"><img src="Images/gdc1.jpg" alt="GDC Event"></div>
-        <div class="gallery-item"><img src="Images/gdc2.jpg" alt="GDC Event"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 Jack Longmore</p>
   </footer>
