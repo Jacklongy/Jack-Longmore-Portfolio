@@ -165,8 +165,8 @@ nav .socials a:hover {
 ========================================================= */
 .banner {
   position: relative;
-  height: 80vh;
-  min-height: 500px;
+  height: 90vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,6 +176,7 @@ nav .socials a:hover {
   background-attachment: fixed;
   overflow: hidden;
   margin-top: 0;
+  perspective: 1000px;
 }
 
 .banner::before {
@@ -400,8 +401,143 @@ section h2::after {
 }
 
 /* =========================================================
-   YOUTUBE SECTION - SMALLER, NOT STRETCHED
+   YOUTUBE FEATURED SECTION
 ========================================================= */
+#youtube .youtube-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+#youtube .youtube-featured-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-bottom: 4rem;
+  border-bottom: 2px solid rgba(124, 166, 126, 0.3);
+  border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;
+}
+
+#youtube .youtube-featured-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#youtube .youtube-featured-item.reverse {
+  direction: rtl;
+}
+
+#youtube .youtube-featured-item.reverse > * {
+  direction: ltr;
+}
+
+#youtube .youtube-video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#youtube .youtube-video-wrapper iframe {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+
+#youtube .youtube-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#youtube .youtube-text-wrapper h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+#youtube .youtube-text-wrapper p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   JOURNEY CAROUSEL
+========================================================= */
+#youtube .journey-section {
+  margin: 4rem 0;
+}
+
+#youtube .journey-section h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+#youtube .journey-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  position: relative;
+}
+
+#youtube .journey-carousel-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  max-width: 900px;
+  height: 400px;
+}
+
+#youtube .journey-carousel-track {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#youtube .journey-carousel-item {
+  flex: 0 0 240px;
+  height: 280px;
+  opacity: 0.5;
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transform: scale(0.75);
+}
+
+#youtube .journey-carousel-item.active {
+  opacity: 1;
+  flex: 0 0 320px;
+  height: 360px;
+  transform: scale(1);
+  z-index: 10;
+}
+
+#youtube .journey-carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+#youtube .journey-carousel-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
 #youtube .youtube-video {
   width: 100%;
   height: 250px;
@@ -628,7 +764,7 @@ footer p {
   display: block;
   border-radius: 16px;
   overflow: hidden;
-  height: 300px;
+  height: 450px;
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid rgba(124, 166, 126, 0.15);
@@ -785,6 +921,58 @@ footer p {
 /* =========================================================
    CAROUSEL / SIDE SCROLLING
 ========================================================= */
+.featured-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.featured-carousel-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  height: 550px;
+}
+
+.featured-carousel-track {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.featured-carousel-item {
+  flex: 0 0 320px;
+  height: 400px;
+  opacity: 0.5;
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.75);
+}
+
+.featured-carousel-item.active {
+  opacity: 1;
+  flex: 0 0 500px;
+  height: 500px;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.featured-carousel-item:nth-child(1) { animation-delay: 0.1s; }
+.featured-carousel-item:nth-child(2) { animation-delay: 0.2s; }
+.featured-carousel-item:nth-child(3) { animation-delay: 0.3s; }
+.featured-carousel-item:nth-child(4) { animation-delay: 0.4s; }
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -854,10 +1042,15 @@ footer p {
 /* =========================================================
    HOME PAGE - FIX
 ========================================================= */
+#featured .carousel-item {
+  flex: 0 0 500px;
+}
+
 #featured .carousel-item .featured-card {
   opacity: 1;
   transform: none;
   animation: none;
+  height: 350px;
 }
 
 /* =========================================================

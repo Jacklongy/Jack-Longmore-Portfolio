@@ -1,3 +1,149 @@
+/* ===== Collapsible Toggle Functionality ===== */
+function toggleCollapsible(header) {
+  const content = header.nextElementSibling;
+  
+  header.classList.toggle('active');
+  content.classList.toggle('active');
+  
+  if (content.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  } else {
+    content.style.maxHeight = '0';
+  }
+}
+
+/* ===== Featured Carousel Navigation ===== */
+let carouselIndex = 0;
+let carouselAutoPlayTimer;
+
+function moveCarousel(direction) {
+  const items = document.querySelectorAll('.featured-carousel-item');
+  
+  if (!items.length) return;
+  
+  carouselIndex += direction;
+  
+  if (carouselIndex < 0) {
+    carouselIndex = items.length - 1;
+  } else if (carouselIndex >= items.length) {
+    carouselIndex = 0;
+  }
+  
+  updateCarouselPosition(items);
+  
+  // Reset auto-play timer when manually navigating
+  clearTimeout(carouselAutoPlayTimer);
+  startCarouselAutoPlay();
+}
+
+function updateCarouselPosition(items) {
+  // Always show 3 items: prev, active (big), next
+  items.forEach((item, index) => {
+    item.classList.remove('active');
+  });
+  items[carouselIndex].classList.add('active');
+  
+  // Calculate which items are visible and position them
+  const track = document.querySelector('.featured-carousel-track');
+  const prevIndex = carouselIndex === 0 ? items.length - 1 : carouselIndex - 1;
+  const nextIndex = (carouselIndex + 1) % items.length;
+  
+  // Set order of visible items to always show 3
+  const orderedItems = [
+    items[prevIndex],
+    items[carouselIndex], 
+    items[nextIndex]
+  ];
+  
+  // Clear and rebuild order
+  orderedItems.forEach((item, visIndex) => {
+    item.style.order = visIndex;
+  });
+  
+  items.forEach((item, index) => {
+    if (![prevIndex, carouselIndex, nextIndex].includes(index)) {
+      item.style.order = 999; // Hide other items
+      item.style.display = 'none';
+    } else {
+      item.style.display = 'flex';
+    }
+  });
+}
+
+function startCarouselAutoPlay() {
+  carouselAutoPlayTimer = setInterval(() => {
+    moveCarouselAuto();
+  }, 4000); // Auto-advance every 4 seconds
+}
+
+function moveCarouselAuto() {
+  const items = document.querySelectorAll('.featured-carousel-item');
+  if (!items.length) return;
+  
+  carouselIndex = (carouselIndex + 1) % items.length;
+  updateCarouselPosition(items);
+}
+
+/* ===== Journey Carousel Navigation ===== */
+let journeyCarouselIndex = 0;
+
+function moveJourneyCarousel(direction) {
+  const items = document.querySelectorAll('.journey-carousel-item');
+  
+  if (!items.length) return;
+  
+  journeyCarouselIndex += direction;
+  
+  if (journeyCarouselIndex < 0) {
+    journeyCarouselIndex = items.length - 1;
+  } else if (journeyCarouselIndex >= items.length) {
+    journeyCarouselIndex = 0;
+  }
+  
+  updateJourneyCarouselPosition(items);
+}
+
+function updateJourneyCarouselPosition(items) {
+  // Always show 3 items: prev, active (big), next
+  items.forEach((item, index) => {
+    item.classList.remove('active');
+  });
+  items[journeyCarouselIndex].classList.add('active');
+  
+  // Set order of visible items to always show 3
+  const prevIndex = journeyCarouselIndex === 0 ? items.length - 1 : journeyCarouselIndex - 1;
+  const nextIndex = (journeyCarouselIndex + 1) % items.length;
+  
+  const orderedItems = [
+    items[prevIndex],
+    items[journeyCarouselIndex], 
+    items[nextIndex]
+  ];
+  
+  // Clear and rebuild order
+  orderedItems.forEach((item, visIndex) => {
+    item.style.order = visIndex;
+  });
+  
+  items.forEach((item, index) => {
+    if (![prevIndex, journeyCarouselIndex, nextIndex].includes(index)) {
+      item.style.order = 999;
+      item.style.display = 'none';
+    } else {
+      item.style.display = 'flex';
+    }
+  });
+}
+
+// Initialize carousel
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.featured-carousel-item');
+  if (items.length > 0) {
+    items[0].classList.add('active');
+    startCarouselAutoPlay();
+  }
+});
+
 /* ===== Slideshow Functionality ===== */
 let slideIndex = 1;
 
@@ -50,17 +196,31 @@ setInterval(() => {
   
   if (!banner) return;
 
-  // Add GPU acceleration
-  banner.style.willChange = 'transform';
-  banner.style.transform = 'translateZ(0)';
-
-  window.addEventListener('scroll', () => {
+  // Subtle parallax effect on scroll
+  let ticking = false;
+  
+  function updateParallax() {
     const scrollY = window.scrollY;
+    const bannerBottom = banner.offsetHeight;
     
-    // Move background image slower than scroll using transform
-    const parallaxAmount = scrollY * 0.5;
-    banner.style.backgroundPosition = `center calc(-${parallaxAmount}px)`;
-  }, { passive: true });
+    // Only apply parallax when banner is visible
+    if (scrollY < bannerBottom) {
+      const parallaxValue = scrollY * 0.05;
+      banner.style.backgroundPosition = `center ${parallaxValue}px`;
+    }
+    
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
+  
+  // Initial call
+  updateParallax();
 })();
 
 /* ===== CAROUSEL - OPTIMAL INFINITE LOOP ===== */
@@ -261,27 +421,11 @@ setInterval(() => {
   cards.forEach(card => observer.observe(card));
 })();
 
-/* ===== Expandable Cards Parallax & Preview ===== */
+/* ===== Parallax on Cards (No Preview Follower) ===== */
 (() => {
-  const previewFollower = document.getElementById('previewFollower');
-  const previewImage = document.getElementById('previewImage');
   const projectCards = document.querySelectorAll('.project-card');
   
   if (!projectCards.length) return;
-
-  // Mouse move tracker
-  let mouseX = 0;
-  let mouseY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    if (previewFollower) {
-      previewFollower.style.left = (mouseX + 15) + 'px';
-      previewFollower.style.top = (mouseY + 15) + 'px';
-    }
-  });
 
   // Scroll-based parallax ONLY on Games & YouTube sections
   const gamesSection = document.getElementById('games');
@@ -306,34 +450,6 @@ setInterval(() => {
         const parallaxAmount = distance * 0.15;
         el.style.transform = `translateY(${parallaxAmount}px)`;
       });
-    });
-  });
-
-  // Project card hover handlers for preview
-  projectCards.forEach(card => {
-    const header = card.querySelector('.project-header');
-    
-    // Hide preview when clicking to expand/collapse
-    header.addEventListener('click', () => {
-      if (previewFollower) {
-        previewFollower.classList.remove('active');
-      }
-    });
-    
-    card.addEventListener('mouseenter', () => {
-      if (previewFollower) {
-        const previewSrc = card.dataset.preview;
-        if (previewSrc) {
-          previewImage.src = previewSrc;
-          previewFollower.classList.add('active');
-        }
-      }
-    });
-
-    card.addEventListener('mouseleave', () => {
-      if (previewFollower) {
-        previewFollower.classList.remove('active');
-      }
     });
   });
 })();
