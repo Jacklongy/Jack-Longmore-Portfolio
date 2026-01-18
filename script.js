@@ -140,7 +140,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.featured-carousel-item');
   if (items.length > 0) {
     items[0].classList.add('active');
-    startCarouselAutoPlay();
+    // Quick initial rotation to fix centering on first load
+    setTimeout(() => {
+      moveCarouselAuto();
+      startCarouselAutoPlay();
+    }, 50);
+  }
+
+  // Initialize journey carousel
+  const journeyItems = document.querySelectorAll('.journey-carousel-item');
+  if (journeyItems.length > 0) {
+    journeyCarouselIndex = 0;
+    updateJourneyCarouselPosition(journeyItems);
+    // Quick initial rotation to fix centering on first load
+    setTimeout(() => {
+      moveJourneyCarousel(1);
+    }, 50);
   }
 });
 
