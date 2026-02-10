@@ -191,8 +191,9 @@ nav .socials a:hover {
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), linear-gradient(to right, transparent 0%, transparent 100%);
   z-index: 1;
+  animation: fadeInOverlay 1.5s ease-out;
 }
 
 .banner-content {
@@ -287,14 +288,15 @@ section h2::after {
 
 .stat-card {
   text-align: center;
-  padding: 2rem;
-  background: var(--card-bg);
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.1), rgba(124, 166, 126, 0.05));
   border-radius: 16px;
-  border: 1px solid rgba(124, 166, 126, 0.15);
+  border: 2px solid rgba(124, 166, 126, 0.25);
   transition: all 0.3s;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease-out forwards;
+  box-shadow: 0 4px 15px rgba(124, 166, 126, 0.1);
 }
 
 .stat-card:nth-child(1) { animation-delay: 0.1s; }
@@ -304,21 +306,23 @@ section h2::after {
 
 .stat-card:hover {
   border-color: var(--accent);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(124, 166, 126, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(124, 166, 126, 0.3);
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.15), rgba(124, 166, 126, 0.08));
 }
 
 .stat-card .number {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--accent);
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .stat-card .label {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 /* =========================================================
@@ -540,7 +544,7 @@ section h2::after {
 }
 #youtube .youtube-video {
   width: 100%;
-  height: 250px;
+  height: 280px;
   border-radius: 8px;
   margin: 1rem 0;
 }
@@ -730,6 +734,15 @@ footer p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -935,7 +948,7 @@ footer p {
   overflow: hidden;
   position: relative;
   max-width: 1200px;
-  height: 550px;
+  height: 480px;
 }
 
 .featured-carousel-track {
@@ -951,7 +964,7 @@ footer p {
 
 .featured-carousel-item {
   flex: 0 0 320px;
-  height: 400px;
+  height: 360px;
   opacity: 0.5;
   transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
@@ -963,7 +976,7 @@ footer p {
 .featured-carousel-item.active {
   opacity: 1;
   flex: 0 0 500px;
-  height: 500px;
+  height: 450px;
   transform: scale(1);
   z-index: 10;
 }
@@ -1119,41 +1132,68 @@ footer p {
 /* =========================================================
    SKILLS SECTION
 ========================================================= */
-.skills {
+.skills-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  align-items: center;
+}
+
+.skill-section {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(124, 166, 126, 0.2);
+  width: 100%;
+}
+
+.skill-section:last-child {
+  border-bottom: none;
+}
+
+.skill-section h3 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.skill-section h3 i {
+  font-size: 1.4rem;
+}
+
+.skill-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .skill-card {
-  background: var(--card-bg);
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.1), rgba(124, 166, 126, 0.05));
+  border: 2px solid rgba(124, 166, 126, 0.25);
   border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid rgba(124, 166, 126, 0.15);
-  transition: all 0.3s;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease-out forwards;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(124, 166, 126, 0.1);
 }
-
-.skill-card:nth-child(1) { animation-delay: 0.1s; }
-.skill-card:nth-child(2) { animation-delay: 0.2s; }
-.skill-card:nth-child(3) { animation-delay: 0.3s; }
-.skill-card:nth-child(4) { animation-delay: 0.4s; }
-.skill-card:nth-child(5) { animation-delay: 0.5s; }
-.skill-card:nth-child(6) { animation-delay: 0.6s; }
 
 .skill-card:hover {
-  transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(124, 166, 126, 0.15);
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.15), rgba(124, 166, 126, 0.08));
+  box-shadow: 0 12px 40px rgba(124, 166, 126, 0.3);
+  transform: translateY(-8px);
 }
 
-.skill-card h3 {
+.skill-card h4 {
   color: var(--accent);
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .skill-card p {
@@ -1161,6 +1201,60 @@ footer p {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.15), rgba(124, 166, 126, 0.08));
+  border: 2px solid rgba(124, 166, 126, 0.35);
+  border-radius: 25px;
+  padding: 1rem 1.8rem;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(124, 166, 126, 0.15);
+}
+
+.skill-item:hover {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.25), rgba(124, 166, 126, 0.12));
+  box-shadow: 0 12px 40px rgba(124, 166, 126, 0.3);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.skills-footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(124, 166, 126, 0.2);
+}
+
+.portfolio-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.portfolio-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 8px 25px rgba(124, 166, 126, 0.3);
+  transform: translateY(-3px);
+}
+
 
 /* =========================================================
    CONTACT FORM
@@ -1386,3 +1480,131 @@ footer p {
     height: 200px;
   }
 }
+
+/* =========================================================
+   PROJECT SHOWCASE (Alternating Layout)
+========================================================= */
+.project-showcase {
+  margin: 2rem 0;
+}
+
+.project-showcase h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.project-content.reverse {
+  direction: rtl;
+}
+
+.project-content.reverse > * {
+  direction: ltr;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-media iframe {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-text p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project-text .highlight {
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.1), rgba(124, 166, 126, 0.05));
+  border: 2px solid rgba(124, 166, 126, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(124, 166, 126, 0.1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-text .highlight:hover {
+  border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(124, 166, 126, 0.3);
+  transform: translateY(-8px);
+}
+
+.project-text .highlight h4 {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.project-text .highlight ul {
+  margin-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+.project-text .highlight ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 968px) {
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-content.reverse {
+    direction: ltr;
+  }
+}
+.project-media iframe[src*="itch.io"] {
+  width: 100% !important;
+  max-width: 500px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+@media (max-width: 968px) {
+  .project-media iframe[src*="itch.io"] {
+    max-width: 100% !important;
+  }
+}
+/* Make project showcase titles green */
+#games .project-showcase h3 {
+  color: var(--accent);
+}
+
+#uni-projects .project-showcase h3 {
+  color: var(--accent);
+}
+
+#work .project-showcase h3 {
+  color: var(--accent);
+}
+
+#events .project-showcase h3 {
+  color: var(--accent);
+}
+
+/* Increase video sizes in Games section */
+.youtube-video { min-height: 280px !important; }
+

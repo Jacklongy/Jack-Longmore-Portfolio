@@ -21,6 +21,7 @@
   <div class="sidebar">
     <a href="#about"><span>About</span></a>
     <a href="#skills"><span>Skills</span></a>
+    <a href="#slideshow"><span>Journey</span></a>
     <a href="#contact"><span>Contact</span></a>
   </div>
 
@@ -54,17 +55,20 @@
   <section id="about">
     <h2>About Me</h2>
       
-    <div class="card">
-      <p>Hi, I'm Jack 👋 Or Longy dev. I'm a game developer who's been creating and experimenting with games for years. What started as a hobby quickly became my passion, I love turning ideas into playable worlds.</p>
+    <!-- Divider -->
+    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0;"></div>
+
+    <!-- About Text -->
+    <div style="padding: 3rem 2rem; margin-bottom: 3rem;">
+      <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 2rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
+      
+      <p style="margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm a passionate game developer and freelancer dedicated to helping others bring their dream games to life. Whether you need gameplay mechanics, immersive level design, or audio that makes your world come alive—I'm here to make it happen.</p>
+      
+      <p style="margin: 1.5rem 0 0 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">Let's create something amazing together.</p>
     </div>
-    
-    <div class="card">
-      <p>I'm especially into Unity, level design, and gameplay systems, but what drives me most is the creativity of bringing fun concepts to life.</p>
-    </div>
-    
-    <div class="card">
-      <p>Outside of coding, I enjoy playing games, exploring new mechanics, and learning from different studios' approaches to design.</p>
-    </div>
+
+    <!-- Divider -->
+    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0;"></div>
 
     <!-- Stats Blocks -->
     <div class="stats">
@@ -87,6 +91,74 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Main Skills</h2>
+    
+    <div class="skills-simple">
+      <!-- Game Development & Immersive Tech -->
+      <div class="skill-section">
+        <h3><i class="fas fa-gamepad"></i> Game Development & Immersive Tech</h3>
+        <div class="skill-cards-grid">
+          <div class="skill-card">
+            <h4>Unity & C#</h4>
+            <p>Building polished games with clean architecture and gameplay systems.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Game Design & VR/AR</h4>
+            <p>Designing engaging mechanics and immersive experiences.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Visual Effects & Audio</h4>
+            <p>Creating impactful VFX, audio design, and 2D game art.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="skill-section">
+        <h3><i class="fas fa-map"></i> Design</h3>
+        <div class="skill-cards-grid">
+          <div class="skill-card">
+            <h4>Player Psychology</h4>
+            <p>Understanding player behavior to create engaging, rewarding experiences.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Level Design</h4>
+            <p>Designing engaging levels that create immersive, compelling gameplay experiences.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Mobile Optimization</h4>
+            <p>Designing intuitive, engaging games for mobile players.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Management & Leadership -->
+      <div class="skill-section">
+        <h3><i class="fas fa-briefcase"></i> Project Management & Leadership</h3>
+        <div class="skill-cards-grid">
+          <div class="skill-card">
+            <h4>Project Management</h4>
+            <p>Leading projects from concept through delivery with quality focus.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Team Coordination</h4>
+            <p>Managing teams, fostering collaboration, and clear communication.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Technical Leadership</h4>
+            <p>Guiding technical decisions and mentoring team members.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-footer">
+      <a href="portfolio.html" class="portfolio-link">View Full Portfolio</a>
+    </div>
+  </section>
+
   <!-- Slideshow Section -->
   <section id="slideshow">
     <h2>My Journey</h2>
@@ -97,13 +169,16 @@
         <img src="Images/SlideShow/Untitled design (7).png" alt="Young me">
       </div>
       <div class="slide fade">
-        <img src="Images/award1.jpg" alt="Award">
+        <img src="Images/SlideShow/Nan.png" alt="Me and nan and grandad and meg">
+      </div>
+       <div class="slide fade">
+        <img src="Images/SlideShow/Hatchery.png" alt="Showcase">
+      </div>
+       <div class="slide fade">
+        <img src="Images/SlideShow/BCU awards.png" alt="Showcase">
       </div>
       <div class="slide fade">
-        <img src="Images/showcase1.jpg" alt="Showcase">
-      </div>
-      <div class="slide fade">
-        <img src="Images/ggj2022.jpg" alt="Game Jam">
+        <img src="Images/SlideShow/Grad.png" alt="Game Jam">
       </div>
        <div class="slide fade">
         <img src="Images/SlideShow/gradation.png" alt="Graduation">
@@ -119,64 +194,6 @@
       <span class="dot" onclick="currentSlide(3)"></span>
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Main Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3><i class="fas fa-gamepad"></i> Game Development</h3>
-        <div class="skills-list">
-          <div class="skill-card">
-            <h4>Unity & C#</h4>
-            <p>Creating polished 2D & 3D games with industry-standard tools and best practices.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Gameplay Systems</h4>
-            <p>Turning ideas into interactive systems that are fun and engaging.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Game Architecture</h4>
-            <p>Building scalable, maintainable code structures for complex game projects.</p>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3><i class="fas fa-map"></i> Design</h3>
-        <div class="skills-list">
-          <div class="skill-card">
-            <h4>Level Design</h4>
-            <p>Designing engaging gameplay flow and memorable player experiences.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Player Psychology & Mobile</h4>
-            <p>Crafting engaging experiences optimized for mobile platforms.</p>
-          </div>
-          <div class="skill-card">
-            <h4>User Experience</h4>
-            <p>Creating intuitive interfaces and engaging player interactions.</p>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3><i class="fas fa-vr-cardboard"></i> Immersive Tech and Project Management</h3>
-        <div class="skills-list">
-          <div class="skill-card">
-            <h4>VR & AR Experience</h4>
-            <p>Building immersive simulations and experimental interactive projects.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Project Management</h4>
-            <p>Coordinating teams and delivering quality on freelance projects.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Technical Leadership</h4>
-            <p>Guiding projects from concept through delivery with technical expertise.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
