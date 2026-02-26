@@ -23,7 +23,10 @@
 
   <!-- Top navigation -->
   <nav>
-    <div class="nav-left">Jack Longmore</div>
+    <div class="nav-left">
+      <img id="logo" src="NewImages/channels4_profile.jpg" alt="Logo" class="nav-logo">
+      <span>Longy Dev</span>
+    </div>
     <div class="nav-right">
       <a href="index.html">Home</a>
       <a href="portfolio.html" class="current">Portfolio</a>
@@ -47,99 +50,76 @@
     <div class="scroll-indicator"></div>
   </header>
 
-  <!-- FEATURED PROJECTS - CAROUSEL -->
+  <!-- FEATURED PROJECTS - GRID -->
   <section id="featured">
     <h2>Featured Projects</h2>
 
-    <div class="featured-carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
-      <div class="featured-carousel-container">
-        <div class="featured-carousel-track">
-          <!-- Treat Time -->
-          <div class="featured-carousel-item">
-            <a href="#games" class="featured-card">
-              <img src="Images/TreatTime/4 (10).png" alt="Treat Time">
-              <div class="featured-card-overlay">
-                <h3>Treat Time!</h3>
-                <p>Mobile Game | 2025</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- VR Ward Project -->
-          <div class="featured-carousel-item">
-            <a href="#uni-projects" class="featured-card">
-              <img src="Images/UniWork/VR Ward/Untitled design.png" alt="VR Ward">
-              <div class="featured-card-overlay">
-                <h3>VR Ward Project</h3>
-                <p>VR Simulation | Final Year</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Game Audio Project -->
-          <div class="featured-carousel-item">
-            <a href="#games" class="featured-card">
-              <img src="Images/UniWork/GameAudio/Untitled design (3).png" alt="Game Audio Project">
-              <div class="featured-card-overlay">
-                <h3>Game Audio Project</h3>
-                <p>Audio Design | 2025</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- VFX Showcase -->
-          <div class="featured-carousel-item">
-            <a href="#work" class="featured-card">
-              <img src="Images/BOM/VFX/4 (9).png" alt="VFX Showcase">
-              <div class="featured-card-overlay">
-                <h3>VFX Showcase</h3>
-                <p>Visual Effects | BOM 2023</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Freelance Game -->
-          <div class="featured-carousel-item">
-            <a href="#work" class="featured-card">
-              <img src="Images/TreatTime/4 (5).png" alt="Freelance Game Project">
-              <div class="featured-card-overlay">
-                <h3>Freelance Game Project</h3>
-                <p>Current Work | 2025-2026</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Global Game Jam 2026 -->
-          <div class="featured-carousel-item">
-            <a href="#games" class="featured-card">
-              <img src="Images/SlideShow/GGJ2026.png" alt="Global Game Jam 2026">
-              <div class="featured-card-overlay">
-                <h3>Global Game Jam 2026</h3>
-                <p>48-Hour Game Jam | 2026</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- AI Sheep Dog -->
-          <div class="featured-carousel-item">
-            <a href="#youtube" class="featured-card">
-              <img src="Images/dog.png" alt="AI Sheep Dog">
-              <div class="featured-card-overlay">
-                <h3>AI Sheep Dog</h3>
-                <p>Machine Learning | AI Project</p>
-              </div>
-            </a>
-          </div>
+    <div class="featured-grid">
+      <!-- Treat Time -->
+      <a href="#games" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Videos/FeaturedVideos/Featured treat.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>Treat Time!</h3>
+          <p>Mobile Game | 2025</p>
         </div>
-      </div>
+      </a>
 
-      <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">
-        <i class="fas fa-chevron-right"></i>
-      </button>
+      <!-- VR Ward Project -->
+      <a href="#games" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>VR Ward Project</h3>
+          <p>VR Simulation | Final Year</p>
+        </div>
+      </a>
+
+      <!-- Game Audio Project -->
+      <a href="#games" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Videos/FeaturedVideos/Featured Audio.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>Game Audio Project</h3>
+          <p>Audio Design | 2025</p>
+        </div>
+      </a>
+
+      <!-- Freelance Game -->
+      <a href="#work" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>Freelance Game Project</h3>
+          <p>Current Work | 2025-2026</p>
+        </div>
+      </a>
+
+      <!-- Global Game Jam 2026 -->
+      <a href="#games" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Videos/FeaturedVideos/Featured GGJ2026.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>Global Game Jam 2026</h3>
+          <p>48-Hour Game Jam | 2026</p>
+        </div>
+      </a>
+
+      <!-- AI Sheep Dog -->
+      <a href="#youtube" class="featured-card">
+        <video class="youtube-video" autoplay loop muted style="object-position: center 0%;">
+          <source src="Videos/FeaturedVideos/Featured AI.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>AI Sheep Dog</h3>
+          <p>Machine Learning | AI Project</p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -245,6 +225,38 @@
           <a href="https://longydev.itch.io/space-man" target="_blank" class="btn itch-btn">
             <i class="fas fa-gamepad"></i> Play on Itch.io
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
+
+    <!-- PS4 CONSOLE GAME -->
+    <div class="project-showcase">
+      <h3>PS4 Console Game</h3>
+      <div class="project-content reverse">
+        <div class="project-media">
+          <div style="background: var(--card-bg); padding: 3rem 2rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; text-align: center;">
+            <i class="fab fa-tiktok" style="font-size: 4rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+            <h4 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Check Out My TikTok Video</h4>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 300px;">See the PS4 console game development and 3D level design in action!</p>
+            <a href="https://www.tiktok.com/@longydev/video/7552984854749613334" target="_blank" class="btn itch-btn">
+              <i class="fab fa-tiktok"></i> Watch on TikTok
+            </a>
+          </div>
+          <p>A console game developed for PlayStation 4. This project showcased my ability to work with console platforms and optimize gameplay for a controller-based experience.</p>
+        </div>
+        <div class="project-sidebar">
+          <div class="card highlight">
+            <h4>What I Learned</h4>
+            <ul>
+              <li>Developing for console platforms and controller input systems.</li>
+              <li>Optimizing game performance for specific hardware constraints.</li>
+              <li>Creating engaging gameplay tailored for console audiences.</li>
+            </ul>
+            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
+            <p>Console development requires different thinking around performance, controls, and user experience compared to mobile or PC platforms.</p>
+          </div>
         </div>
       </div>
     </div>
