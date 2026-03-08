@@ -13,11 +13,11 @@
 <body>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar" style="display: none; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" id="mainSidebar">
     <a href="#featured"><span>Featured</span></a>
     <a href="#games"><span>Games</span></a>
     <a href="#youtube"><span>YouTube</span></a>
-    <a href="#work"><span>Work</span></a>
+    <a href="#work"><span>Work XP</span></a>
     <a href="#events"><span>Awards</span></a>
   </div>
 
@@ -41,13 +41,18 @@
   </nav>
 
   <!-- Banner -->
-  <header class="banner" style="background-image: url('Images/Newbanner.JPG');">
-    <div class="banner-overlay"></div>
-    <div class="banner-content">
-      <h1>Portfolio</h1>
-      <p>Game Developer | 5+ years Experience</p>
+  <header class="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 3rem 4rem; min-height: 100vh; overflow: hidden; position: relative;">
+    <!-- Right Background Image Side (Full Coverage) -->
+    <div style="position: absolute; inset: 0; background-image: url('Images/Newbanner.JPG'); background-size: cover; background-position: right top; z-index: 1;"></div>
+    
+    <!-- Fade Overlay -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.98) 20%, rgba(26, 26, 26, 0.85) 40%, rgba(26, 26, 26, 0.5) 65%, rgba(26, 26, 26, 0.1) 85%, transparent 100%); z-index: 2;"></div>
+    
+    <!-- Left Content Side -->
+    <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
+      <h1 style="font-size: 3.5rem; margin: 0 0 1rem 0; color: #ffffff; font-weight: 700;">Portfolio</h1>
+      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 2.5rem 0; font-weight: 600;">Game Developer | 5+ years Experience</p>
     </div>
-    <div class="scroll-indicator"></div>
   </header>
 
   <!-- FEATURED PROJECTS - GRID -->
@@ -66,16 +71,6 @@
         </div>
       </a>
 
-      <!-- VR Ward Project -->
-      <a href="#games" class="featured-card">
-        <video class="youtube-video" autoplay loop muted>
-          <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
-        </video>
-        <div class="featured-card-overlay">
-          <h3>VR Ward Project</h3>
-          <p>VR Simulation | Final Year</p>
-        </div>
-      </a>
 
       <!-- Game Audio Project -->
       <a href="#games" class="featured-card">
@@ -99,6 +94,17 @@
         </div>
       </a>
 
+      <!-- VR Ward Project -->
+      <a href="#games" class="featured-card">
+        <video class="youtube-video" autoplay loop muted>
+          <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay">
+          <h3>VR Ward Project</h3>
+          <p>VR Simulation | Final Year</p>
+        </div>
+      </a>
+
       <!-- Global Game Jam 2026 -->
       <a href="#games" class="featured-card">
         <video class="youtube-video" autoplay loop muted>
@@ -112,7 +118,7 @@
 
       <!-- AI Sheep Dog -->
       <a href="#youtube" class="featured-card">
-        <video class="youtube-video" autoplay loop muted style="object-position: center 0%;">
+        <video class="youtube-video" autoplay loop muted>
           <source src="Videos/FeaturedVideos/Featured AI.mp4" type="video/mp4">
         </video>
         <div class="featured-card-overlay">
@@ -136,16 +142,7 @@
       </a>
     </div>
 
-    <div class="card">
-      <p>In this section i will show my top Games and Projects.</p>
-    </div>
-
-    <div class="card">
-      <p>I wanted to highlight some of my favourite projects in this section. They show progress and the journey into different areas of game dev.</p>
-    </div>
-
-    
-
+  
     <!-- TREAT TIME -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     
@@ -191,7 +188,7 @@
               <li>Game audio adds another layer that can transform a basic prototype into something memorable.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Never leave audio until the end.</p>
+            <p>Never leave audio until the end. Or you'll miss the chance to elevate your game's experience.</p>
           </div>
           
           <a href="https://longydev.itch.io/game-audio" target="_blank" class="btn itch-btn">
@@ -261,21 +258,7 @@
       </div>
     </div>
 
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-
-    <!-- GAME DEVELOPMENT JOURNEY -->
-    <div class="youtube-snippets">
-      <div class="card">
-        <h3>Game Development Journey</h3>
-        <p>I continually experiment with gameplay systems, mechanics, and interactive storytelling. Each project shows a step forward.</p>
-      </div>
-
-      <div class="card">
-        <h3>Future Plans</h3>
-        <p>I want to experiment with gameplay systems and make the development process more efficient. Big passion for mobile games, but I'd love to help create larger titles.</p>
-      </div>
-    </div>
-
+  
     <!-- GAME JAMS SUBSECTION -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     
@@ -295,10 +278,13 @@
             <h4>What I Learned</h4>
             <ul>
               <li>Continued growth in rapid prototyping and creative problem-solving.</li>
-              <li>Valuable networking and collaboration with industry professionals.</li>
+              <li>Valuable networking and collaboration.</li>
+               <li>Got to experiment with the sprite mask again!</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Game jams are where innovation happens. I'm always excited to see what ideas emerge from these events!</p>
+            <p>Game jams are where innovation happens. I'm always excited to see what ideas emerge from these events!
+              I also had great fun researching and looking at inspiration from masquerade balls and the idea of hidden identities, which led to the sprite mask mechanic in my game.
+            </p>
           </div>
           
           <a href="https://longy-dev.itch.io/were-you-invited" target="_blank" class="btn itch-btn">
@@ -323,7 +309,9 @@
             <h4>What I Learned</h4>
             <ul>
               <li>Building on previous jam experience to create even better games.</li>
-              <li>Improving workflow and team dynamics for efficiency.</li>\n            </ul>
+              <li>Improving workflow and efficiency.</li>
+              <li>Worked on a cool grid system for movement mechanics.</li>
+            </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
             <p>Each jam teaches me something new. The community is incredible and the energy is unmatched.</p>
           </div>
@@ -353,7 +341,7 @@
               <li>Team collaboration and effective communication during crunch.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Constraints breed creativity. Some of my best ideas came from working within tight time frames.</p>
+            <p>This game won best mechanics award, for its use of the sprite mask which matched the theme well!</p>
           </div>
           
           <a href="https://longy-dev.itch.io/yang-and-ying" target="_blank" class="btn itch-btn">
@@ -378,7 +366,7 @@
             <h4>What I Learned</h4>
             <ul>
               <li>Adapting quickly to unexpected technical challenges.</li>
-              <li>Balancing feature scope with time constraints.</li>
+              <li>Balancing feature scope with time constraints. As I only used half of the time limit, I had to prioritize features effectively.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
             <p>GMTK's focus on game design and mechanics pushed me to think critically about what makes a game fun.</p>
@@ -399,17 +387,17 @@
       <div class="project-content">
         <div class="project-media">
           <iframe class="youtube-video" src="https://www.youtube.com/embed/rI1lLicKtDc" frameborder="0" allowfullscreen></iframe>
-          <p>A fast-paced 48-hour game jam challenge where I collaborated with other developers to create an innovative game under tight time constraints.</p>
+          <p>A fast-paced 48-hour game hosted by Brackeys! a legend in the game dev community.</p>
         </div>
         <div class="project-sidebar">
           <div class="card highlight">
             <h4>What I Learned</h4>
             <ul>
-              <li>Rapid ideation and prototyping in extreme time pressure.</li>
-              <li>Effective team communication and delegation.</li>
+              <li>First time rapid prototyping in extreme time pressure.</li>
+              <li>Fast art work flow using procreate.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Working with passionate developers from the Brackeys community was inspiring and pushed my creative boundaries.</p>
+            <p>You can always find game jams to compete in that are not just in your local community!</p>
           </div>
           
           <a href="https://longy-dev.itch.io/shooting-stars" target="_blank" class="btn itch-btn">
@@ -490,20 +478,17 @@
       <div class="project-content">
         <div class="project-media">
           <iframe class="youtube-video" src="https://www.youtube.com/embed/srArk0R27VU" frameborder="0" allowfullscreen></iframe>
-          <p>I explored shaders, lighting, and procedural generation to create visually interesting effects for games.</p>
+          <p>I explored shaders and different rendering techniques such as ray tracing and path tracing. To learn more about how game engines render images and objects.</p>
         </div>
         <div class="project-sidebar">
           <div class="card highlight">
             <h4>What I Learned</h4>
             <ul>
-              <li>Shader programming and lighting techniques.</li>
-              <li>Procedural generation for dynamic content.</li>
+              <li>What rendering techniques are available and how they impact visuals.</li>
+              <li>More practice with C++ and graphics programming.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <ul>
-              <li>Balancing visuals and performance is key.</li>
-              <li>Combining techniques creates immersive environments.</li>
-            </ul>
+            <p>Balancing visuals and performance is key. Understanding the underlying mechanics of rendering helps me make informed decisions in my game projects.</p>
           </div>
         </div>
       </div>
@@ -527,10 +512,7 @@
               <li>Building a game loop and core engine systems from scratch.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <ul>
-              <li>Understanding low-level mechanics strengthens overall development skills.</li>
-              <li>C++ allows full control but requires discipline and planning.</li>
-            </ul>
+            <p>Understanding low-level mechanics strengthens overall development skills. C++ allows full control but requires discipline and planning.</p>
           </div>
         </div>
       </div>
@@ -544,14 +526,12 @@
   <section id="youtube">
     <h2>YouTube</h2>
     
-    <div class="card">
+    <div style="text-align: center; padding-bottom: 2rem; margin-bottom: 3rem;">
       <p>YouTube is a great way to see who I am as a person and visually explore what I've created. I post a mix of game development tutorials, project development logs and topic videos.</p>
-    </div>
 
-    <div class="card">
       <p>YouTube is something I'm very passionate about and I love documenting my journey through game development!</p>
     </div>
-
+ <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     <!-- Featured YouTube Videos -->
     <div class="youtube-featured">
       <!-- AI Sheep Dog - Video Left -->
@@ -597,7 +577,7 @@
   <section id="work">
     <h2>Work Experience</h2>
 
-    <div class="card">
+    <div style="text-align: center; padding-bottom: 2rem; margin-bottom: 3rem;">
       <p>This section covers all relevant game development work experience I've had so far.</p>
     </div>
 
@@ -609,10 +589,10 @@
       <div class="project-content">
         <div class="project-media">
           <div class="gallery" style="margin-bottom: 1.5rem;">
-            <div class="gallery-item"><img src="Images/bom1.jpg" alt="BOM Work 1"></div>
-            <div class="gallery-item"><img src="Images/bom2.jpg" alt="BOM Work 2"></div>
-            <div class="gallery-item"><img src="Images/bom3.jpg" alt="BOM Work 3"></div>
-            <div class="gallery-item"><img src="Images/bom4.jpg" alt="BOM Work 4"></div>
+            <div class="gallery-item"><img src="NewImages/BOM/BOM1 bootcamps.jpeg" alt="BOM Work 1"></div>
+            <div class="gallery-item"><img src="NewImages/BOM/BOM 3d scaning.jpeg" alt="BOM Work 2"></div>
+            <div class="gallery-item"><img src="NewImages/BOM/BOM-Logo-2023.png" alt="BOM Work 3"></div>
+            <div class="gallery-item"><img src="NewImages/BOM/BOMFORHIRE_v2_Page_06_Image_0001.jpg" alt="BOM Work 4"></div>
           </div>
           <p>I worked on VFX, VR projects, AR projects, Unity courseware projects, and team bootcamps. It was a chance to combine technical and creative work in a professional environment.</p>
         </div>
@@ -625,11 +605,7 @@
               <li>Improved Unity workflow under real project deadlines.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <ul>
-              <li>Collaboration and community is the key to growth, not only as a person but as a developer.</li>
-              <li>Improved communication skills and teaching skills.</li>
-              <li>Professional projects prepared me for freelance and studio work, gaining an insight into finances and studio workflow.</li>
-            </ul>
+            <p>Collaboration and community is the key to growth, not only as a person but as a developer. I improved communication and teaching skills. Professional projects prepared me for freelance and studio work, gaining an insight into finances and studio workflow.</p>
           </div>
         </div>
       </div>
@@ -640,49 +616,47 @@
             <h4 style="color: var(--accent);">Heartbond VR Project</h4>
             <p>This was a very interesting and unique project, I worked with my first client to create a VR anxiety relaxation game where there would be a murmuration VFX display that would react and change based on your heart rate and heart activities. I worked with someone from the company HeartMath who provided the Inner Balance Coherence Plus to provide reading I could take and use for the VFX. Unfortunately this project folded quite early on, but I was able to use some of the cool take and help bring the early stages of this idea to life.</p>
           </div>
-          <img src="Images/bom1.jpg" alt="Heartbond VR" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+            <source src="NewVideos/HEartArtvideo.mp4" type="video/mp4">
+          </video>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <img src="Images/bom2.jpg" alt="AR Project" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
-          <div>
-            <h4 style="color: var(--accent);">AR Project Work</h4>
-            <p>This was my first time working and creating an AR app. It was great to look into a new area, and will be something I'll be using in my future games.</p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;"><source src="NewVideos/BAths.mp4" type="video/mp4"></video>
           <div>
             <h4 style="color: var(--accent);">Baths Workshop Event - 3D Scanning and Printing</h4>
-            <p>This event took place inside a swimming pool! an abandoned swimming baths turned creative space. We explored the world of 3D scanning and printing. I helped the BOM CTO present this technology to students!</p>
+            <p>This event took place inside a swimming pool! An abandoned swimming baths turned creative space. We explored the world of 3D scanning and printing. I helped the BOM CTO present this technology to students!</p>
           </div>
-          <img src="Images/bom3.jpg" alt="Baths Workshop" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
           <div>
-            <iframe class="youtube-video" src="https://www.youtube.com/embed/6GskK7eLHlw" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div>
             <h4 style="color: var(--accent);">VFX Showcase</h4>
             <p>I worked on VFX within Unity. It was my main focus while on this placement. I was given access to lots of learning material to go through and learn all aspects on VFX. It was a massive step up from the basic Unity particle system, it really opened my eyes to the possibilities of in game effects.</p>
           </div>
+          <div>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/6GskK7eLHlw" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+            <source src="NewVideos/Video Project 8.mp4" type="video/mp4">
+          </video>
           <div>
             <h4 style="color: var(--accent);">Unity Courseware Work</h4>
-            <p>I worked through some Unity Associate courseware in order to take the test and earn the qualification. Although I completed and studied for the exam, my time at the placement came to an end and I could not get the funding to take the exam. However this I learnt some valuable things.</p>
+            <p>I worked through some Unity Associate courseware in order to take the test and earn the qualification. Although I completed and studied for the exam, my time at the placement came to an end and I could not get the funding to take the exam. However, this really helped me learn some valuable things.</p>
           </div>
-          <img src="Images/bom1.jpg" alt="Unity Courseware" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <img src="Images/bom4.jpg" alt="BootCamps" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
           <div>
             <h4 style="color: var(--accent);">Unreal Engine BootCamps</h4>
             <p>At these bootcamps I got to help teach others Unreal Engine 5, and Blender to create 3D environments or games to then show to industry people at a locally hosted event. I got to attend these events, meet great people and see people grow on their journey!</p>
           </div>
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+            <source src="NewVideos/WhatsApp Video 2026-01-09 at 3.11.38 PM.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -694,9 +668,7 @@
       <h3>VR Hospital Microplacement - 2024</h3>
       <div class="project-content reverse">
         <div class="project-media">
-          <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; min-height: 300px;">
-            <p style="text-align: center; color: var(--text-muted);">Summer internship project</p>
-          </div>
+          <img src="Images/UniWork/VR Ward/Untitled design (4).png" alt="VR Hospital Microplacement" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
           <p>Before my Final year project at Uni, I spent the previous summer working with the Uni to build, fix and expand upon an existing VR project. It was a project that I would later change and take forward for my Final Year Project.</p>
         </div>
         <div class="project-sidebar">
@@ -744,9 +716,9 @@
       <h3>Freelance Game Developer - Current</h3>
       <div class="project-content reverse">
         <div class="project-media">
-          <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; min-height: 300px;">
-            <p style="text-align: center; color: var(--text-muted);">Freelance Game Development Project</p>
-          </div>
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+            <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
+          </video>
           <p>Working on a freelance game project. Current Job. Progress update soon to come!</p>
         </div>
         <div class="project-sidebar">
@@ -768,9 +740,7 @@
   <section id="events">
     <h2>Awards and Events</h2>
 
-    <div class="card">
-      <p>A collection of awards, recognitions, and notable events that have been significant milestones in my game development journey.</p>
-    </div>
+    <p style="text-align: center;">A collection of awards, recognitions, and notable events that have been significant milestones in my game development journey.</p>
 
     <!-- GRADUATION -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
@@ -780,9 +750,10 @@
       <div class="project-content">
         <div class="project-media">
           <div class="gallery">
-            <div class="gallery-item"><img src="Images/graduation1.jpg" alt="Graduation"></div>
-            <div class="gallery-item"><img src="Images/graduation2.jpg" alt="Graduation"></div>
-            <div class="gallery-item"><img src="Images/graduation3.jpg" alt="Graduation"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/Grad.png" alt="Graduation"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/Grad2.jpeg" alt="Graduation"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/Grad3.jpeg" alt="Graduation"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/Grad4.jpeg" alt="Graduation"></div>
           </div>
           <p>Celebrating the completion of my degree in Game Development at Birmingham City University. A significant milestone marking the end of an incredible educational journey and the beginning of my professional career.</p>
         </div>
@@ -809,18 +780,17 @@
       <div class="project-content reverse">
         <div class="project-media">
           <div class="gallery">
-            <div class="gallery-item"><img src="Images/award1.jpg" alt="Award"></div>
-            <div class="gallery-item"><img src="Images/award2.jpg" alt="Award"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/BCU Awards.jpeg" alt="Award"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/BCU Awards 2.jpeg" alt="Award"></div>
           </div>
-          <p>Recognition and awards received from Birmingham City University for academic achievement and contributions to the game development program.</p>
+          <p>Recognition and awards received from Birmingham City University for business and entrepreneurial achievements in the game development.</p>
         </div>
         <div class="project-sidebar">
           <div class="card highlight">
             <h4>Recognition Received</h4>
             <ul>
-              <li>Acknowledged for exceptional work in game development modules.</li>
+              <li>Acknowledged for going outside the box with creating a YouTube channel.</li>
               <li>Recognized contributions to university projects and community.</li>
-              <li>Exemplary performance in technical and creative assessments.</li>
             </ul>
             <h4 style="margin-top: 1rem;">Key Takeaway</h4>
             <p>These awards validate the hard work and dedication invested in my studies and projects throughout my time at BCU.</p>
@@ -837,7 +807,8 @@
       <div class="project-content">
         <div class="project-media">
           <div class="gallery">
-            <div class="gallery-item"><img src="Images/hatchery1.jpg" alt="Hatchery Award"></div>
+            <div class="gallery-item"><img src="Images/SlideShow/Hatchery.png" alt="Hatchery Award"></div>
+             <div class="gallery-item"><img src="Images/SlideShow/Hathcery award.jpeg" alt="Hatchery Award"></div>
           </div>
           <p>Selected for and completed the Hatchery Program, an intensive initiative for game developers showing exceptional potential and promising work in the industry.</p>
         </div>
@@ -863,10 +834,9 @@
       <h3>BCU Showcase & Games Academy Opening!</h3>
       <div class="project-content reverse">
         <div class="project-media">
-          <div class="gallery">
-            <div class="gallery-item"><img src="Images/showcase1.jpg" alt="Showcase Event"></div>
-            <div class="gallery-item"><img src="Images/showcase2.jpg" alt="Showcase Event"></div>
-          </div>
+          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+            <source src="NewVideos/GamesAc.mp4" type="video/mp4">
+          </video>
           <p>Featured in the prestigious BCU Showcase event celebrating the launch of the new Games Academy. This was an opportunity to present my work to industry professionals, academics, and fellow students.</p>
         </div>
         <div class="project-sidebar">
@@ -884,34 +854,7 @@
       </div>
     </div>
 
-    <!-- GDG PLAYGROUND GAMES EVENT -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>GDG Playground Games Event!</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <div class="gallery">
-            <div class="gallery-item"><img src="Images/gdc1.jpg" alt="GDC Event"></div>
-            <div class="gallery-item"><img src="Images/gdc2.jpg" alt="GDC Event"></div>
-          </div>
-          <p>Attended and participated in the GDG (Google Developers Group) Playground Games Event, an exciting gathering of game developers showcasing innovative projects and networking with industry leaders.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>Event Highlights</h4>
-            <ul>
-              <li>Exhibited my game projects to a diverse audience of developers.</li>
-              <li>Engaged with leading figures in the game development community.</li>
-              <li>Explored emerging trends and technologies in gaming.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Community events like this are crucial for staying connected with the industry and continuously learning from peers and experts.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+   </section>
 
   <!-- Footer -->
   <footer>
@@ -924,5 +867,26 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Show/hide sidebar on scroll
+    const sidebar = document.getElementById('mainSidebar');
+    let hasScrolled = false;
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100 && !hasScrolled) {
+        hasScrolled = true;
+        sidebar.style.display = 'flex';
+        sidebar.style.opacity = '1';
+        sidebar.style.pointerEvents = 'auto';
+      } else if (window.scrollY <= 100 && hasScrolled) {
+        hasScrolled = false;
+        sidebar.style.opacity = '0';
+        sidebar.style.pointerEvents = 'none';
+        setTimeout(() => {
+          sidebar.style.display = 'none';
+        }, 300);
+      }
+    });
+  </script>
 </body>
 </html>

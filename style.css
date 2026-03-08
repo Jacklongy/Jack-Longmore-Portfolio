@@ -616,7 +616,8 @@ section h2::after {
 ========================================================= */
 #games .card.highlight,
 #uni-projects .card.highlight,
-#work .card.highlight {
+#work .card.highlight,
+#events .card.highlight {
   background: linear-gradient(135deg, rgba(124, 166, 126, 0.1) 0%, rgba(124, 166, 126, 0.05) 100%);
   border: 2px solid var(--accent);
   border-radius: 12px;
@@ -629,7 +630,8 @@ section h2::after {
 
 #games .card.highlight h4,
 #uni-projects .card.highlight h4,
-#work .card.highlight h4 {
+#work .card.highlight h4,
+#events .card.highlight h4 {
   color: var(--accent);
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -640,7 +642,8 @@ section h2::after {
 
 #games .card.highlight p,
 #uni-projects .card.highlight p,
-#work .card.highlight p {
+#work .card.highlight p,
+#events .card.highlight p {
   color: var(--text);
   line-height: 1.6;
   margin: 0.8rem 0;
@@ -648,7 +651,8 @@ section h2::after {
 
 #games .card.highlight ul,
 #uni-projects .card.highlight ul,
-#work .card.highlight ul {
+#work .card.highlight ul,
+#events .card.highlight ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -656,7 +660,8 @@ section h2::after {
 
 #games .card.highlight li,
 #uni-projects .card.highlight li,
-#work .card.highlight li {
+#work .card.highlight li,
+#events .card.highlight li {
   color: var(--text);
   margin: 0.8rem 0;
   padding-left: 1.5rem;
@@ -666,7 +671,8 @@ section h2::after {
 
 #games .card.highlight li::before,
 #uni-projects .card.highlight li::before,
-#work .card.highlight li::before {
+#work .card.highlight li::before,
+#events .card.highlight li::before {
   content: '✓';
   position: absolute;
   left: 0;

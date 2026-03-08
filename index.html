@@ -18,7 +18,7 @@
   </div>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar" style="display: none; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" id="mainSidebar">
     <a href="#about"><span>About</span></a>
     <a href="#skills"><span>Skills</span></a>
     <a href="#slideshow"><span>Journey</span></a>
@@ -45,13 +45,19 @@
   </nav>
 
   <!-- Banner -->
-  <header class="banner" style="background-image: url('Images/home.JPG');">
-    <div class="banner-overlay"></div>
-    <div class="banner-content">
-      <h1></h1>
-      <p></p>
+  <header class="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 3rem 4rem; min-height: 100vh; overflow: hidden; position: relative;">
+    <!-- Right Background Image Side (Full Coverage) -->
+    <div style="position: absolute; inset: 0; background-image: url('Images/IMG_0144.JPG'); background-size: cover; background-position: right top; z-index: 1;"></div>
+    
+    <!-- Fade Overlay -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.98) 20%, rgba(26, 26, 26, 0.85) 40%, rgba(26, 26, 26, 0.5) 65%, rgba(26, 26, 26, 0.1) 85%, transparent 100%); z-index: 2;"></div>
+    
+    <!-- Left Content Side -->
+    <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
+      <h1 style="font-size: 3.5rem; margin: 0 0 1rem 0; color: #ffffff; font-weight: 700;">Jack Longmore</h1>
+      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 2.5rem 0; font-weight: 600;">Game Developer & Creative</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn" style="cursor: pointer; z-index: 10; width: fit-content;">Contact Me</button>
     </div>
-    <div class="scroll-indicator"></div>
   </header>
 
   <!-- About Section -->
@@ -241,5 +247,26 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    // Show/hide sidebar on scroll
+    const sidebar = document.getElementById('mainSidebar');
+    let hasScrolled = false;
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100 && !hasScrolled) {
+        hasScrolled = true;
+        sidebar.style.display = 'flex';
+        sidebar.style.opacity = '1';
+        sidebar.style.pointerEvents = 'auto';
+      } else if (window.scrollY <= 100 && hasScrolled) {
+        hasScrolled = false;
+        sidebar.style.opacity = '0';
+        sidebar.style.pointerEvents = 'none';
+        setTimeout(() => {
+          sidebar.style.display = 'none';
+        }, 300);
+      }
+    });
+  </script>
 </body>
 </html>
