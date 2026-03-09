@@ -5,98 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Freelance Inquiries - Jack Longmore</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar" style="display: none; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" id="mainSidebar">
     <a href="#review"><span>Reviews</span></a>
-    <a href="#example"><span>Example Work</span></a>
-    <a href="#services"><span>What I Provide</span></a>
+    <a href="#services"><span>How We Work</span></a>
     <a href="#pricing"><span>Pricing</span></a>
     <a href="#contact"><span>Contact</span></a>
   </div>
 
   <!-- Top navigation -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="freelance.html">Freelance</a></li>
-    </ul>
+    <div class="nav-left">
+      <img id="logo" src="NewImages/channels4_profile.jpg" alt="Logo" class="nav-logo">
+      <span>Longy Dev</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="freelance.html" class="current">Freelance</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <h1>Do you have a game idea? Let's make it happen.</h1>
-    <div class="card">
-      <p>I help bring your game ideas to life, from concept to playable prototype. Whether it's mobile, VR, or desktop, I guide your project through design, programming, and development.</p>
-    </div>
+  <section id="hero" style="text-align: center; padding: 4rem 2rem; margin-top: 80px;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #ffffff;">Do you have a game idea?</h1>
+    <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; line-height: 1.8;">I help bring your game ideas to life, from concept to playable prototype. Whether it's mobile, VR, or desktop, I guide your project through design, programming, and development.</p>
   </section>
 
   <!-- Reviews Section -->
-  <section id="review">
-    <h2>Reviews - Alex, Taran, Nate, Richard, Andrew</h2>
-    <div class="card">
-      <p>"Jack helped us turn our concept into a fully functional demo. Professional, fast, and creative!" – Client A</p>
-    </div>
-    <div class="card">
-      <p>"Working with Jack was seamless. He understood our vision and brought it to life." – Client B</p>
+  <section id="review" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Client Reviews</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+      <div class="card highlight">
+        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">"As both an intern and a final-year project student, Jack worked closely with me and NHS clinicians to expand our provision of medical training simulations for the NHS and regional medical schools. He successfully rose to the technical challenge of developing a centralised, web-based virtual reality hospital ward, while also gaining a strong understanding of the underlying clinical concepts and translating them into effective computer-based solutions.</p>
+        
+        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">Jack engaged independently with NHS doctors, demonstrating confidence, professionalism, and conscientiousness throughout. This work led to further enhancements of the virtual ward, during which Jack took a leadership role, guiding other computer science students and collaborating with additional NHS clinicians. In doing so, he demonstrated a strong ability to adapt and thrive within interdisciplinary team environments.</p>
+        
+        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">The virtual ward is now being evaluated for use by clinical teaching teams both in regional NHS training centres and local medical schools."</p>
+        
+        <p style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">– Dr Andrew Wilson</p>
+        <p style="color: var(--accent); font-size: 0.95rem;">SFHEA, MIEE, MBCS</p>
+      </div>
+
+      <div class="card highlight">
+        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">"I'm currently working on a game with Jack and it's going great. He's a really good communicator and great at keeping me up to date with progress, and very flexible (I decided to change the entire game right after we started!). It's still early days but he's building the game in Unity and seems to know what he's doing. Would recommend."</p>
+        
+        <p style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">– Alex Skerrat</p>
+        <p style="color: var(--accent); font-size: 0.95rem;">Skerrat Studios</p>
+      </div>
     </div>
   </section>
 
-  <!-- Example Work Section -->
-  <section id="example">
-    <h2>Example Work</h2>
-    <div class="card">
-      <p>Project 1: Mobile Puzzle Game – Unity & C#</p>
-    </div>
-    <div class="card">
-      <p>Project 2: VR Medical Simulation – Interactive VR experience</p>
-    </div>
-    <div class="card">
-      <p>Project 3: Multiplayer Mini Game – Level & gameplay design</p>
-    </div>
-  </section>
+
 
   <!-- Services Section -->
-  <section id="services">
-    <h2>What I Can Provide</h2>
-    <ul>
-      <li class="card"><strong>Game Design & Concept</strong> – From idea to full concept document</li>
-      <li class="card"><strong>Programming & Prototyping</strong> – Unity, C#, rapid prototypes</li>
-      <li class="card"><strong>Level & Gameplay Design</strong> – Fun, engaging levels</li>
-      <li class="card"><strong>VR & AR Development</strong> – Immersive interactive experiences</li>
-    </ul>
+  <section id="services" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">How We Work Together</h2>
+    <div class="card highlight" style="max-width: 800px; margin: 0 auto;">
+      <h4 style="color: var(--accent); margin-bottom: 1.5rem;">Bring Your Game Idea to Life</h4>
+      <p style="margin-bottom: 1.5rem;">We start by discussing your game idea in detail. I'll listen to your vision, understand your goals, and ask questions to clarify what you're trying to achieve.</p>
+      <p style="margin-bottom: 1.5rem;">Once we understand the concept, we'll break it down into a nicely scoped project. This means defining what features are essential for the first version, what can wait for later updates, and what's realistic given your budget and timeline.</p>
+      <p style="margin-bottom: 1.5rem;">Together, we'll decide on a basic timeframe for your project. This is flexible and will depend on the scope and the contract we agree on. Whether you need a quick prototype or a fully polished game, we'll work out what works best for you.</p>
+      <p><strong style="color: var(--accent);">Ready to start?</strong> Get in touch below and let's turn your game idea into reality.</p>
+    </div>
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="card">
-      <p><strong>Free Demo:</strong> Free Demo of your game idea to showcase potential</p>
-      <p><strong>Hourly Rate:</strong> £35/hr</p>
-      <p><strong>Small Projects:</strong> Fixed price available</p>
-      <p><strong>Large Projects:</strong> Contact for quote</p>
+  <section id="pricing" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Pricing</h2>
+    <div class="card highlight" style="max-width: 600px; margin: 0 auto;">
+      <div style="display: grid; gap: 1rem;">
+        <div>
+          <h4 style="color: var(--accent);">Free Demo</h4>
+          <p>Free demonstration of your game idea to showcase potential and feasibility.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent);">Hourly Rate</h4>
+          <p><strong>£35/hour</strong> – Flexible for ongoing projects and consultations.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent);">Project Packages</h4>
+          <p>Fixed pricing available for small projects. Contact for custom quotes on larger projects.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Form Section -->
-  <section id="contact">
-    <h2>Contact / Submit Your Game Idea</h2>
-    <div class="card form-card">
+  <section id="contact" style="padding: 4rem 2rem; max-width: 700px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Let's Work Together</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Submit your game idea and I'll get back to you within 48 hours.</p>
+    <div class="card highlight" style="padding: 2rem;">
       <form action="mailto:Jacklongmore@outlook.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <div style="margin-bottom: 1.5rem;">
+          <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem;" />
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        <div style="margin-bottom: 1.5rem;">
+          <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem;" />
+        </div>
 
-        <label for="gameidea">Your Game Idea:</label>
-        <textarea id="gameidea" name="gameidea" rows="6" placeholder="Describe your idea..." required></textarea>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="gameidea" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Your Game Idea</label>
+          <textarea id="gameidea" name="gameidea" rows="6" placeholder="Describe your game idea, genre, target audience, and any specific features you're interested in..." required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+        </div>
 
-        <button type="submit">Send Idea</button>
+        <button type="submit" class="btn itch-btn" style="width: 100%; padding: 1rem; font-size: 1rem; cursor: pointer;">Send My Idea</button>
       </form>
     </div>
   </section>
@@ -106,5 +131,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Show/hide sidebar on scroll
+    const sidebar = document.getElementById('mainSidebar');
+    let hasScrolled = false;
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100 && !hasScrolled) {
+        hasScrolled = true;
+        sidebar.style.display = 'flex';
+        sidebar.style.opacity = '1';
+        sidebar.style.pointerEvents = 'auto';
+      } else if (window.scrollY <= 100 && hasScrolled) {
+        hasScrolled = false;
+        sidebar.style.opacity = '0';
+        sidebar.style.pointerEvents = 'none';
+        setTimeout(() => {
+          sidebar.style.display = 'none';
+        }, 300);
+      }
+    });
+  </script>
 </body>
 </html>
