@@ -1992,7 +1992,16 @@ footer p {
 
   /* Banner background image */
   .banner-bg {
-    display: none !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.8;
+  }
+
+  /* Medical Sim section images on mobile */
+  img[src*="FinalDemoMenigitisProject"],
+  img[src*="com.oculus.browser"],
+  img[src*="Ai_pVL"] {
+    height: 200px !important;
   }
 
   /* Video containers */
