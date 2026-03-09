@@ -1990,6 +1990,11 @@ footer p {
     font-size: 0.95rem !important;
   }
 
+  /* Banner background image */
+  .banner-bg {
+    display: none !important;
+  }
+
   /* Video containers */
   #games .youtube-video,
   #youtube .youtube-video,
