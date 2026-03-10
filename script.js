@@ -474,5 +474,29 @@ document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
   document.querySelector('section')?.scrollIntoView({ behavior: 'smooth' });
 });
 
+/* ===== Smart Video Autoplay on Scroll ===== */
+(() => {
+  const videos = document.querySelectorAll('video[autoplay]');
+  if (!videos.length) return;
+
+  const videoAutoplayObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      
+      if (entry.isIntersecting) {
+        // Video is visible - play it
+        video.play().catch(err => {
+          // Autoplay may be blocked, that's ok
+          console.log('Video autoplay prevented:', err);
+        });
+      } else {
+        // Video is not visible - pause it
+        video.pause();
+      }
+    });
+  }, { threshold: 0.25 }); // Trigger when 25% of video is visible
+
+  videos.forEach(video => videoAutoplayObserver.observe(video));
+})();
 
 
