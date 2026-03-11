@@ -22,7 +22,6 @@
   <!-- Sidebar -->
   <div class="sidebar" style="display: none; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" id="mainSidebar">
     <a href="#about"><span>About</span></a>
-    <a href="#skills"><span>Skills</span></a>
     <a href="#contact"><span>Contact</span></a>
   </div>
 
@@ -35,7 +34,7 @@
     <div class="nav-right">
       <a href="index.html" class="current">Home</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="freelance.html">Freelance</a>
+      <a href="freelance.html">Services</a>
       <div class="socials">
         <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -55,140 +54,171 @@
     <!-- Left Content Side -->
     <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
       <h1 style="font-size: 3.5rem; margin: 0 0 1rem 0; color: #ffffff; font-weight: 700;">Jack Longmore</h1>
-      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 2.5rem 0; font-weight: 600;">Game Developer</p>
-      <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn" style="cursor: pointer; z-index: 10; width: fit-content;">Contact Me</button>
+      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 0.5rem 0; font-weight: 600;">Game Developer</p>
+      <p style="font-size: 1.1rem; color: #ffffff; margin: 0 0 2.5rem 0;">Turning ideas into playable interactive experiences.</p>
+      <div style="display: flex; gap: 1rem; z-index: 10;">
+        <a href="freelance.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content;">Work With Me</a>
+        <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='rgba(124, 166, 126, 0.1)'" onmouseout="this.style.background='transparent'">Portfolio</a>
+      </div>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-      
+  <!-- Featured Projects Section -->
+  <section style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+    <h2>Featured</h2>
+    
     <!-- Divider -->
-    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0;"></div>
+    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
-    <!-- About Text -->
-    <div style="padding: 3rem 2rem; margin-bottom: 3rem;">
-      <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 2rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
-      
-      <p style="margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm a game developer with a passion for creating engaging and fun experiences. I love the challenge of bringing ideas to life through code, design, and creativity. Whether it's mechanics, level design, or technical implementation, I'm driven by the craft of game development and the joy of seeing players engage with what I have built.</p>
-      
-      <p style="margin: 1.5rem 0 0 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm always learning, experimenting, and pushing myself to create better games.</p>
+    <div class="featured-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin: 3rem 0;">
+      <!-- Treat Time -->
+      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+          <source src="Videos/FeaturedVideos/Featured treat.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">
+          <h3 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;">Treat Time!</h3>
+          <p style="margin: 0; color: var(--accent); font-size: 0.9rem;">Mobile Game | 2025</p>
+        </div>
+      </a>
+
+      <!-- Freelance Game Project -->
+      <a href="portfolio.html#work" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+          <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">
+          <h3 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;">Freelance Game Project</h3>
+          <p style="margin: 0; color: var(--accent); font-size: 0.9rem;">Current Work | 2025-2026</p>
+        </div>
+      </a>
+
+      <!-- VR Ward Project -->
+      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+          <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
+        </video>
+        <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">
+          <h3 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;">VR Ward Project</h3>
+          <p style="margin: 0; color: var(--accent); font-size: 0.9rem;">VR Simulation | Final Year</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- View Portfolio & Work With Me Buttons -->
+    <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="portfolio.html" class="cta-btn" style="display: inline-block; text-decoration: none;">View Full Portfolio</a>
+      <a href="freelance.html" class="cta-btn" style="display: inline-block; text-decoration: none; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='rgba(124, 166, 126, 0.1)'" onmouseout="this.style.background='transparent'">Work With Me</a>
     </div>
 
     <!-- Divider -->
-    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0;"></div>
+    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
     <!-- Stats Blocks -->
-    <div class="stats">
+    <div class="stats" style="margin-top: 4rem;">
       <div class="stat-card">
-        <span class="number">5+</span>
-        <span class="label">Years Experience</span>
+        <span class="number">5</span>
+        <span class="label">Years Game Development Studies</span>
       </div>
       <div class="stat-card">
-        <span class="number">20+</span>
+        <span class="number">2:1</span>
+        <span class="label">Degree Computer Game Technology</span>
+      </div>
+       <div class="stat-card">
+        <span class="number">10+</span>
         <span class="label">Projects Completed</span>
       </div>
-      <div class="stat-card">
-        <span class="number">10+</span>
-        <span class="label">Game Jams</span>
+    </div>
+  </section>
+
+  
+
+  <!-- About Section -->
+  <section id="about">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; position: relative;">
+      <!-- Left Column -->
+      <div>
+        <h2>About Me</h2>
+        <!-- Divider -->
+        <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+        <div style="padding: 3rem 2rem; margin-bottom: 3rem;">
+          <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 2rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
+          
+          <p style="margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm a <strong style="color: var(--accent);">Game Developer, Content Creator, and Interactive Experience Designer</strong> with a passion for creating engaging and fun experiences. I love the challenge of bringing ideas to life through <strong style="color: var(--accent);">code, design, and creativity</strong>. Whether it's <strong style="color: var(--accent);">mechanics, level design, or technical implementation</strong>, I'm driven by the craft of game development!</p>
+          
+          <p style="margin: 1.5rem 0 0 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm always searching for <strong style="color: var(--accent);">opportunities and collaborations</strong> to push the boundaries of <strong style="color: var(--accent);">interactive experiences</strong>. In the <strong style="color: var(--accent);">Educational</strong>, <strong style="color: var(--accent);">medical</strong>, and <strong style="color: var(--accent);">entertainment</strong> sectors.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="number">1st</span>
-        <span class="label">Class Degree</span>
+
+      <!-- Vertical Divider -->
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent, rgba(124, 166, 126, 0.3) 10%, rgba(124, 166, 126, 0.3) 90%, transparent);"></div>
+
+      <!-- Right Column -->
+      <div>
+        <h2>Who I Work With</h2>
+        
+        <!-- Divider -->
+        <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+
+        <!-- Who I Work With Content -->
+        <div style="padding: 3rem 2rem; margin-bottom: 3rem; min-height: 600px;">
+          <ul style="margin: 0; padding-left: 1.5rem; list-style: none; font-size: 1.1rem; line-height: 1.8; color: #ffffff; display: flex; flex-direction: column; justify-content: space-evenly; height: 100%; gap: 3rem;">
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Individuals with game ideas
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Indie teams needing development support
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Startups building interactive products
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Schools and educational projects
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Businesses exploring gamification
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">•</span>
+              Larger studios looking for Support
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <!-- Divider -->
-    <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0;"></div>
 
     <!-- CV Download -->
     <div style="padding: 2rem; text-align: center;">
-      <a href="Jack Longmore CV PDF.pdf" class="portfolio-link" download>Download My CV</a>
+      <a href="Jack Longmore CV PDF.pdf" class="cta-btn" download style="display: inline-block; text-decoration: none;">Download My CV</a>
     </div>
   </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Main Skills</h2>
-    
-    <div class="skills-simple">
-      <!-- Game Development & Immersive Tech -->
-      <div class="skill-section">
-        <h3><i class="fas fa-gamepad"></i> Game Development & Immersive Tech</h3>
-        <div class="skill-cards-grid">
-          <div class="skill-card">
-            <h4>Unity & C#</h4>
-            <p>Building polished games with clean architecture and gameplay systems.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Game Design & VR/AR</h4>
-            <p>Designing engaging mechanics and immersive experiences.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Visual Effects & Audio</h4>
-            <p>Creating impactful VFX, audio design, and 2D game art.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Design -->
-      <div class="skill-section">
-        <h3><i class="fas fa-map"></i> Design</h3>
-        <div class="skill-cards-grid">
-          <div class="skill-card">
-            <h4>Player Psychology</h4>
-            <p>Understanding player behavior to create engaging, rewarding experiences.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Level Design</h4>
-            <p>Designing engaging levels that create immersive, compelling gameplay experiences.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Mobile Optimization</h4>
-            <p>Designing intuitive, engaging games for mobile players.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Management & Leadership -->
-      <div class="skill-section">
-        <h3><i class="fas fa-briefcase"></i> Project Management & Leadership</h3>
-        <div class="skill-cards-grid">
-          <div class="skill-card">
-            <h4>Project Management</h4>
-            <p>Leading projects from concept through delivery with quality focus.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Team Coordination</h4>
-            <p>Managing teams, fostering collaboration, and clear communication.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Technical Leadership</h4>
-            <p>Guiding technical decisions and mentoring team members.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-footer">
-      <a href="portfolio.html" class="portfolio-link">View Full Portfolio</a>
-    </div>
-  </section>
-
- 
-  <!-- Section Separator -->
-  <div class="section-separator"></div>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
     <div class="contact-wrapper">
-      <p>Have a project in mind or just want to chat? Feel free to reach out!</p>
+      <h2>Contact</h2>
+      <h3 style="text-align: center; color: var(--accent); margin-bottom: 2rem; font-size: 1.5rem;">How Can I Help?</h3>
+      <p style="text-align: center; margin-bottom: 2rem;">We can book a meeting to discuss your project or inquiry! I'll get back to you within 48 hours.</p>
       <form class="contact-form" action="https://formspree.io/f/xaqpeebo" method="POST">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="project-type">Project Type</label>
+          <select id="project-type" name="project-type" required style="width: 100%; padding: 0.6rem; border-radius: 4px; border: 1px solid #555; font-family: inherit; font-size: 1rem; background-color: #2a2a2a; color: #ffffff;">
+            <option value="">Select project type...</option>
+            <option value="Just an idea">Just an idea/ inquiry</option>
+            <option value="Job opportunity">Job opportunity</option>
+            <option value="Short term project">Short term project</option>
+            <option value="Long term project">Long term project</option>
+          </select>
         </div>
         
         <div class="form-group">
@@ -205,7 +235,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Jack Longmore</p>
+    <p>© 2026 Jack Longmore</p>
   </footer>
 
   <!-- Scripts -->

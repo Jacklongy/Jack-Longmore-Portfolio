@@ -7,15 +7,18 @@
   <link rel="icon" href="./NewImages/channels4_profile.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="./NewImages/channels4_profile.jpg">
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="contact.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
   <!-- Sidebar -->
   <div class="sidebar" style="display: none; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" id="mainSidebar">
-    <a href="#review"><span>Reviews</span></a>
-    <a href="#services"><span>How We Work</span></a>
-    <a href="#pricing"><span>Pricing</span></a>
+    <a href="#whoiwork"><span>Who I Work With</span></a>
+    <a href="#whatibuild"><span>What I Build</span></a>
+    <a href="#howwework"><span>How We Work</span></a>
+    <a href="#packages"><span>Packages</span></a>
+    <a href="#reviews"><span>Reviews</span></a>
     <a href="#contact"><span>Contact</span></a>
   </div>
 
@@ -28,7 +31,7 @@
     <div class="nav-right">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="freelance.html" class="current">Freelance</a>
+      <a href="freelance.html" class="current">Services</a>
       <div class="socials">
         <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.youtube.com/@LongyDev" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -38,98 +41,200 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" style="text-align: center; padding: 4rem 2rem; margin-top: 80px;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #ffffff;">Do you have a game idea?</h1>
-    <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; line-height: 1.8;">I help bring your game ideas to life, from concept to playable prototype. Whether it's mobile, VR, or desktop, I guide your project through design, programming, and development.</p>
+  <section id="hero" style="text-align: center; padding: 6rem 2rem; margin-top: 80px;">
+    <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #ffffff;">Freelance Game & Interactive Experience Development</h1>
+    <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8;">Helping creators, teams, and organisations turn ideas into playable games and interactive experiences.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn" style="cursor: pointer; width: fit-content; margin: 0 auto; display: block; margin-bottom: 1.5rem;">Book a Free Consultation</button>
+    <p style="font-size: 0.95rem; color: var(--text-muted);">Not sure where to start? Let's discuss your idea.</p>
   </section>
 
-  <!-- Reviews Section -->
-  <section id="review" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Client Reviews</h2>
-    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-      <div class="card highlight">
-        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">"As both an intern and a final-year project student, Jack worked closely with me and NHS clinicians to expand our provision of medical training simulations for the NHS and regional medical schools. He successfully rose to the technical challenge of developing a centralised, web-based virtual reality hospital ward, while also gaining a strong understanding of the underlying clinical concepts and translating them into effective computer-based solutions.</p>
-        
-        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">Jack engaged independently with NHS doctors, demonstrating confidence, professionalism, and conscientiousness throughout. This work led to further enhancements of the virtual ward, during which Jack took a leadership role, guiding other computer science students and collaborating with additional NHS clinicians. In doing so, he demonstrated a strong ability to adapt and thrive within interdisciplinary team environments.</p>
-        
-        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">The virtual ward is now being evaluated for use by clinical teaching teams both in regional NHS training centres and local medical schools."</p>
-        
-        <p style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">– Dr Andrew Wilson</p>
-        <p style="color: var(--accent); font-size: 0.95rem;">SFHEA, MIEE, MBCS</p>
-      </div>
+  <div style="max-width: 1000px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
-      <div class="card highlight">
-        <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">"I'm currently working on a game with Jack and it's going great. He's a really good communicator and great at keeping me up to date with progress, and very flexible (I decided to change the entire game right after we started!). It's still early days but he's building the game in Unity and seems to know what he's doing. Would recommend."</p>
-        
-        <p style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">– Alex Skerrat</p>
-        <p style="color: var(--accent); font-size: 0.95rem;">Skerrat Studios</p>
+  <!-- Who I Work With Section -->
+  <section id="whoiwork" style="padding: 4rem 2rem; max-width: 1000px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Who I Work With</h2>
+    <ul style="margin: 0 auto; padding-left: 0; list-style: none; font-size: 1.1rem; line-height: 1.8; color: #ffffff; display: flex; flex-direction: column; justify-content: space-evenly; max-width: 600px; gap: 1.5rem;">
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Individuals with game ideas
+      </li>
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Indie teams needing development support
+      </li>
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Startups building interactive products
+      </li>
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Schools and educational projects
+      </li>
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Businesses exploring gamification
+      </li>
+      <li style="text-align: center;">
+        <strong style="color: var(--accent);">✓</strong> Larger studios looking for Support
+      </li>
+    </ul>
+  </section>
+
+  <div style="max-width: 1000px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+
+  <!-- What I Can Build Section -->
+  <section id="whatibuild" style="padding: 4rem 2rem; max-width: 1000px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">What I Can Build</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
+      <div style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎮</div>
+        <h3 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Games</h3>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.95rem;">Full or partial development of interactive games.</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+        <h3 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Prototypes</h3>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.95rem;">Playable concepts to test mechanics or pitch ideas.</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+        <h3 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Interactive Experiences</h3>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.95rem;">Educational tools, simulations, and immersive digital projects.</p>
       </div>
     </div>
   </section>
 
+  <div style="max-width: 1000px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
-
-  <!-- Services Section -->
-  <section id="services" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+  <!-- How We Work Section -->
+  <section id="howwework" style="padding: 4rem 2rem; max-width: 1000px; margin: 0 auto;">
     <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">How We Work Together</h2>
-    <div class="card highlight" style="max-width: 800px; margin: 0 auto;">
-      <h4 style="color: var(--accent); margin-bottom: 1.5rem;">Bring Your Game Idea to Life</h4>
-      <p style="margin-bottom: 1.5rem;">We start by discussing your game idea in detail. I'll listen to your vision, understand your goals, and ask questions to clarify what you're trying to achieve.</p>
-      <p style="margin-bottom: 1.5rem;">Once we understand the concept, we'll break it down into a nicely scoped project. This means defining what features are essential for the first version, what can wait for later updates, and what's realistic given your budget and timeline.</p>
-      <p style="margin-bottom: 1.5rem;">Together, we'll decide on a basic timeframe for your project. This is flexible and will depend on the scope and the contract we agree on. Whether you need a quick prototype or a fully polished game, we'll work out what works best for you.</p>
-      <p><strong style="color: var(--accent);">Ready to start?</strong> Get in touch below and let's turn your game idea into reality.</p>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <section id="pricing" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Pricing</h2>
-    <div class="card highlight" style="max-width: 600px; margin: 0 auto;">
-      <div style="display: grid; gap: 1rem;">
-        <div>
-          <h4 style="color: var(--accent);">Free Demo</h4>
-          <p>Free demonstration of your game idea to showcase potential and feasibility.</p>
-        </div>
-        <div>
-          <h4 style="color: var(--accent);">Hourly Rate</h4>
-          <p><strong>£35/hour</strong> – Flexible for ongoing projects and consultations.</p>
-        </div>
-        <div>
-          <h4 style="color: var(--accent);">Project Packages</h4>
-          <p>Fixed pricing available for small projects. Contact for custom quotes on larger projects.</p>
-        </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2rem;">
+      <div style="text-align: center;">
+        <div style="width: 3.5rem; height: 3.5rem; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">1</div>
+        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 0.95rem;">Free Consultation</h4>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.9rem;">We discuss your idea and project goals.</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 3.5rem; height: 3.5rem; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">2</div>
+        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 0.95rem;">Choose a Package</h4>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.9rem;">I recommend the best development option for your scope.</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 3.5rem; height: 3.5rem; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">3</div>
+        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 0.95rem;">Development Begins</h4>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.9rem;">You receive builds and updates during development.</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 3.5rem; height: 3.5rem; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">4</div>
+        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 0.95rem;">Final Delivery</h4>
+        <p style="color: #ffffff; line-height: 1.6; font-size: 0.9rem;">Project delivered ready to release or expand.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact" style="padding: 4rem 2rem; max-width: 700px; margin: 0 auto;">
-    <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Let's Work Together</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Submit your game idea and I'll get back to you within 48 hours.</p>
-    <div class="card highlight" style="padding: 2rem;">
-      <form action="https://formspree.io/f/xaqpeebo" method="POST">
-        <div style="margin-bottom: 1.5rem;">
-          <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem;" />
+  <div style="max-width: 900px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+
+  <!-- Services & Packages Section -->
+  <section id="packages" style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2rem;">Packages</h2>
+    <p style="text-align: center; margin-bottom: 3rem; color: var(--text-muted); font-size: 0.95rem;">These are examples of different project types. During our consultation, we'll discuss your specific needs and create a custom package tailored to your project.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+      <!-- Package 1: Free Consultation (Blue) -->
+      <div class="card highlight" style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; padding: 2rem;">
+        <h3 style="color: #3b82f6; margin-bottom: 0.5rem; font-size: 1.3rem;">Free Idea Consultation</h3>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #ffffff;">20–30 minute video call to discuss your idea and project scope.</p>
+        <p style="margin-bottom: 0;"><strong style="color: #3b82f6;">Price:</strong> <span style="font-size: 1.1rem;">Free</span></p>
+      </div>
+
+      <!-- Package 2: Prototype (Yellow) -->
+      <div class="card highlight" style="background: rgba(234, 179, 8, 0.1); border-left: 4px solid #eab308; padding: 2rem;">
+        <h3 style="color: #eab308; margin-bottom: 0.5rem; font-size: 1.3rem;">Prototype Package</h3>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #ffffff;">Turn your idea into a playable concept.</p>
+        <p style="margin-bottom: 0;"><strong style="color: #eab308;">Price:</strong> <span style="font-size: 1.1rem;">Starting from £300</span></p>
+      </div>
+
+      <!-- Package 3: Short-Term Project (Purple) -->
+      <div class="card highlight" style="background: rgba(168, 85, 247, 0.1); border-left: 4px solid #a855f7; padding: 2rem;">
+        <h3 style="color: #a855f7; margin-bottom: 0.5rem; font-size: 1.3rem;">Short-Term Project</h3>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #ffffff;">Small interactive game or product built for release.</p>
+        <p style="margin-bottom: 0;"><strong style="color: #a855f7;">Price:</strong> <span style="font-size: 1.1rem;">Starting from £1500</span></p>
+      </div>
+
+      <!-- Package 4: Long-Term Project (Red) -->
+      <div class="card highlight" style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 2rem;">
+        <h3 style="color: #ef4444; margin-bottom: 0.5rem; font-size: 1.3rem;">Long-Term Project</h3>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #ffffff;">Full development of larger interactive experiences.</p>
+        <p style="margin-bottom: 0;"><strong style="color: #ef4444;">Price:</strong> <span style="font-size: 1.1rem;">Starting from £3500+</span></p>
+      </div>
+    </div>
+
+    <!-- Important Note -->
+    <div class="card highlight" style="background: rgba(124, 166, 126, 0.1); border-left: 4px solid var(--accent); max-width: 600px; margin: 0 auto;">
+      <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Final Pricing Confirmed After Consultation</p>
+      <p>Final pricing and scope are confirmed after the initial consultation call depending on project scope.</p>
+    </div>
+  </section>
+
+  <div style="max-width: 1000px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+
+  <!-- Reviews / Testimonials Section -->
+  <section id="reviews" style="padding: 4rem 2rem; max-width: 1000px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">What Clients Say</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;">
+      <div class="card highlight">
+        <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">⭐ "As both an intern and a final-year project student, Jack worked closely with me and NHS clinicians to expand our provision of medical training simulations. He successfully rose to the technical challenge of developing a centralised, web-based virtual reality hospital ward, while also gaining a strong understanding of the underlying clinical concepts and translating them into effective computer-based solutions.</p>
+        
+        <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">Jack engaged independently with NHS doctors, demonstrating confidence, professionalism, and conscientiousness throughout. This work led to further enhancements of the virtual ward, during which Jack took a leadership role, guiding other computer science students and collaborating with additional NHS clinicians."</p>
+        
+        <p style="color: var(--accent); font-weight: 600; font-size: 1rem;">– Dr Andrew Wilson</p>
+        <p style="color: var(--accent); font-size: 0.9rem;">SFHEA, MIEE, MBCS</p>
+      </div>
+
+      <div class="card highlight">
+        <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">⭐ "I'm currently working on a game with Jack and it's going great. He's a really good communicator and great at keeping me up to date with progress, and very flexible (I decided to change the entire game right after we started!). It's still early days but he's building the game in Unity and seems to know what he's doing. Would recommend."</p>
+        
+        <p style="color: var(--accent); font-weight: 600; font-size: 1rem;">– Alex Skerrat</p>
+        <p style="color: var(--accent); font-size: 0.9rem;">Skerrat Studios</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="max-width: 1000px; margin: 2rem auto; border-bottom: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-wrapper">
+      <h2>Contact</h2>
+      <h3 style="text-align: center; color: var(--accent); margin-bottom: 2rem; font-size: 1.5rem;">How Can I Help?</h3>
+      <p style="text-align: center; margin-bottom: 2rem;">We can book a meeting to discuss your project or inquiry! I'll get back to you within 48 hours.</p>
+      <form class="contact-form" action="https://formspree.io/f/xaqpeebo" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
         </div>
 
-        <div style="margin-bottom: 1.5rem;">
-          <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem;" />
+        <div class="form-group">
+          <label for="project-type">Project Type</label>
+          <select id="project-type" name="project-type" required style="width: 100%; padding: 0.6rem; border-radius: 4px; border: 1px solid #555; font-family: inherit; font-size: 1rem; background-color: #2a2a2a; color: #ffffff;">
+            <option value="">Select project type...</option>
+            <option value="Just an idea">Just an idea/ inquiry</option>
+            <option value="Job opportunity">Job opportunity</option>
+            <option value="Short term project">Short term project</option>
+            <option value="Long term project">Long term project</option>
+          </select>
         </div>
-
-        <div style="margin-bottom: 1.5rem;">
-          <label for="gameidea" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 600;">Your Game Idea</label>
-          <textarea id="gameidea" name="gameidea" rows="6" placeholder="Describe your game idea, genre, target audience, and any specific features you're interested in..." required style="width: 100%; padding: 0.8rem; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message or game idea..." required></textarea>
         </div>
-
-        <button type="submit" class="btn itch-btn" style="width: 100%; padding: 1rem; font-size: 1rem; cursor: pointer;">Send My Idea</button>
+        
+        <div class="form-group">
+          <button type="submit" class="cta-btn">Send Message</button>
+        </div>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Jack Longmore</p>
+    <p>© 2026 Jack Longmore</p>
   </footer>
 
   <script src="script.js"></script>
