@@ -11,6 +11,27 @@
   <link rel="stylesheet" href="expandable.css"/>
   <link rel="stylesheet" href="contact.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @media (max-width: 768px) {
+      section#about > div {
+        display: block !important;
+        gap: 0 !important;
+        position: static !important;
+      }
+      
+      section#about .vertical-divider {
+        display: none !important;
+      }
+      
+      section#about > div > div {
+        margin-bottom: 0;
+      }
+      
+      .featured-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -54,7 +75,7 @@
     <!-- Left Content Side -->
     <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
       <h1 style="font-size: 3.5rem; margin: 0 0 1rem 0; color: #ffffff; font-weight: 700;">Jack Longmore</h1>
-      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 0.5rem 0; font-weight: 600;">Game Developer</p>
+      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 0.5rem 0; font-weight: 600;">Indie Game Developer and Freelancer</p>
       <p style="font-size: 1.1rem; color: #ffffff; margin: 0 0 2.5rem 0;">Turning ideas into playable interactive experiences.</p>
       <div style="display: flex; gap: 1rem; z-index: 10;">
         <a href="freelance.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content;">Work With Me</a>
@@ -114,23 +135,7 @@
     <!-- Divider -->
     <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
-    <!-- Stats Blocks -->
-    <div class="stats" style="margin-top: 4rem;">
-      <div class="stat-card">
-        <span class="number">5</span>
-        <span class="label">Years Game Development Studies</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">2:1</span>
-        <span class="label">Degree Computer Game Technology</span>
-      </div>
-       <div class="stat-card">
-        <span class="number">10+</span>
-        <span class="label">Projects Completed</span>
-      </div>
-    </div>
   </section>
-
   
 
   <!-- About Section -->
@@ -144,14 +149,14 @@
         <div style="padding: 3rem 2rem; margin-bottom: 3rem;">
           <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 2rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
           
-          <p style="margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm a <strong style="color: var(--accent);">Game Developer, Content Creator, and Interactive Experience Designer</strong> with a passion for creating engaging and fun experiences. I love the challenge of bringing ideas to life through <strong style="color: var(--accent);">code, design, and creativity</strong>. Whether it's <strong style="color: var(--accent);">mechanics, level design, or technical implementation</strong>, I'm driven by the craft of game development!</p>
+          <p style="margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm a <strong style="color: var(--accent);">Indie Game Developer, Content Creator, and Interactive Experience Designer</strong> with a passion for creating engaging and fun experiences. I love the challenge of bringing ideas to life through <strong style="color: var(--accent);">code, design, and creativity</strong>. Whether it's <strong style="color: var(--accent);">mechanics, level design, or technical implementation</strong>, I'm driven by the craft of game development!</p>
           
           <p style="margin: 1.5rem 0 0 0; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #ffffff;">I'm always searching for <strong style="color: var(--accent);">opportunities and collaborations</strong> to push the boundaries of <strong style="color: var(--accent);">interactive experiences</strong>. In the <strong style="color: var(--accent);">Educational</strong>, <strong style="color: var(--accent);">medical</strong>, and <strong style="color: var(--accent);">entertainment</strong> sectors.</p>
         </div>
       </div>
 
       <!-- Vertical Divider -->
-      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent, rgba(124, 166, 126, 0.3) 10%, rgba(124, 166, 126, 0.3) 90%, transparent);"></div>
+      <div class="vertical-divider" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent, rgba(124, 166, 126, 0.3) 10%, rgba(124, 166, 126, 0.3) 90%, transparent);"></div>
 
       <!-- Right Column -->
       <div>
