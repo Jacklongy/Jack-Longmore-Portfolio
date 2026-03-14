@@ -56,6 +56,8 @@
     <div class="nav-right">
       <a href="index.html" class="current">Home</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="work-experience.html">Work XP</a>
+      <a href="awards.html">Awards</a>
       <a href="freelance.html">Services</a>
       <div class="socials">
         <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -83,19 +85,24 @@
         <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='rgba(124, 166, 126, 0.1)'" onmouseout="this.style.background='transparent'">Portfolio</a>
       </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); cursor: pointer; z-index: 15;" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+      <div style="color: var(--accent); font-size: 3rem; animation: bounce 2s infinite; cursor: pointer; text-align: center;">•</div>
+    </div>
   </header>
 
   <!-- Featured Projects Section -->
   <section id="featured" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-    <h2>Featured</h2>
+    
     
     <!-- Divider -->
     <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
 
     <div class="featured-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin: 3rem 0;">
       <!-- Treat Time -->
-      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
-        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 0; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
           <source src="Videos/FeaturedVideos/Featured treat.mp4" type="video/mp4">
         </video>
         <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">
@@ -105,8 +112,8 @@
       </a>
 
       <!-- Freelance Game Project -->
-      <a href="portfolio.html#work" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
-        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+      <a href="portfolio.html#work" class="featured-card" style="position: relative; border-radius: 0; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
           <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
         </video>
         <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">
@@ -116,8 +123,8 @@
       </a>
 
       <!-- VR Ward Project -->
-      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 8px; overflow: hidden; display: block; text-decoration: none;">
-        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; height: 250px; object-fit: cover; display: block;">
+      <a href="portfolio.html#games" class="featured-card" style="position: relative; border-radius: 0; overflow: hidden; display: block; text-decoration: none;">
+        <video class="youtube-video" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
           <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
         </video>
         <div class="featured-card-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.8)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: #ffffff;">

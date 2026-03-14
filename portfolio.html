@@ -19,8 +19,6 @@
     <a href="#featured"><span>Featured</span></a>
     <a href="#games"><span>Games</span></a>
     <a href="#youtube"><span>YouTube</span></a>
-    <a href="#work"><span>Work XP</span></a>
-    <a href="#events"><span>Awards</span></a>
   </div>
 
   <!-- Top navigation -->
@@ -32,6 +30,8 @@
     <div class="nav-right">
       <a href="index.html">Home</a>
       <a href="portfolio.html" class="current">Portfolio</a>
+      <a href="work-experience.html">Work XP</a>
+      <a href="awards.html">Awards</a>
       <a href="freelance.html">Services</a>
       <div class="socials">
         <a href="https://www.linkedin.com/in/jacklongmorein/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -42,26 +42,14 @@
   </nav>
 
   <!-- Banner -->
-  <header class="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 3rem 4rem; min-height: 100vh; overflow: hidden; position: relative;">
-    <!-- Right Background Image Side (Full Coverage) -->
-    <div style="position: absolute; inset: 0; background-image: url('Images/IMG_0066.JPG'); background-size: cover; background-position: right top; z-index: 1; filter: blur(8px);"></div>
-    
-    <!-- Fade Overlay -->
-    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.98) 20%, rgba(26, 26, 26, 0.85) 40%, rgba(26, 26, 26, 0.5) 65%, rgba(26, 26, 26, 0.1) 85%, transparent 100%); z-index: 2;"></div>
-    
-    <!-- Left Content Side -->
-    <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
-      <h1 style="font-size: 3.5rem; margin: 0 0 1rem 0; color: #ffffff; font-weight: 700;">Portfolio</h1>
-      <p style="font-size: 1.5rem; color: var(--accent); margin: 0 0 2.5rem 0; font-weight: 600;">Indie Game Developer And Freelancer</p>
-    </div>
-  </header>
+  <header class="banner" style="display: none;"></header>
 
   <!-- FEATURED PROJECTS - GRID -->
-  <section id="featured">
+  <section id="featured" style="padding: 4rem 2rem;">
   
     <div class="featured-grid">
       <!-- Treat Time -->
-      <a href="#games" class="featured-card">
+      <a href="#games" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured treat.mp4" type="video/mp4">
         </video>
@@ -73,7 +61,7 @@
 
 
       <!-- Game Audio Project -->
-      <a href="#games" class="featured-card">
+      <a href="#games" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured Audio.mp4" type="video/mp4">
         </video>
@@ -84,7 +72,7 @@
       </a>
 
       <!-- Freelance Game -->
-      <a href="#work" class="featured-card">
+      <a href="#games" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
         </video>
@@ -95,7 +83,7 @@
       </a>
 
       <!-- VR Ward Project -->
-      <a href="#games" class="featured-card">
+      <a href="#games" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
         </video>
@@ -106,7 +94,7 @@
       </a>
 
       <!-- Global Game Jam 2026 -->
-      <a href="#games" class="featured-card">
+      <a href="#games" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured GGJ2026.mp4" type="video/mp4">
         </video>
@@ -117,7 +105,7 @@
       </a>
 
       <!-- AI Sheep Dog -->
-      <a href="#youtube" class="featured-card">
+      <a href="#youtube" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured AI.mp4" type="video/mp4">
         </video>
@@ -258,7 +246,119 @@
       </div>
     </div>
 
+
   
+    <!-- GAME DEVELOPMENT & TECHNICAL PROJECTS SUBSECTION -->
+    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
+    
+    <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--accent); text-align: center;">Game Development & Technical Projects</h3>
+    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 4.5rem; text-align: center;">Academic and technical projects exploring serious game development, graphics programming, and engine architecture.</p>
+
+    <!-- VR WARD PROJECT (SERIOUS GAME) -->
+    
+    <div class="project-showcase">
+      <h3>VR Ward Project - Final Year Project</h3>
+      <div class="project-content">
+        <div class="project-media" style="margin-top: 2rem;">
+          <video class="youtube-video" controls>
+            <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>I explored VR development further and also a whole new industry — the medical sector. The simulation helps students train in ward environments by diagnosing patients with different conditions.</p>
+        </div>
+        <div class="project-sidebar" style="align-self: start;">
+          <div class="card highlight">
+            <h4>What I Learned</h4>
+            <ul>
+              <li>Optimizing VR experiences for hardware and user comfort.</li>
+              <li>Designing interactive simulations in Unity.</li>
+              <li>Integrating external datasets into gameplay systems.</li>
+            </ul>
+            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
+            <p>Building for real-world impact requires a different mindset. Working with healthcare professionals taught me that accessibility and educational value must guide every decision, opening my eyes to the transformative potential of games beyond entertainment.</p>
+          </div>
+          
+          <a href="https://longy-dev.itch.io/vr-ward" target="_blank" class="btn itch-btn">
+            <i class="fas fa-gamepad"></i> Play on Itch.io
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <img src="Images/FinalDemoMenigitisProject - frame at 1m4s.jpg" alt="VR Ward Overview" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
+          <div>
+            <h4 style="color: var(--accent);">Project Overview</h4>
+            <p>This project aimed to create an interactive simulation to help medical students train for ward environments. The simulation works by maintaining a database of patients, each with different medical information and conditions. They are placed in beds throughout the ward, and the user's objective is to walk around and diagnose each patient based on the clinical information provided.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div>
+            <h4 style="color: var(--accent);">Current Development</h4>
+            <p>The interactivity systems are currently a work in progress and are being actively developed by other students. A key feature I designed is the ability for doctors to add new medical conditions into the database via their computer, allowing the project to scale and remain relevant for extended educational use.</p>
+          </div>
+          <img src="Images/UniWork/VR Ward/com.oculus.browser-20251004-141448.jpg" alt="VR Ward Walkthrough" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <img src="Images/Ai_pVL.jpg" alt="VR Ward Collaboration" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
+          <div>
+            <h4 style="color: var(--accent);">Collaboration & Support</h4>
+            <p>This project was made possible through collaboration with several key partners. The Henderson Fund provided crucial funding after I won their pitching competition. Sandwell Hospital and the University supplied essential medical information and expertise, ensuring clinical relevance and accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAPHICS EXPERIMENTATION -->
+    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
+    
+    <div class="project-showcase">
+      <h3>Graphics Experimentation</h3>
+      <div class="project-content">
+        <div class="project-media">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/srArk0R27VU" frameborder="0" allowfullscreen></iframe>
+          <p>I explored shaders and different rendering techniques such as ray tracing and path tracing. To learn more about how game engines render images and objects.</p>
+        </div>
+        <div class="project-sidebar">
+          <div class="card highlight">
+            <h4>What I Learned</h4>
+            <ul>
+              <li>What rendering techniques are available and how they impact visuals.</li>
+              <li>More practice with C++ and graphics programming.</li>
+            </ul>
+            <h4 style="margin-top: 1rem;">Key Takeaways</h4>
+            <p>Balancing visuals and performance is key. Understanding the underlying mechanics of rendering helps me make informed decisions in my game projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C++ GAME PROJECT (TECHNICAL) -->
+    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
+    
+    <div class="project-showcase">
+      <h3>C++ Game Project</h3>
+      <div class="project-content reverse">
+        <div class="project-media">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/bpjejLSwnm4" frameborder="0" allowfullscreen></iframe>
+          <p>A solo project to create a small desktop game entirely in C++, focusing on memory management, performance, and architecture.</p>
+        </div>
+        <div class="project-sidebar">
+          <div class="card highlight">
+            <h4>What I Learned</h4>
+            <ul>
+              <li>Memory and resource management in C++.</li>
+              <li>Building a game loop and core engine systems from scratch.</li>
+            </ul>
+            <h4 style="margin-top: 1rem;">Key Takeaways</h4>
+            <p>Understanding low-level mechanics strengthens overall development skills. C++ allows full control but requires discipline and planning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- GAME JAMS SUBSECTION -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     
@@ -406,117 +506,6 @@
         </div>
       </div>
     </div>
-
-    <!-- GAME DEVELOPMENT & TECHNICAL PROJECTS SUBSECTION -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--accent); text-align: center;">Game Development & Technical Projects</h3>
-    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 4.5rem; text-align: center;">Academic and technical projects exploring serious game development, graphics programming, and engine architecture.</p>
-
-    <!-- VR WARD PROJECT (SERIOUS GAME) -->
-    
-    <div class="project-showcase">
-      <h3>VR Ward Project - Final Year Project</h3>
-      <div class="project-content">
-        <div class="project-media" style="margin-top: 2rem;">
-          <video class="youtube-video" controls>
-            <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>I explored VR development further and also a whole new industry — the medical sector. The simulation helps students train in ward environments by diagnosing patients with different conditions.</p>
-        </div>
-        <div class="project-sidebar" style="align-self: start;">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>Optimizing VR experiences for hardware and user comfort.</li>
-              <li>Designing interactive simulations in Unity.</li>
-              <li>Integrating external datasets into gameplay systems.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Building for real-world impact requires a different mindset. Working with healthcare professionals taught me that accessibility and educational value must guide every decision, opening my eyes to the transformative potential of games beyond entertainment.</p>
-          </div>
-          
-          <a href="https://longy-dev.itch.io/vr-ward" target="_blank" class="btn itch-btn">
-            <i class="fas fa-gamepad"></i> Play on Itch.io
-          </a>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <img src="Images/FinalDemoMenigitisProject - frame at 1m4s.jpg" alt="VR Ward Overview" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
-          <div>
-            <h4 style="color: var(--accent);">Project Overview</h4>
-            <p>This project aimed to create an interactive simulation to help medical students train for ward environments. The simulation works by maintaining a database of patients, each with different medical information and conditions. They are placed in beds throughout the ward, and the user's objective is to walk around and diagnose each patient based on the clinical information provided.</p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <div>
-            <h4 style="color: var(--accent);">Current Development</h4>
-            <p>The interactivity systems are currently a work in progress and are being actively developed by other students. A key feature I designed is the ability for doctors to add new medical conditions into the database via their computer, allowing the project to scale and remain relevant for extended educational use.</p>
-          </div>
-          <img src="Images/UniWork/VR Ward/com.oculus.browser-20251004-141448.jpg" alt="VR Ward Walkthrough" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <img src="Images/Ai_pVL.jpg" alt="VR Ward Collaboration" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
-          <div>
-            <h4 style="color: var(--accent);">Collaboration & Support</h4>
-            <p>This project was made possible through collaboration with several key partners. The Henderson Fund provided crucial funding after I won their pitching competition. Sandwell Hospital and the University supplied essential medical information and expertise, ensuring clinical relevance and accuracy.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GRAPHICS EXPERIMENTATION -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Graphics Experimentation</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/srArk0R27VU" frameborder="0" allowfullscreen></iframe>
-          <p>I explored shaders and different rendering techniques such as ray tracing and path tracing. To learn more about how game engines render images and objects.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>What rendering techniques are available and how they impact visuals.</li>
-              <li>More practice with C++ and graphics programming.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <p>Balancing visuals and performance is key. Understanding the underlying mechanics of rendering helps me make informed decisions in my game projects.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- C++ GAME PROJECT (TECHNICAL) -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>C++ Game Project</h3>
-      <div class="project-content reverse">
-        <div class="project-media">
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/bpjejLSwnm4" frameborder="0" allowfullscreen></iframe>
-          <p>A solo project to create a small desktop game entirely in C++, focusing on memory management, performance, and architecture.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>Memory and resource management in C++.</li>
-              <li>Building a game loop and core engine systems from scratch.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <p>Understanding low-level mechanics strengthens overall development skills. C++ allows full control but requires discipline and planning.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION SEPARATOR -->
@@ -569,291 +558,6 @@
     </div>
 
   </section >
-
-  <!-- Section Separator -->
-  <div class="section-separator"></div>
-
-  <!-- WORK EXPERIENCE -->
-  <section id="work">
-    <h2>Work Experience</h2>
-
-    <div style="text-align: center; padding-bottom: 2rem; margin-bottom: 3rem;">
-      <p>This section covers all relevant game development work experience I've had so far.</p>
-    </div>
-
-    <!-- BIRMINGHAM OPEN MEDIA -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Birmingham Open Media - 2023</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <div class="gallery" style="margin-bottom: 1.5rem;">
-            <div class="gallery-item"><img src="NewImages/BOM/BOM1 bootcamps.jpeg" alt="BOM Work 1"></div>
-            <div class="gallery-item"><img src="NewImages/BOM/BOM 3d scaning.jpeg" alt="BOM Work 2"></div>
-            <div class="gallery-item"><img src="NewImages/BOM/BOM-Logo-2023.png" alt="BOM Work 3"></div>
-            <div class="gallery-item"><img src="NewImages/BOM/BOMFORHIRE_v2_Page_06_Image_0001.jpg" alt="BOM Work 4"></div>
-          </div>
-          <p>I worked on VFX, VR projects, AR projects, Unity courseware projects, and team bootcamps. It was a chance to combine technical and creative work in a professional environment.</p>
-        </div>
-        <div class="project-sidebar" style="align-self: start;">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>How to collaborate with a multidisciplinary team (artists, developers and community managers).</li>
-              <li>Practice VFX skills!</li>
-              <li>Improved Unity workflow under real project deadlines.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaways</h4>
-            <p>Collaboration and community is the key to growth, not only as a person but as a developer. I improved communication and teaching skills. Professional projects prepared me for freelance and studio work, gaining an insight into finances and studio workflow.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <div>
-            <h4 style="color: var(--accent);">Heartbond VR Project</h4>
-            <p>This was a very interesting and unique project, I worked with my first client to create a VR anxiety relaxation game where there would be a murmuration VFX display that would react and change based on your heart rate and heart activities. I worked with someone from the company HeartMath who provided the Inner Balance Coherence Plus to provide reading I could take and use for the VFX. Unfortunately this project folded quite early on, but I was able to use some of the cool take and help bring the early stages of this idea to life.</p>
-          </div>
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
-            <source src="NewVideos/HEartArtvideo.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;"><source src="NewVideos/BAths.mp4" type="video/mp4"></video>
-          <div>
-            <h4 style="color: var(--accent);">Baths Workshop Event - 3D Scanning and Printing</h4>
-            <p>This event took place inside a swimming pool! An abandoned swimming baths turned creative space. We explored the world of 3D scanning and printing. I helped the BOM CTO present this technology to students!</p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-          <div>
-            <h4 style="color: var(--accent);">VFX Showcase</h4>
-            <p>I worked on VFX within Unity. It was my main focus while on this placement. I was given access to lots of learning material to go through and learn all aspects on VFX. It was a massive step up from the basic Unity particle system, it really opened my eyes to the possibilities of in game effects.</p>
-          </div>
-          <div>
-            <iframe class="youtube-video" src="https://www.youtube.com/embed/6GskK7eLHlw" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
-            <source src="NewVideos/Video Project 8.mp4" type="video/mp4">
-          </video>
-          <div>
-            <h4 style="color: var(--accent);">Unity Courseware Work</h4>
-            <p>I worked through some Unity Associate courseware in order to take the test and earn the qualification. Although I completed and studied for the exam, my time at the placement came to an end and I could not get the funding to take the exam. However, this really helped me learn some valuable things.</p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-          <div>
-            <h4 style="color: var(--accent);">Unreal Engine BootCamps</h4>
-            <p>At these bootcamps I got to help teach others Unreal Engine 5, and Blender to create 3D environments or games to then show to industry people at a locally hosted event. I got to attend these events, meet great people and see people grow on their journey!</p>
-          </div>
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
-            <source src="NewVideos/WhatsApp Video 2026-01-09 at 3.11.38 PM.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-
-    <!-- VR HOSPITAL MICROPLACEMENT -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>VR Hospital Microplacement - 2024</h3>
-      <div class="project-content reverse">
-        <div class="project-media">
-          <img src="Images/UniWork/VR Ward/Untitled design (4).png" alt="VR Hospital Microplacement" style="border-radius: 8px; border: 2px solid var(--accent); width: 100%; height: 350px; object-fit: cover;">
-          <p>Before my Final year project at Uni, I spent the previous summer working with the Uni to build, fix and expand upon an existing VR project. It was a project that I would later change and take forward for my Final Year Project.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>Building upon existing codebases and understanding project structure.</li>
-              <li>Iterative development and continuous improvement.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>This experience set the foundation for my final year project, showing the importance of practical summer placements in academic growth.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO EDITING -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Video Editing - 2025</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/EGfBfL-zl_0" frameborder="0" allowfullscreen></iframe>
-          <p>Recorded tutorials for my uni for new students.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>What I Learned</h4>
-            <ul>
-              <li>Teaching complex concepts through clear video demonstrations.</li>
-              <li>The importance of quality educational content.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Creating educational videos helped me solidify my knowledge while helping others learn.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FREELANCE -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Freelance Game Developer - Current</h3>
-      <div class="project-content reverse">
-        <div class="project-media">
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
-            <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
-          </video>
-          <p>Working on a freelance game project. Current Job. Progress update soon to come!</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>Current Focus</h4>
-            <ul>
-              <li>Building game systems and mechanics.</li>
-              <li>Client communication and project management.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Freelance work provides valuable experience in independent development and direct client interaction.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AWARDS AND EVENTS -->
-  <section id="events">
-    <h2>Awards and Events</h2>
-
-    <p style="text-align: center;">A collection of awards, recognitions, and notable events that have been significant milestones in my game development journey.</p>
-
-    <!-- GRADUATION -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Graduation! 🎓</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <div class="gallery">
-            <div class="gallery-item"><img src="Images/SlideShow/Grad.png" alt="Graduation"></div>
-            <div class="gallery-item"><img src="Images/SlideShow/Grad2.jpeg" alt="Graduation"></div>
-            <div class="gallery-item"><img src="Images/SlideShow/Grad3.jpeg" alt="Graduation"></div>
-            <div class="gallery-item"><img src="Images/SlideShow/Grad4.jpeg" alt="Graduation"></div>
-          </div>
-          <p>Celebrating the completion of my degree in Game Development at Birmingham City University. A significant milestone marking the end of an incredible educational journey and the beginning of my professional career.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>What This Means</h4>
-            <ul>
-              <li>Successfully completed a comprehensive game development degree.</li>
-              <li>Developed portfolio of professional-quality projects.</li>
-              <li>Ready to pursue opportunities in the game development industry.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Graduation represents not an end, but a beginning—ready to apply all I've learned to create amazing games in the industry.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BCU AWARDS -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>BCU Awards</h3>
-      <div class="project-content reverse">
-        <div class="project-media">
-          <div class="gallery">
-            <div class="gallery-item"><img src="Images/SlideShow/BCU Awards.jpeg" alt="Award"></div>
-            <div class="gallery-item"><img src="Images/SlideShow/Bcu Awards 2.jpeg" alt="Award"></div>
-          </div>
-          <p>Recognition and awards received from Birmingham City University for business and entrepreneurial achievements in the game development.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>Recognition Received</h4>
-            <ul>
-              <li>Acknowledged for going outside the box with creating a YouTube channel.</li>
-              <li>Recognized contributions to university projects and community.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>These awards validate the hard work and dedication invested in my studies and projects throughout my time at BCU.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HATCHERY PROGRAM AWARD -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>Hatchery Program Award!</h3>
-      <div class="project-content">
-        <div class="project-media">
-          <div class="gallery">
-            <div class="gallery-item"><img src="Images/SlideShow/Hatchery.png" alt="Hatchery Award"></div>
-             <div class="gallery-item"><img src="Images/SlideShow/Hathcery award.jpeg" alt="Hatchery Award"></div>
-          </div>
-          <p>Selected for and completed the Hatchery Program, a bootcamp on how to create and run a business.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>Program Highlights</h4>
-            <ul>
-              <li>Intensive training and mentorship from industry professionals.</li>
-              <li>Access to a fresh new business course.</li>
-              <li>Networking with peers and like minded people.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>This program provided invaluable insight into business.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BCU SHOWCASE -->
-    <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
-    
-    <div class="project-showcase">
-      <h3>BCU Showcases & Games Academy Opening!</h3>
-      <div class="project-content reverse">
-        <div class="project-media">
-          <video class="youtube-video" autoplay loop muted style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
-            <source src="NewVideos/GamesAc.mp4" type="video/mp4">
-          </video>
-          <p>Featured in the BCU Showcase event celebrating the launch of the new Games Academy. This was an opportunity to present my work to industry professionals, academics, and fellow students.</p>
-        </div>
-        <div class="project-sidebar">
-          <div class="card highlight">
-            <h4>Event Experience</h4>
-            <ul>
-              <li>Presented portfolio projects to industry professionals.</li>
-              <li>Made valuable connections with peers and industry mentors.</li>
-            </ul>
-            <h4 style="margin-top: 1rem;">Key Takeaway</h4>
-            <p>Showcasing work in a professional setting provided confidence and valuable feedback for future development endeavors.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-   </section>
 
   <!-- Footer -->
   <footer>
