@@ -1766,10 +1766,82 @@ footer p {
   }
 }
 
+/* Hamburger menu - hide on desktop */
+.nav-hamburger {
+  display: none;
+}
+
+.nav-dropdown {
+  display: none;
+}
+
 /* MOBILE (600px and below) */
 @media (max-width: 600px) {
   :root {
     --nav-height: 70px;
+  }
+
+  /* Hamburger Menu Styles */
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-hamburger.active {
+    color: var(--accent);
+  }
+
+  .nav-right {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(124, 166, 126, 0.1);
+    border-left: 1px solid rgba(124, 166, 126, 0.1);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    min-width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;
+    z-index: 999;
+  }
+
+  .nav-dropdown.active {
+    max-height: 300px;
+  }
+
+  .nav-dropdown a {
+    padding: 1rem 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(124, 166, 126, 0.1);
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+
+  .nav-dropdown a:hover {
+    background: rgba(124, 166, 126, 0.1);
+    color: var(--accent);
+  }
+
+  .nav-dropdown a.current {
+    background: rgba(124, 166, 126, 0.15);
+    color: var(--accent);
   }
 
   /* Navigation */
@@ -1813,16 +1885,27 @@ footer p {
 
   /* Banner */
   header.banner {
-    padding: 2rem 1rem !important;
-    min-height: 60vh;
+    padding: 3rem 1rem 2rem 1rem !important;
+    min-height: 80vh;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
   header.banner h1 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     margin: 0 0 0.8rem 0 !important;
+    white-space: nowrap;
+  }
+
+  /* Extra scroll padding for sections on mobile */
+  div[id="treat-time"],
+  div[id="game-audio"],
+  div[id="freelance-game"],
+  div[id="vr-ward"],
+  div[id="ggj-2026"],
+  div[id="ai-sheep-dog"] {
+    scroll-margin-top: calc(var(--nav-height) + 2rem);
   }
 
   header.banner p {
@@ -1862,6 +1945,22 @@ footer p {
   .project-sidebar,
   .project-media {
     width: 100% !important;
+  }
+
+  /* Featured section on mobile */
+  section#featured {
+    margin: -1.5rem auto 0 auto !important;
+    padding: 2rem 1rem !important;
+  }
+
+  /* Scroll padding for project sections */
+  div[id="treat-time"],
+  div[id="game-audio"],
+  div[id="freelance-game"],
+  div[id="vr-ward"],
+  div[id="ggj-2026"],
+  div[id="ai-sheep-dog"] {
+    scroll-margin-top: calc(var(--nav-height) + 1rem);
   }
 
   /* Featured cards */
@@ -2039,11 +2138,83 @@ footer p {
     line-height: 1.6 !important;
   }
 
+  /* Mobile nav bar fixes - prevent cropping */
+  nav .nav-right {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: calc(100vw - 120px);
+  }
+
+  nav .nav-right > a {
+    font-size: 0.75rem !important;
+    padding: 0 0.3rem !important;
+    min-width: fit-content;
+  }
+
+  nav .socials a {
+    font-size: 0.9rem !important;
+  }
+
+  /* Bouncy dot fixes - center and position better on mobile */
+  div[style*="bottom: 1rem"][style*="left: 50%"] {
+    bottom: 0.5rem !important;
+  }
+
+  div[style*="font-size: 3rem"] div[style*="animation: bounce"],
+  div[style*="animation: bounce 2s infinite"] {
+    font-size: 1.5rem !important;
+  }
+
   /* Mobile responsive grid layouts - stacking content vertically */
   /* VR Ward Project - inline grids */
   div[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
   }
 
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+  /* More aggressive nav fixes */
+  nav {
+    padding: 0 1% !important;
+  }
+
+  nav .nav-left {
+    font-size: 0.85rem !important;
+  }
+
+  nav .nav-logo {
+    height: 25px !important;
+  }
+
+  nav .nav-right {
+    gap: 0.6rem !important;
+    max-width: calc(100vw - 100px) !important;
+  }
+
+  nav .nav-right > a {
+    font-size: 0.65rem !important;
+    padding: 0 0.2rem !important;
+  }
+
+  nav .socials {
+    gap: 0.4rem !important;
+    padding-left: 0.5rem !important;
+    margin-left: 0.4rem !important;
+  }
+
+  nav .socials a {
+    font-size: 0.8rem !important;
+  }
+
+  /* Bouncy dot - even smaller on tiny screens */
+  div[style*="animation: bounce 2s infinite"] {
+    font-size: 1.2rem !important;
+  }
+
+  div[style*="bottom: 1rem"][style*="left: 50%"] {
+    bottom: 0.25rem !important;
+  }
 }
 

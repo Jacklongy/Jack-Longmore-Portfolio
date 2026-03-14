@@ -39,6 +39,14 @@
         <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
+    <div class="nav-hamburger" id="navHamburger" onclick="this.classList.toggle('active'); document.getElementById('navDropdown').classList.toggle('active');">&#9776;</div>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="index.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Home</a>
+      <a href="portfolio.html" class="current" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Portfolio</a>
+      <a href="work-experience.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Work XP</a>
+      <a href="awards.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Awards</a>
+      <a href="freelance.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Services</a>
+    </div>
   </nav>
 
   <!-- Banner -->
@@ -49,7 +57,7 @@
   
     <div class="featured-grid">
       <!-- Treat Time -->
-      <a href="#games" class="featured-card" style="border-radius: 0;">
+      <a href="#treat-time" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured treat.mp4" type="video/mp4">
         </video>
@@ -61,7 +69,7 @@
 
 
       <!-- Game Audio Project -->
-      <a href="#games" class="featured-card" style="border-radius: 0;">
+      <a href="#game-audio" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured Audio.mp4" type="video/mp4">
         </video>
@@ -72,7 +80,7 @@
       </a>
 
       <!-- Freelance Game -->
-      <a href="#games" class="featured-card" style="border-radius: 0;">
+      <a href="work-experience.html#freelance-game" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
         </video>
@@ -83,7 +91,7 @@
       </a>
 
       <!-- VR Ward Project -->
-      <a href="#games" class="featured-card" style="border-radius: 0;">
+      <a href="#vr-ward" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
         </video>
@@ -94,7 +102,7 @@
       </a>
 
       <!-- Global Game Jam 2026 -->
-      <a href="#games" class="featured-card" style="border-radius: 0;">
+      <a href="#ggj-2026" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured GGJ2026.mp4" type="video/mp4">
         </video>
@@ -105,7 +113,7 @@
       </a>
 
       <!-- AI Sheep Dog -->
-      <a href="#youtube" class="featured-card" style="border-radius: 0;">
+      <a href="#ai-sheep-dog" class="featured-card" style="border-radius: 0;">
         <video class="youtube-video" autoplay loop muted playsinline>
           <source src="Videos/FeaturedVideos/Featured AI.mp4" type="video/mp4">
         </video>
@@ -134,7 +142,7 @@
     <!-- TREAT TIME -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     
-    <div class="project-showcase">
+    <div class="project-showcase" id="treat-time">
       <h3>Treat Time! 2025</h3>
       <div class="project-content">
         <div class="project-media">
@@ -162,7 +170,7 @@
     <!-- GAME AUDIO PROJECT -->
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     
-    <div class="project-showcase">
+    <div class="project-showcase" id="game-audio">
       <h3>My Game Audio Project 2025</h3>
       <div class="project-content reverse">
         <div class="project-media">
@@ -256,7 +264,7 @@
 
     <!-- VR WARD PROJECT (SERIOUS GAME) -->
     
-    <div class="project-showcase">
+    <div class="project-showcase" id="vr-ward">
       <h3>VR Ward Project - Final Year Project</h3>
       <div class="project-content">
         <div class="project-media" style="margin-top: 2rem;">
@@ -366,7 +374,7 @@
     <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 4.5rem; text-align: center;">Here are some of my game jam projects. I love participating in Game Jam events to push my skills and create innovative games under tight deadlines.</p>
 
     <!-- GGJ 2026 -->
-    <div class="project-showcase">
+    <div class="project-showcase" id="ggj-2026">
       <h3>Global Game Jam 2026</h3>
       <div class="project-content">
         <div class="project-media">
@@ -524,7 +532,7 @@
     <!-- Featured YouTube Videos -->
     <div class="youtube-featured">
       <!-- AI Sheep Dog - Video Left -->
-      <div class="youtube-featured-item">
+      <div class="youtube-featured-item" id="ai-sheep-dog">
         <div class="youtube-video-wrapper">
           <iframe class="youtube-video" src="https://www.youtube.com/embed/-KtcWmoTKhY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         </div>

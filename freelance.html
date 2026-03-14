@@ -40,18 +40,26 @@
         <a href="https://www.tiktok.com/@longydev" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
+    <div class="nav-hamburger" id="navHamburger" onclick="this.classList.toggle('active'); document.getElementById('navDropdown').classList.toggle('active');">&#9776;</div>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="index.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Home</a>
+      <a href="portfolio.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Portfolio</a>
+      <a href="work-experience.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Work XP</a>
+      <a href="awards.html" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Awards</a>
+      <a href="freelance.html" class="current" onclick="document.getElementById('navHamburger').classList.remove('active'); document.getElementById('navDropdown').classList.remove('active');">Services</a>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" style="text-align: center; padding: 2.5rem 2rem; margin-top: 80px;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: #ffffff;">Freelance Game Development & Products</h1>
-    <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8;">Helping creators and teams turn ideas into playable games and interactive experiences.</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn" style="cursor: pointer; width: fit-content; margin: 0 auto; display: block; margin-bottom: 1.5rem;">Book a Free Consultation</button>
-    <p style="font-size: 0.95rem; color: var(--text-muted);">Not sure where to start? Scroll to learn more.</p>
+  <section id="hero" style="text-align: center; padding: 1.5rem 2rem; margin-top: 80px;">
+    <h1 style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #ffffff;">Freelance Game Development & Products</h1>
+    <p style="font-size: 1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 1.5rem; line-height: 1.6;">Helping creators and teams turn ideas into playable games and interactive experiences.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn" style="cursor: pointer; width: fit-content; margin: 0 auto; display: block; margin-bottom: 1rem;">Book a Free Consultation</button>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">Not sure where to start? Scroll to learn more.</p>
   </section>
 
   <!-- Scroll Indicator -->
-  <div style="display: flex; justify-content: center; padding: 0.8rem 0; width: 100%; margin-bottom: 2rem;">
+  <div style="display: none; justify-content: center; padding: 0.8rem 0; width: 100%; margin-bottom: 2rem;">
     <div style="text-align: center; cursor: pointer;" onclick="document.getElementById('whoiwork').scrollIntoView({behavior: 'smooth'})">
       <div style="color: var(--accent); font-size: 3rem; animation: bounce 2s infinite; cursor: pointer;">•</div>
     </div>
@@ -154,7 +162,7 @@
         </div>
         <div>
           <p style="font-size: 1.05rem; line-height: 1.8; color: #ffffff; margin-bottom: 1rem;">I'm currently working on a complete game development project for a client, demonstrating my ability to handle full-scope development and maintain regular client communication.</p>
-          <a href="portfolio.html#work" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
+          <a href="work-experience.html#freelance-game" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
         </div>
       </div>
     </div>
@@ -165,14 +173,14 @@
     <div>
       <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--accent);">VR Ward - Medical Training Simulation</h3>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
-        <div style="order: 2;">
+        <div>
           <video style="width: 100%; border-radius: 8px; border: 2px solid var(--accent);" autoplay loop muted>
             <source src="Images/UniWork/VR Ward/WhatsApp Video 2026-01-09 at 3.01.18 PM - Trim.mp4" type="video/mp4">
           </video>
         </div>
-        <div style="order: 1;">
+        <div>
           <p style="font-size: 1.05rem; line-height: 1.8; color: #ffffff; margin-bottom: 1rem;">Initially started as a freelance project in the summer, this VR simulation evolved into my final year project at university. I developed an interactive VR simulation for medical training, working directly with healthcare professionals. This showcases my ability to work in specialized industries and translate complex requirements into engaging interactive experiences.</p>
-          <a href="portfolio.html#games" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
+          <a href="portfolio.html#vr-ward" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
         </div>
       </div>
     </div>
@@ -188,7 +196,7 @@
         </div>
         <div>
           <p style="font-size: 1.05rem; line-height: 1.8; color: #ffffff; margin-bottom: 1rem;">As a freelancer, I've also worked on creating professional educational video content. This project involved recording, editing, and producing tutorial videos for university students, demonstrating my ability to handle multimedia projects and communicate complex concepts clearly through video.</p>
-          <a href="work-experience.html#work" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
+          <a href="work-experience.html#video-editing" style="display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: underline; font-weight: 600;">→ more info</a>
         </div>
       </div>
     </div>
