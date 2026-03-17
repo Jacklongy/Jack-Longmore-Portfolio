@@ -476,6 +476,20 @@ document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
 
 /* ===== Smart Video Autoplay on Scroll ===== */
 (() => {
+  // Disable autoplay on mobile devices
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                   window.matchMedia('(max-width: 768px)').matches;
+  
+  if (isMobile) {
+    // Remove autoplay attribute from all videos on mobile
+    const videos = document.querySelectorAll('video[autoplay]');
+    videos.forEach(video => {
+      video.removeAttribute('autoplay');
+      video.pause();
+    });
+    return;
+  }
+  
   const videos = document.querySelectorAll('video[autoplay]');
   if (!videos.length) return;
 
