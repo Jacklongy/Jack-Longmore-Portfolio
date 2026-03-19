@@ -1541,6 +1541,7 @@ footer p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  align-items: start;
 }
 
 .project-content.reverse {
