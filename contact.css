@@ -138,8 +138,9 @@
 }
 
 .cta-btn:hover {
+  background: #9af0a0;
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(124, 166, 126, 0.3);
+  box-shadow: 0 15px 30px rgba(125, 228, 130, 0.3);
 }
 
 .cta-btn:active {

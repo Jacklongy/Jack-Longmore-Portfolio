@@ -13,75 +13,54 @@ function toggleCollapsible(header) {
 }
 
 /* ===== Featured Carousel Navigation ===== */
-let carouselIndex = 0;
-let carouselAutoPlayTimer;
+let featuredIndex = 0;
+let featuredAutoPlay;
 
-function moveCarousel(direction) {
-  const items = document.querySelectorAll('.featured-carousel-item');
-  
-  if (!items.length) return;
-  
-  carouselIndex += direction;
-  
-  if (carouselIndex < 0) {
-    carouselIndex = items.length - 1;
-  } else if (carouselIndex >= items.length) {
-    carouselIndex = 0;
-  }
-  
-  updateCarouselPosition(items);
-  
-  // Reset auto-play timer when manually navigating
-  clearTimeout(carouselAutoPlayTimer);
-  startCarouselAutoPlay();
+function moveFeaturedCarousel(dir) {
+  const slides = document.querySelectorAll('.carousel-slide');
+  if (!slides.length) return;
+  featuredIndex += dir;
+  if (featuredIndex < 0) featuredIndex = slides.length - 1;
+  if (featuredIndex >= slides.length) featuredIndex = 0;
+  updateFeaturedCarousel();
+  resetFeaturedAutoPlay();
 }
 
-function updateCarouselPosition(items) {
-  // Always show 3 items: prev, active (big), next
-  items.forEach((item, index) => {
-    item.classList.remove('active');
+function goToFeaturedSlide(index) {
+  featuredIndex = index;
+  updateFeaturedCarousel();
+  resetFeaturedAutoPlay();
+}
+
+function updateFeaturedCarousel() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const track = document.getElementById('carouselTrack');
+  if (!slides.length || !track) return;
+
+  // Each slide is 60% + 2% margin = 62% per slide on desktop
+  // We want the active slide centered, so offset = (index * slideWidth) - centering
+  const slideWidth = slides[0].offsetWidth + parseFloat(getComputedStyle(slides[0]).marginLeft) * 2;
+  const viewportWidth = track.parentElement.offsetWidth;
+  const offset = (featuredIndex * slideWidth) - (viewportWidth / 2) + (slideWidth / 2);
+  
+  track.style.transform = `translateX(-${offset}px)`;
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === featuredIndex);
   });
-  items[carouselIndex].classList.add('active');
-  
-  // Calculate which items are visible and position them
-  const track = document.querySelector('.featured-carousel-track');
-  const prevIndex = carouselIndex === 0 ? items.length - 1 : carouselIndex - 1;
-  const nextIndex = (carouselIndex + 1) % items.length;
-  
-  // Set order of visible items to always show 3
-  const orderedItems = [
-    items[prevIndex],
-    items[carouselIndex], 
-    items[nextIndex]
-  ];
-  
-  // Clear and rebuild order
-  orderedItems.forEach((item, visIndex) => {
-    item.style.order = visIndex;
-  });
-  
-  items.forEach((item, index) => {
-    if (![prevIndex, carouselIndex, nextIndex].includes(index)) {
-      item.style.order = 999; // Hide other items
-      item.style.display = 'none';
-    } else {
-      item.style.display = 'flex';
-    }
+
+  // Update dots
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === featuredIndex);
   });
 }
 
-function startCarouselAutoPlay() {
-  carouselAutoPlayTimer = setInterval(() => {
-    moveCarouselAuto();
-  }, 4000); // Auto-advance every 4 seconds
-}
-
-function moveCarouselAuto() {
-  const items = document.querySelectorAll('.featured-carousel-item');
-  if (!items.length) return;
-  
-  carouselIndex = (carouselIndex + 1) % items.length;
-  updateCarouselPosition(items);
+function resetFeaturedAutoPlay() {
+  clearInterval(featuredAutoPlay);
+  featuredAutoPlay = setInterval(() => {
+    featuredIndex = (featuredIndex + 1) % document.querySelectorAll('.carousel-slide').length;
+    updateFeaturedCarousel();
+  }, 5000);
 }
 
 /* ===== Journey Carousel Navigation ===== */
@@ -104,13 +83,11 @@ function moveJourneyCarousel(direction) {
 }
 
 function updateJourneyCarouselPosition(items) {
-  // Always show 3 items: prev, active (big), next
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     item.classList.remove('active');
   });
   items[journeyCarouselIndex].classList.add('active');
   
-  // Set order of visible items to always show 3
   const prevIndex = journeyCarouselIndex === 0 ? items.length - 1 : journeyCarouselIndex - 1;
   const nextIndex = (journeyCarouselIndex + 1) % items.length;
   
@@ -120,7 +97,6 @@ function updateJourneyCarouselPosition(items) {
     items[nextIndex]
   ];
   
-  // Clear and rebuild order
   orderedItems.forEach((item, visIndex) => {
     item.style.order = visIndex;
   });
@@ -135,24 +111,46 @@ function updateJourneyCarouselPosition(items) {
   });
 }
 
-// Initialize carousel
+// Initialize carousels
 document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.featured-carousel-item');
-  if (items.length > 0) {
-    items[0].classList.add('active');
-    // Quick initial rotation to fix centering on first load
-    setTimeout(() => {
-      moveCarouselAuto();
-      startCarouselAutoPlay();
-    }, 50);
+  // Featured carousel
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('carouselDots');
+  if (slides.length > 0 && dotsContainer) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.onclick = () => goToFeaturedSlide(i);
+      dotsContainer.appendChild(dot);
+    });
+    slides[0].classList.add('active');
+    updateFeaturedCarousel();
+    resetFeaturedAutoPlay();
   }
 
-  // Initialize journey carousel
+  // Touch/swipe support
+  const viewport = document.querySelector('.carousel-viewport');
+  if (viewport) {
+    let startX = 0;
+    viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) moveFeaturedCarousel(diff > 0 ? 1 : -1);
+    }, { passive: true });
+  }
+
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    const s = document.querySelectorAll('.carousel-slide');
+    if (s.length) updateFeaturedCarousel();
+  });
+
+  // Journey carousel
   const journeyItems = document.querySelectorAll('.journey-carousel-item');
   if (journeyItems.length > 0) {
     journeyCarouselIndex = 0;
     updateJourneyCarouselPosition(journeyItems);
-    // Quick initial rotation to fix centering on first load
     setTimeout(() => {
       moveJourneyCarousel(1);
     }, 50);
