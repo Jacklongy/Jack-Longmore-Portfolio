@@ -70,29 +70,37 @@
       <h3>Freelance Experience</h3>
       <div style="max-width: 900px; margin: 0 auto 2.5rem auto; text-align: center;">
         <p style="font-size: 1.15rem; color: var(--text); margin-bottom: 1.2rem;">
-          I've worked on a range of freelance projects, including game development, VR/AR, and video editing. My freelance journey began with adapting a university VR project for a client, and has since grown to include building game systems, creating educational video content, and collaborating with clients to bring their visions to life. Each project has helped me grow as a developer and collaborator, teaching me to be adaptable, communicate clearly, and deliver high-quality work across a variety of disciplines.
+          Freelance work: game dev, VR/AR, and video editing for clients. I build systems, create content, and help bring ideas to life. Always learning and adapting along the way.
         </p>
       </div>
       <div class="freelance-gallery" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; margin-top: 0;">
         <!-- Game Development Card -->
         <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <video class="youtube-video" autoplay loop muted style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
-            <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
-          </video>
-          <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Game Development</h4>
-          <p style="font-size: 1.08rem; color: var(--text-muted);">Developed games for clients and personal projects, focusing on gameplay systems, polish, and client goals.</p>
+          <a href="portfolio.html#aisle-survive" style="width: 100%; text-decoration: none; color: inherit;">
+            <video class="youtube-video" autoplay loop muted style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
+              <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
+            </video>
+            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Game Development</h4>
+            <p style="font-size: 1.08rem; color: var(--text-muted);">Client and personal games. See: Aisle Survive.</p>
+          </a>
         </div>
         <!-- VR/AR Project Card -->
         <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <img src="Images/UniWork/VR Ward/Untitled design (4).png" alt="VR Project" style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">VR/AR Projects</h4>
-          <p style="font-size: 1.08rem; color: var(--text-muted);">Adapted and extended VR/AR projects for clients, including feature implementation and technical consulting.</p>
+          <a href="portfolio.html#vr-ward" style="width: 100%; text-decoration: none; color: inherit;">
+            <img src="Images/UniWork/VR Ward/Untitled design (4).png" alt="VR Project" style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">VR/AR Projects</h4>
+            <p style="font-size: 1.08rem; color: var(--text-muted);">VR/AR for clients. See: VR Ward.</p>
+          </a>
         </div>
         <!-- Video Editing Card -->
         <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/EGfBfL-zl_0" frameborder="0" allowfullscreen style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; margin-bottom: 1rem;"></iframe>
-          <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Video Editing</h4>
-          <p style="font-size: 1.08rem; color: var(--text-muted);">Created educational and promotional videos for clients, focusing on clear communication and professional standards.</p>
+          <a href="https://www.youtube.com/watch?v=EGfBfL-zl_0" target="_blank" style="width: 100%; text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 230px; background: #181818; border-radius: 10px; margin-bottom: 1rem;">
+              <i class="fab fa-youtube" style="font-size: 4rem; color: #ff0000;"></i>
+            </div>
+            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Video Editing</h4>
+            <p style="font-size: 1.08rem; color: var(--text-muted);">See my work on YouTube</p>
+          </a>
         </div>
       </div>
       <div style="text-align: center; margin-top: 2.5rem;">
@@ -114,6 +122,14 @@
           .gallery-card iframe { height: 160px !important; }
           .gallery-card h4 { font-size: 1.1rem !important; }
           .gallery-card p { font-size: 0.98rem !important; }
+          .gallery-card { flex-direction: column-reverse !important; }
+        }
+        .gallery-card:hover {
+          transform: translateY(-8px) scale(1.03);
+          box-shadow: 0 8px 32px rgba(124,166,126,0.18), 0 2px 8px rgba(0,0,0,0.10);
+          border-color: var(--accent, #7ca67e);
+          transition: transform 0.18s cubic-bezier(.4,1.3,.6,1), box-shadow 0.18s, border-color 0.18s;
+          cursor: pointer;
         }
       </style>
     </div>
