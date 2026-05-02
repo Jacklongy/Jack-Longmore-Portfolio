@@ -68,70 +68,44 @@
     <div style="border-top: 2px solid rgba(124, 166, 126, 0.3); border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1; margin: 3rem 0;"></div>
     <div class="project-showcase" id="freelance-summary">
       <h3>Freelance Experience</h3>
-      <div style="max-width: 900px; margin: 0 auto 2.5rem auto; text-align: center;">
-        <p style="font-size: 1.15rem; color: var(--text); margin-bottom: 1.2rem;">
-          Freelance work: game dev, VR/AR, and video editing for clients. I build systems, create content, and help bring ideas to life. Always learning and adapting along the way.
-        </p>
-      </div>
-      <div class="freelance-gallery" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; margin-top: 0;">
-        <!-- Game Development Card -->
-        <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <a href="portfolio.html#aisle-survive" style="width: 100%; text-decoration: none; color: inherit;">
-            <video class="youtube-video" autoplay loop muted style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
-              <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
-            </video>
-            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Game Development</h4>
-            <p style="font-size: 1.08rem; color: var(--text-muted);">Client and personal games. See: Aisle Survive.</p>
-          </a>
-        </div>
-        <!-- VR/AR Project Card -->
-        <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <a href="portfolio.html#vr-ward" style="width: 100%; text-decoration: none; color: inherit;">
-            <img src="Images/UniWork/VR Ward/Untitled design (4).png" alt="VR Project" style="border-radius: 10px; width: 100%; max-width: 420px; height: 230px; object-fit: cover; margin-bottom: 1rem;">
-            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">VR/AR Projects</h4>
-            <p style="font-size: 1.08rem; color: var(--text-muted);">VR/AR for clients. See: VR Ward.</p>
-          </a>
-        </div>
-        <!-- Video Editing Card -->
-        <div class="gallery-card" style="background: var(--card-bg); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); width: 420px; max-width: 98vw; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem;">
-          <a href="https://www.youtube.com/watch?v=EGfBfL-zl_0" target="_blank" style="width: 100%; text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
-            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 230px; background: #181818; border-radius: 10px; margin-bottom: 1rem;">
-              <i class="fab fa-youtube" style="font-size: 4rem; color: #ff0000;"></i>
+      <p style="text-align: center; margin-bottom: 2.5rem; color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto;">Game dev, VR/AR, and video editing for clients. I build systems, create content, and help bring ideas to life.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        <a href="portfolio.html#aisle-survive" style="text-decoration: none; display: block;" class="work-xp-card">
+          <div class="card highlight" style="border-left: 4px solid var(--accent); padding: 1.5rem; text-align: center; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+            <div style="width: 2.8rem; height: 2.8rem; background: linear-gradient(135deg, #1a1a1a, #7ca67e); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+              <i class="fas fa-gamepad" style="color: #ffffff; font-size: 1.15rem;"></i>
             </div>
-            <h4 style="margin-bottom: 0.5rem; color: var(--accent); font-size: 1.25rem;">Video Editing</h4>
-            <p style="font-size: 1.08rem; color: var(--text-muted);">See my work on YouTube</p>
-          </a>
-        </div>
+            <h4 style="color: var(--accent); margin-bottom: 0.6rem; font-size: 1.1rem;">Game Development</h4>
+            <p style="color: #ffffff; font-size: 0.95rem; line-height: 1.6; flex: 1;">Client and personal games built in Unity. Including Aisle Survive, shipped to Steam Early Access May 2026.</p>
+            <div style="margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.82rem; font-weight: 600; color: var(--accent); letter-spacing: 0.03em;">View in Portfolio →</div>
+          </div>
+        </a>
+        <a href="portfolio.html#vr-ward" style="text-decoration: none; display: block;" class="work-xp-card">
+          <div class="card highlight" style="border-left: 4px solid var(--accent); padding: 1.5rem; text-align: center; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+            <div style="width: 2.8rem; height: 2.8rem; background: linear-gradient(135deg, #1a1a1a, #7ca67e); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+              <i class="fas fa-vr-cardboard" style="color: #ffffff; font-size: 1.15rem;"></i>
+            </div>
+            <h4 style="color: var(--accent); margin-bottom: 0.6rem; font-size: 1.1rem;">VR / AR Projects</h4>
+            <p style="color: #ffffff; font-size: 0.95rem; line-height: 1.6; flex: 1;">Immersive XR experiences built for clients, including a VR medical training simulation for NHS clinicians.</p>
+            <div style="margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.82rem; font-weight: 600; color: var(--accent); letter-spacing: 0.03em;">View in Portfolio →</div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=EGfBfL-zl_0" target="_blank" style="text-decoration: none; display: block;" class="work-xp-card">
+          <div class="card highlight" style="border-left: 4px solid var(--accent); padding: 1.5rem; text-align: center; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+            <div style="width: 2.8rem; height: 2.8rem; background: linear-gradient(135deg, #1a1a1a, #7ca67e); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+              <i class="fas fa-film" style="color: #ffffff; font-size: 1.15rem;"></i>
+            </div>
+            <h4 style="color: var(--accent); margin-bottom: 0.6rem; font-size: 1.1rem;">Video Editing</h4>
+            <p style="color: #ffffff; font-size: 0.95rem; line-height: 1.6; flex: 1;">Professional video editing and content creation for clients and personal projects.</p>
+            <div style="margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.82rem; font-weight: 600; color: var(--accent); letter-spacing: 0.03em;">Watch on YouTube →</div>
+          </div>
+        </a>
       </div>
       <div style="text-align: center; margin-top: 2.5rem;">
         <a href="freelance.html" class="btn itch-btn" style="display: inline-block; font-size: 1.15rem; padding: 1rem 2rem;">
           <i class="fas fa-briefcase"></i> View My Services
         </a>
       </div>
-      <!-- Mobile responsive tweaks -->
-      <style>
-        @media (max-width: 900px) {
-          .freelance-gallery { flex-direction: column !important; align-items: center !important; }
-          .gallery-card { width: 98% !important; max-width: 420px !important; }
-        }
-        @media (max-width: 600px) {
-          .freelance-gallery { gap: 1.2rem !important; }
-          .gallery-card { padding: 1rem !important; }
-          .gallery-card video,
-          .gallery-card img,
-          .gallery-card iframe { height: 160px !important; }
-          .gallery-card h4 { font-size: 1.1rem !important; }
-          .gallery-card p { font-size: 0.98rem !important; }
-          .gallery-card { flex-direction: column-reverse !important; }
-        }
-        .gallery-card:hover {
-          transform: translateY(-8px) scale(1.03);
-          box-shadow: 0 8px 32px rgba(124,166,126,0.18), 0 2px 8px rgba(0,0,0,0.10);
-          border-color: var(--accent, #7ca67e);
-          transition: transform 0.18s cubic-bezier(.4,1.3,.6,1), box-shadow 0.18s, border-color 0.18s;
-          cursor: pointer;
-        }
-      </style>
     </div>
 
     <!-- BIRMINGHAM OPEN MEDIA -->

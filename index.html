@@ -112,7 +112,7 @@
       <p style="font-size: 1rem; color: #ffffff; margin: 0 0 2rem 0;">Turning ideas into playable interactive experiences.</p>
       <div style="display: flex; gap: 1rem; z-index: 10; flex-wrap: wrap;">
         <a href="freelance.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap;">Work With Me</a>
-        <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; justify-content: center; text-decoration: none; width: fit-content; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='rgba(124, 166, 126, 0.1)'" onmouseout="this.style.background='transparent'">Portfolio</a>
+        <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='var(--accent)'; this.style.color='#1a1a1a';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';"><i class="fas fa-folder-open" style="font-size: 0.95rem;"></i> Portfolio</a>
       </div>
     </div>
 
@@ -179,7 +179,7 @@
     <!-- View Portfolio & Work With Me Buttons -->
     <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="portfolio.html" class="cta-btn" style="display: inline-block; text-decoration: none;">View Full Portfolio</a>
-      <a href="freelance.html" class="cta-btn" style="display: inline-block; text-decoration: none; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='rgba(124, 166, 126, 0.1)'" onmouseout="this.style.background='transparent'">Work With Me</a>
+      <a href="freelance.html" class="cta-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='var(--accent)'; this.style.color='#1a1a1a';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';"><i class="fas fa-envelope" style="font-size: 0.95rem;"></i> Work With Me</a>
     </div>
 
     <!-- Divider -->
@@ -190,7 +190,7 @@
 
   <!-- About Section -->
   <section id="about" style="margin-top: 4.5rem;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; position: relative;" class="about-grid">
+    <div style="max-width: 700px; margin: 0 auto;" class="about-grid">
       <!-- Left Column -->
       <div>
         <h2>About Me</h2>
@@ -224,46 +224,6 @@
         </div>
       </div>
 
-      <!-- Vertical Divider -->
-      <div class="vertical-divider" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent, rgba(124, 166, 126, 0.3) 10%, rgba(124, 166, 126, 0.3) 90%, transparent);"></div>
-
-      <!-- Right Column -->
-      <div>
-        <h2>Who I Work With</h2>
-        
-        <!-- Divider -->
-        <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
-
-        <!-- Who I Work With Content -->
-        <div class="about-content">
-          <ul class="about-bullets">
-            <li>
-              <i class="fas fa-lightbulb" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Individuals with game ideas</span>
-            </li>
-            <li>
-              <i class="fas fa-users" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Indie teams needing development support</span>
-            </li>
-            <li>
-              <i class="fas fa-rocket" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Startups building interactive products</span>
-            </li>
-            <li>
-              <i class="fas fa-graduation-cap" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Schools and educational projects</span>
-            </li>
-            <li>
-              <i class="fas fa-building" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Businesses exploring gamification</span>
-            </li>
-            <li>
-              <i class="fas fa-headset" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span>Larger studios looking for support</span>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
 
     <!-- CV Download -->
@@ -278,9 +238,7 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact-wrapper">
-      <h2>Contact</h2>
-      <h3 style="text-align: center; color: var(--accent); margin-bottom: 2rem; font-size: 1.5rem;">How Can I Help?</h3>
-      <p style="text-align: center; margin-bottom: 2rem;">We can book a meeting to discuss your project or inquiry! I'll get back to you within 48 hours.</p>
+      <h2>Get In Touch</h2>
       <form class="contact-form" action="https://formspree.io/f/xaqpeebo" method="POST">
         <div class="form-group">
           <label for="email">Email</label>

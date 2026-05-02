@@ -1,3 +1,575 @@
+/* Freelance project card links */
+/* Juicy pill-style links for freelance cards */
+/* Simple accent color links for freelance cards */
+.freelance-card-content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 1.2rem;
+  transition: color 0.18s;
+  position: relative;
+}
+.freelance-card-content a:last-child {
+  margin-right: 0;
+}
+.freelance-card-content a:hover, .freelance-card-content a:focus {
+  color: #fff;
+  text-decoration: underline;
+  outline: none;
+}
+.freelance-card-links {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+/* =========================================================
+   FREELANCE PAGE CUSTOM STYLES
+========================================================= */
+
+/* Override muted text colour on the freelance page only */
+.page-freelance {
+  --text-muted: #e0e0e0;
+}
+.page-freelance [style*="text-muted"] {
+  font-size: 1rem !important;
+}
+
+/* Outline/hollow CTA button for hero on freelance page */
+#hero .cta-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+#hero .cta-btn:hover {
+  background: var(--accent);
+  color: #1a1a1a;
+  box-shadow: 0 15px 30px rgba(124, 166, 126, 0.25);
+}
+
+
+.freelance-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+}
+
+.freelance-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.freelance-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(40,40,40,0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(124,166,126,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.freelance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  border-color: rgba(124,166,126,0.5);
+}
+
+.freelance-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid rgba(124,166,126,0.2);
+}
+
+.freelance-card-content {
+  flex: 1;
+  min-width: 0;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.freelance-card-content h3 {
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+  font-size: 1.25rem;
+}
+
+.freelance-card-content p {
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+
+.freelance-review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.freelance-review-card {
+  display: flex;
+  position: relative;
+  background: rgba(30,30,30,0.9);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 2.2rem 2rem 1.8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  overflow: hidden;
+}
+.freelance-review-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.6rem;
+  left: 1.2rem;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.18;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.freelance-review-card p {
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.freelance-review-card .review-author {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.93rem;
+  letter-spacing: 0.02em;
+}
+.freelance-review-card .review-role {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+}
+
+/* Project Types grid */
+.freelance-packages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .freelance-review-grid,
+  .freelance-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .freelance-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .freelance-section {
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .freelance-cards {
+    grid-template-columns: 1fr;
+  }
+  .freelance-review-card {
+    padding: 1.2rem;
+  }
+  .freelance-section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+/* =========================================================
+   WHAT I'VE BUILT — EDITORIAL CARD LAYOUT
+========================================================= */
+
+.built-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Base card */
+.built-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(24,24,24,0.95);
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.built-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.55);
+  border-color: rgba(124,166,126,0.3);
+}
+
+/* Featured card spans both columns, side-by-side layout */
+.built-card--featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+/* Image wrapper */
+.built-card-img {
+  position: relative;
+  overflow: hidden;
+}
+.built-card--featured .built-card-img {
+  flex: 0 0 55%;
+  min-height: 300px;
+}
+.built-card:not(.built-card--featured) .built-card-img {
+  height: 210px;
+}
+
+.built-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.built-card:hover .built-card-img img {
+  transform: scale(1.05);
+}
+
+/* Gradient edge fade — right-edge for featured, bottom for others */
+.built-card--featured .built-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 55%, rgba(24,24,24,0.85) 100%);
+  pointer-events: none;
+}
+.built-card:not(.built-card--featured) .built-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, rgba(24,24,24,0.75) 100%);
+  pointer-events: none;
+}
+
+/* Pill tag badge */
+.built-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.28rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+}
+.built-tag--steam {
+  background: rgba(124,166,126,0.2);
+  color: #b0e0b2;
+  border: 1px solid rgba(124,166,126,0.55);
+}
+.built-tag--vr {
+  background: rgba(78,201,201,0.18);
+  color: #82eaea;
+  border: 1px solid rgba(78,201,201,0.5);
+}
+.built-tag--industry {
+  background: rgba(212,175,55,0.18);
+  color: #ecd06e;
+  border: 1px solid rgba(212,175,55,0.5);
+}
+
+/* Card body */
+.built-card-body {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.built-card--featured .built-card-body {
+  padding: 2rem 2.2rem;
+  justify-content: center;
+}
+
+.built-card-body h3 {
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+  font-size: 1.15rem;
+}
+.built-card--featured .built-card-body h3 {
+  font-size: 1.5rem;
+}
+
+.built-card-body p {
+  color: #cccccc;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+/* Pill-style link buttons */
+.built-card-links {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.built-card-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+  color: var(--accent);
+}
+.built-card-links a::after {
+  content: '→';
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+.built-card-links a:hover {
+  color: #fff;
+}
+.built-card-links a:hover::after {
+  transform: translateX(4px);
+}
+.built-card-links a.link-secondary {
+  color: rgba(124,166,126,0.6);
+}
+.built-card-links a.link-secondary:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 750px) {
+  .built-grid {
+    grid-template-columns: 1fr;
+  }
+  .built-card--featured {
+    flex-direction: column;
+  }
+  .built-card--featured .built-card-img {
+    flex: none;
+    min-height: 200px;
+    height: 220px;
+  }
+  .built-card--featured .built-card-img::after {
+    background: linear-gradient(to bottom, transparent 45%, rgba(24,24,24,0.75) 100%);
+  }
+}
+
+/* =========================================================
+   HOW I WORK — PROCESS STEPS
+========================================================= */
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Connecting line behind all steps */
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 2.2rem;
+  left: calc(12.5% - 0px);
+  right: calc(12.5% - 0px);
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(124,166,126,0.35) 10%, rgba(124,166,126,0.35) 90%, transparent);
+  z-index: 0;
+}
+
+.how-step {
+  position: relative;
+  text-align: center;
+  padding: 0 1rem 1.5rem;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+.how-step:hover {
+  transform: translateY(-4px);
+}
+
+/* Number bubble */
+.how-step-num {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: #1a1a1a;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 6px rgba(124,166,126,0.08);
+  transition: background 0.25s, box-shadow 0.25s;
+}
+.how-step:hover .how-step-num {
+  background: #1e2b1f;
+  box-shadow: 0 0 0 8px rgba(124,166,126,0.12);
+}
+
+.how-step h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.how-step p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .how-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+  }
+  .how-steps::before {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .how-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+
+.pricing-card {
+  max-width: 580px;
+  margin: 0 auto;
+  background: rgba(24,24,24,0.95);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 2.4rem 2.4rem 2rem;
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8rem;
+}
+
+.pricing-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pricing-list li:last-child {
+  border-bottom: none;
+}
+
+.pricing-list li .pricing-check {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgba(124,166,126,0.12);
+  border: 1px solid rgba(124,166,126,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--accent);
+  margin-top: 0.05rem;
+}
+
+.pricing-note {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.88rem;
+  text-align: center;
+  margin: 0 0 1.8rem;
+  font-style: italic;
+}
+
+.pricing-cta {
+  text-align: center;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.pricing-cta a {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pricing-cta a:hover {
+  background: #9af0a0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(125, 228, 130, 0.3);
+}
+
+/* Unify .card.highlight for testimonials and packages */
+.card.highlight {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  padding: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .card.highlight {
+    padding: 1.2rem !important;
+  }
+}
 @media (min-width: 901px) {
   .featured-hero-info-mobile {
     padding: 2.2rem 2.5rem 2.2rem 2.5rem;
@@ -2572,6 +3144,18 @@ footer p {
 
 #work .project-showcase h3 {
   color: var(--accent);
+}
+
+/* Work XP experience summary cards */
+.work-xp-card {
+  transition: transform 0.25s ease;
+}
+.work-xp-card:hover {
+  transform: translateY(-6px);
+}
+.work-xp-card:hover .card.highlight {
+  border-color: rgba(124,166,126,0.45);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
 }
 
 #events .project-showcase h3 {
