@@ -1,3 +1,81 @@
+/* ===== Transparent Nav on Scroll ===== */
+(function () {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  function updateNav() {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+})();
+
+/* ===== Button Mouse-Tracking Spotlight Glow ===== */
+(function () {
+  function attachGlow(btn) {
+    btn.addEventListener('mousemove', function (e) {
+      const rect = btn.getBoundingClientRect();
+      btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+      btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    });
+  }
+
+  // Attach to all current buttons and any added later (e.g. in modals)
+  document.querySelectorAll('.cta-btn').forEach(attachGlow);
+
+  // Also catch dynamically inserted buttons
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(m => m.addedNodes.forEach(node => {
+      if (node.nodeType !== 1) return;
+      if (node.matches && node.matches('.cta-btn')) attachGlow(node);
+      node.querySelectorAll && node.querySelectorAll('.cta-btn').forEach(attachGlow);
+    }));
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+
+/* ===== Scroll-Driven Circle Reveal (Hero Peel-Back) ===== */
+(function () {
+  const section = document.querySelector('.featured-section');
+  const hero = document.querySelector('.banner');
+  const tease = document.querySelector('.circle-tease');
+  if (!section || !hero) return;
+
+  // Skip animation for users who prefer reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.style.clipPath = 'none';
+    if (tease) tease.style.opacity = '0';
+    return;
+  }
+
+  function updateCircle() {
+    const rect = section.getBoundingClientRect();
+    const vh = window.innerHeight;
+
+    // Progress: 0 when featured section enters from viewport bottom,
+    // 1 when featured section top is near viewport top.
+    // Using getBoundingClientRect is reliable regardless of layout.
+    const revealStart = vh * 0.9;  // section.top = 90% down viewport
+    const revealEnd   = vh * 0.05; // section.top = 5% from top
+    const progress = Math.min(Math.max(
+      (revealStart - rect.top) / (revealStart - revealEnd), 0), 1);
+
+    // Ease-out: hero peels away quickly at first, slows to finish
+    const eased = Math.pow(1 - progress, 2);
+    const radius = Math.round(eased * 2200);
+
+    // Clip the HERO (full-width) — shrinks to nothing, revealing featured behind it
+    hero.style.clipPath = `circle(${radius}px at 50% 100%)`;
+
+    // Fade tease out immediately on scroll start
+    if (tease) {
+      tease.style.opacity = `${Math.max(0, 1 - progress * 8)}`;
+    }
+  }
+
+  window.addEventListener('scroll', updateCircle, { passive: true });
+  updateCircle(); // Initialise on load
+})();
+
 /* ===== Collapsible Toggle Functionality ===== */
 function toggleCollapsible(header) {
   const content = header.nextElementSibling;

@@ -63,8 +63,10 @@
   <!-- Top navigation -->
   <nav>
     <div class="nav-left">
-      <img id="logo" src="NewImages/channels4_profile.jpg" alt="Logo" class="nav-logo">
-      <span>Longy Dev</span>
+      <a href="index.html" class="nav-logo-link">
+        <img id="logo" src="NewImages/channels4_profile.jpg" alt="Logo" class="nav-logo">
+        <span>Longy Dev</span>
+      </a>
     </div>
     <div class="nav-right">
       <a href="index.html" class="current">Home</a>
@@ -97,8 +99,10 @@
     </div>
   </nav>
 
+  <!-- Hero Scroll Wrapper: 200vh container that keeps the banner sticky while circle reveal plays -->
+  <div class="hero-scroll-wrapper">
   <!-- Banner -->
-  <header class="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; min-height: 70vh; overflow: hidden; position: relative; margin-top: -4rem;">
+  <header class="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; height: 100vh; overflow: hidden; margin-top: 0;">
     <!-- Right Background Image Side (Full Coverage) -->
       <div class="banner-bg" style="position: absolute; inset: 0; background-image: url('Images/Newbanner.JPG'); background-size: cover; background-position: center top; z-index: 1;"></div>
     
@@ -112,15 +116,14 @@
       <p style="font-size: 1rem; color: #ffffff; margin: 0 0 2rem 0;">Turning ideas into playable interactive experiences.</p>
       <div style="display: flex; gap: 1rem; z-index: 10; flex-wrap: wrap;">
         <a href="freelance.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap;"><i class="fas fa-briefcase" style="font-size: 0.95rem;"></i> View Services</a>
-        <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='var(--accent)'; this.style.color='#1a1a1a';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';"><i class="fas fa-folder-open" style="font-size: 0.95rem;"></i> Portfolio</a>
+        <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap;"><i class="fas fa-folder-open" style="font-size: 0.95rem;"></i> Portfolio</a>
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); cursor: pointer; z-index: 15; display: block;" class="scroll-dot" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
-      <div style="color: var(--accent); font-size: 3rem; animation: bounce 2s infinite; cursor: pointer; text-align: center;">•</div>
-    </div>
+    <!-- Circle Tease: glowing arch at hero base teasing the circle reveal -->
+    <div class="circle-tease" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})"></div>
   </header>
+  </div><!-- /hero-scroll-wrapper -->
 
   <!-- Featured Projects Section -->
   <section id="featured" class="featured-section">
@@ -133,7 +136,6 @@
             <source src="Videos/FeaturedVideos/Featured Freelance.mp4" type="video/mp4">
           </video>
         </div>
-        <!-- Mobile/desktop info block for hero, styled like duo -->
         <div class="featured-hero-info-mobile">
           <span class="featured-badge">Featured Project</span>
           <h3>Aisle Survive</h3>
@@ -179,7 +181,7 @@
     <!-- View Portfolio & Work With Me Buttons -->
     <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="portfolio.html" class="cta-btn" style="display: inline-block; text-decoration: none;">View Full Portfolio</a>
-      <a href="freelance.html" class="cta-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background: transparent; border: 2px solid var(--accent); color: var(--accent);" onmouseover="this.style.background='var(--accent)'; this.style.color='#1a1a1a';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';"><i class="fas fa-envelope" style="font-size: 0.95rem;"></i> Work With Me</a>
+      <a href="freelance.html" class="cta-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;"><i class="fas fa-envelope" style="font-size: 0.95rem;"></i> Work With Me</a>
     </div>
 
     <!-- Divider -->

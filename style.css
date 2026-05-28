@@ -39,17 +39,6 @@
   font-size: 1rem !important;
 }
 
-/* Outline/hollow CTA button for hero on freelance page */
-#hero .cta-btn {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-}
-#hero .cta-btn:hover {
-  background: var(--accent);
-  color: #1a1a1a;
-  box-shadow: 0 15px 30px rgba(124, 166, 126, 0.25);
-}
 
 
 .freelance-section {
@@ -575,16 +564,16 @@
 }
 @media (min-width: 901px) {
   .featured-hero-info-mobile {
-    padding: 2.2rem 2.5rem 2.2rem 2.5rem;
+    padding: 1.2rem 1.8rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .featured-hero-info-mobile .featured-badge {
-    font-size: 1.1rem;
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 1.1rem;
+    font-size: 0.85rem;
+    padding: 0.3rem 1rem;
+    margin-bottom: 0.6rem;
     background: var(--accent);
     color: #222;
     font-weight: 800;
@@ -594,60 +583,35 @@
     text-transform: uppercase;
   }
   .featured-hero-info-mobile h3 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     font-weight: 900;
     color: #fff;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.4rem;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 12px rgba(0,0,0,0.18);
   }
   .featured-hero-info-mobile p {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    margin-bottom: 1.1rem;
-    line-height: 1.7;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
     max-width: 600px;
   }
   .featured-hero-info-mobile .featured-link-text {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--accent);
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     letter-spacing: 0.5px;
   }
 }
 @media (min-width: 901px) {
   .featured-hero {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.25), 0 0 0 0 rgba(124, 166, 126, 0.10);
-    border: 1.5px solid transparent;
     background: var(--card-bg);
     border-radius: 16px;
     margin-bottom: 1.2rem;
     position: static;
     z-index: auto;
-    animation: heroPulse 1.5s infinite;
-  }
-}
-@keyframes heroPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.25), 0 0 0 0 rgba(124, 166, 126, 0.10);
-  }
-  70% {
-    box-shadow: 0 0 0 4px rgba(124, 166, 126, 0), 0 0 0 8px rgba(124, 166, 126, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.25), 0 0 0 0 rgba(124, 166, 126, 0.10);
-  }
-}
-@keyframes heroPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.7), 0 0 0 0 rgba(124, 166, 126, 0.3);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(124, 166, 126, 0), 0 0 0 16px rgba(124, 166, 126, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.7), 0 0 0 0 rgba(124, 166, 126, 0.3);
   }
 }
 @media (max-width: 700px) {
@@ -840,14 +804,11 @@
 }
 @media (max-width: 768px) {
   .featured-hero {
-    box-shadow: 0 0 0 0 rgba(124, 166, 126, 0.7), 0 0 0 0 rgba(124, 166, 126, 0.3);
-    border: 1.5px solid transparent;
     background: var(--card-bg);
     border-radius: 16px;
     margin-bottom: 1.2rem;
     position: static;
     z-index: auto;
-    animation: heroPulse 1.5s infinite;
   }
   .featured-hero-link {
     border-radius: 16px;
@@ -936,7 +897,7 @@
    BASE & VARIABLES
 ========================================================= */
 :root {
-  --accent: #7de482;
+  --accent: #7ca67e;
   --dark: #76b67b;
   --darker: #272727;
   --bg: #1a1a1a;
@@ -982,6 +943,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+}
+
+nav.scrolled {
   background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(124, 166, 126, 0.1);
@@ -996,10 +964,22 @@ nav .nav-left {
   gap: 1rem;
 }
 
+/* Logo link */
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo-link span {
+  color: #fff;
+}
+
 .nav-logo {
   height: 40px;
-  width: auto;
-  object-fit: contain;
+  width: 40px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -1732,6 +1712,54 @@ footer p {
   60% { transform: translateX(-50%) translateY(-5px); }
 }
 
+/* Circle Tease: glowing arch at hero bottom teasing the circle reveal */
+.circle-tease {
+  position: absolute;
+  /* Center of circle sits exactly at hero bottom — overflow:hidden clips the
+     lower half, leaving a glowing arch that mirrors the clip-path origin */
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgba(124, 166, 126, 0.65);
+  box-shadow:
+    0 0 40px rgba(124, 166, 126, 0.35),
+    0 0 80px rgba(124, 166, 126, 0.12),
+    inset 0 0 40px rgba(124, 166, 126, 0.06);
+  cursor: pointer;
+  z-index: 15;
+  transition: opacity 0.4s ease;
+  animation: circleTeasePulse 3.5s ease-in-out infinite;
+  pointer-events: auto;
+}
+
+/* First outer ring */
+.circle-tease::before {
+  content: '';
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 166, 126, 0.28);
+  animation: circleTeasePulse 3.5s ease-in-out infinite 0.7s;
+}
+
+/* Second outer ring */
+.circle-tease::after {
+  content: '';
+  position: absolute;
+  inset: -46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(124, 166, 126, 0.12);
+  animation: circleTeasePulse 3.5s ease-in-out infinite 1.4s;
+}
+
+@keyframes circleTeasePulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.9; }
+}
+
 /* =========================================================
    ABOUT SECTION
 ========================================================= */
@@ -1859,12 +1887,42 @@ footer p {
 }
 
 /* =========================================================
+   HERO SCROLL WRAPPER + STICKY BANNER (circle peel effect)
+========================================================= */
+.hero-scroll-wrapper {
+  position: relative;
+  height: 200vh;
+  z-index: 10; /* sits on top of the featured section */
+  pointer-events: none; /* wrapper is transparent to clicks; banner restores them */
+}
+
+/* Make the banner sticky so it stays fixed while wrapper scrolls */
+.banner {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 5 !important;
+  height: 100vh !important;
+  min-height: unset !important;
+  pointer-events: auto; /* re-enable clicks for the actual hero content */
+}
+
+/* =========================================================
    FEATURED SECTION (Hero + Duo Layout)
 ========================================================= */
 .featured-section {
-  padding: 2rem 2rem 0;
-  max-width: 1200px;
-  margin: -2rem auto 0 auto;
+  padding: 5rem 2rem 0;
+  max-width: 1000px;
+  /* Pull up behind the sticky hero */
+  margin: -100vh auto 0 auto;
+  position: relative;
+  z-index: 5; /* behind hero-scroll-wrapper */
+  background: var(--bg); /* solid bg so it shows through the hero's clip */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    clip-path: none !important;
+  }
 }
 
 /* Hero card */
@@ -1877,6 +1935,15 @@ footer p {
   text-decoration: none;
   border-radius: 16px;
   overflow: hidden;
+  border: 1px solid rgba(124, 166, 126, 0.45);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.featured-hero-link:hover {
+  border-color: rgba(124, 166, 126, 0.75);
+  box-shadow: 0 12px 40px rgba(124, 166, 126, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px);
 }
 
 .featured-hero-video {
@@ -1903,7 +1970,7 @@ footer p {
   background: linear-gradient(to top, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.3) 40%, transparent 70%);
   display: flex;
   align-items: flex-end;
-  padding: 2.5rem;
+  padding: 1.5rem 2rem;
 }
 
 .featured-hero-content {
@@ -1924,9 +1991,9 @@ footer p {
 }
 
 .featured-hero-content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   font-weight: 700;
 }
 
@@ -1966,15 +2033,16 @@ footer p {
   text-decoration: none;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(124, 166, 126, 0.15);
+  border: 1px solid rgba(124, 166, 126, 0.45);
   transition: all 0.3s ease;
   background: var(--card-bg);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .featured-duo-card:hover {
-  border-color: rgba(124, 166, 126, 0.4);
+  border-color: rgba(124, 166, 126, 0.75);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(124, 166, 126, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .featured-duo-video {
@@ -1996,10 +2064,11 @@ footer p {
 }
 
 .featured-duo-info {
-  padding: 1.5rem;
+  padding: 1rem 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
+  background: linear-gradient(135deg, rgba(124, 166, 126, 0.12) 0%, rgba(124, 166, 126, 0.04) 100%);
 }
 
 .featured-tag {
@@ -3305,7 +3374,7 @@ footer p {
   right: 0;
   background: rgba(26, 26, 26, 0.98);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(124, 166, 126, 0.1);
+  border-bottom: none;
   border-left: 1px solid rgba(124, 166, 126, 0.1);
   flex-direction: column;
   gap: 0;
