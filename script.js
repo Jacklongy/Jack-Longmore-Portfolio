@@ -19,15 +19,17 @@
     });
   }
 
+  const glossySelector = '.cta-btn, .btn';
+
   // Attach to all current buttons and any added later (e.g. in modals)
-  document.querySelectorAll('.cta-btn').forEach(attachGlow);
+  document.querySelectorAll(glossySelector).forEach(attachGlow);
 
   // Also catch dynamically inserted buttons
   const observer = new MutationObserver(mutations => {
     mutations.forEach(m => m.addedNodes.forEach(node => {
       if (node.nodeType !== 1) return;
-      if (node.matches && node.matches('.cta-btn')) attachGlow(node);
-      node.querySelectorAll && node.querySelectorAll('.cta-btn').forEach(attachGlow);
+      if (node.matches && node.matches(glossySelector)) attachGlow(node);
+      node.querySelectorAll && node.querySelectorAll(glossySelector).forEach(attachGlow);
     }));
   });
   observer.observe(document.body, { childList: true, subtree: true });
