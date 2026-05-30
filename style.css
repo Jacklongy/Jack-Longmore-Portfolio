@@ -3260,6 +3260,7 @@ footer p {
 
   .nav-logo {
     height: 35px;
+    width: 35px;
   }
 
   nav .nav-right {
@@ -3458,6 +3459,7 @@ footer p {
 
   .nav-logo {
     height: 30px;
+    width: 30px;
   }
 
   nav .nav-left span {
@@ -3815,6 +3817,7 @@ footer p {
 
   nav .nav-logo {
     height: 25px !important;
+    width: 25px !important;
   }
 
   nav .nav-right {
