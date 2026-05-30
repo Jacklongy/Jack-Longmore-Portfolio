@@ -40,6 +40,13 @@
   const tease = document.querySelector('.circle-tease');
   if (!section || !hero) return;
 
+  // Keep mobile hero simple (no circle reveal effect)
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    hero.style.clipPath = 'none';
+    if (tease) tease.style.display = 'none';
+    return;
+  }
+
   // Skip animation for users who prefer reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     hero.style.clipPath = 'none';
@@ -588,5 +595,4 @@ document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
 
   videos.forEach(video => videoAutoplayObserver.observe(video));
 })();
-
 

@@ -3491,6 +3491,19 @@ footer p {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    clip-path: none !important;
+  }
+
+  .hero-scroll-wrapper {
+    height: auto !important;
+    pointer-events: auto !important;
+  }
+
+  .circle-tease {
+    display: none !important;
   }
 
   header.banner h1 {
@@ -3833,4 +3846,3 @@ footer p {
     bottom: 0.25rem !important;
   }
 }
-
