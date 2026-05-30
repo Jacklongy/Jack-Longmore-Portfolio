@@ -35,13 +35,14 @@
 
 /* ===== Scroll-Driven Circle Reveal (Hero Peel-Back) ===== */
 (function () {
+  const MOBILE_BREAKPOINT = 600;
   const section = document.querySelector('.featured-section');
   const hero = document.querySelector('.banner');
   const tease = document.querySelector('.circle-tease');
   if (!section || !hero) return;
 
   // Keep mobile hero simple (no circle reveal effect)
-  if (window.matchMedia('(max-width: 600px)').matches) {
+  if (window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches) {
     hero.style.clipPath = 'none';
     if (tease) tease.style.display = 'none';
     return;
@@ -595,4 +596,3 @@ document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
 
   videos.forEach(video => videoAutoplayObserver.observe(video));
 })();
-
