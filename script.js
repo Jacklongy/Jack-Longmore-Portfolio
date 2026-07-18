@@ -35,7 +35,7 @@
   observer.observe(document.body, { childList: true, subtree: true });
 })();
 
-/* ===== Scroll-Driven Circle Reveal (Hero Peel-Back) ===== */
+/* ===== Scroll-Driven Swipe-Down Reveal (Hero Peel-Back) ===== */
 (function () {
   const MOBILE_BREAKPOINT = 600;
   const section = document.querySelector('.featured-section');
@@ -43,7 +43,7 @@
   const tease = document.querySelector('.circle-tease');
   if (!section || !hero) return;
 
-  // Keep mobile hero simple (no circle reveal effect)
+  // Keep mobile hero simple (no swipe reveal effect)
   if (window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches) {
     hero.style.clipPath = 'none';
     if (tease) tease.style.display = 'none';
@@ -57,7 +57,7 @@
     return;
   }
 
-  function updateCircle() {
+  function updateSwipe() {
     const rect = section.getBoundingClientRect();
     const vh = window.innerHeight;
 
@@ -69,12 +69,15 @@
     const progress = Math.min(Math.max(
       (revealStart - rect.top) / (revealStart - revealEnd), 0), 1);
 
-    // Ease-out: hero peels away quickly at first, slows to finish
-    const eased = Math.pow(1 - progress, 2);
-    const radius = Math.round(eased * 2200);
+    // Slight ease-in for a cleaner, intentional swipe edge.
+    const eased = Math.pow(progress, 0.85);
+    const insetTop = Math.min(100, Math.max(0, eased * 100));
 
-    // Clip the HERO (full-width) — shrinks to nothing, revealing featured behind it
-    hero.style.clipPath = `circle(${radius}px at 50% 100%)`;
+    // Clip from the top downward, creating a vertical swipe reveal.
+    hero.style.clipPath = `inset(${insetTop}% 0 0 0)`;
+
+    // Add a slight fade as the swipe progresses.
+    hero.style.opacity = `${Math.max(0, 1 - progress * 0.35)}`;
 
     // Fade tease out immediately on scroll start
     if (tease) {
@@ -82,8 +85,8 @@
     }
   }
 
-  window.addEventListener('scroll', updateCircle, { passive: true });
-  updateCircle(); // Initialise on load
+  window.addEventListener('scroll', updateSwipe, { passive: true });
+  updateSwipe(); // Initialise on load
 })();
 
 /* ===== Collapsible Toggle Functionality ===== */

@@ -111,9 +111,9 @@
     
     <!-- Left Content Side -->
     <div style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
-      <h1 style="font-size: 3rem; margin: 0 0 0.8rem 0; color: #ffffff; font-weight: 700;">Jack Longmore</h1>
-      <p style="font-size: 1.3rem; color: var(--accent); margin: 0 0 0.4rem 0; font-weight: 600;">Indie Game Developer and Freelancer</p>
-      <p style="font-size: 1rem; color: #ffffff; margin: 0 0 2rem 0;">Turning ideas into playable interactive experiences.</p>
+      <h1 style="font-size: 3rem; margin: 0 0 0.8rem 0; color: #ffffff; font-weight: 700;">Longy Dev</h1>
+      <p style="font-size: 1.3rem; color: var(--accent); margin: 0 0 0.4rem 0; font-weight: 600;">Indie Game Developer</p>
+      <p style="font-size: 1rem; color: #ffffff; margin: 0 0 2rem 0;"></p>
       <div style="display: flex; gap: 1rem; z-index: 10; flex-wrap: wrap;">
         <a href="freelance.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap;"><i class="fas fa-briefcase" style="font-size: 0.95rem;"></i> View Services</a>
         <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap;"><i class="fas fa-folder-open" style="font-size: 0.95rem;"></i> Portfolio</a>
@@ -121,7 +121,7 @@
     </div>
 
     <!-- Circle Tease: glowing arch at hero base teasing the circle reveal -->
-    <div class="circle-tease" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})"></div>
+    <div class="circle-tease" onclick="(() => { const target = document.getElementById('featured'); if (!target) return; const y = target.getBoundingClientRect().top + window.pageYOffset + Math.min(35, window.innerHeight * 0.03); window.scrollTo({ top: y, behavior: 'smooth' }); })()"></div>
   </header>
   </div><!-- /hero-scroll-wrapper -->
 
@@ -141,8 +141,8 @@
           <h3>Aisle Survive</h3>
           <p>Main Game Developer for Skerratt Studios, Working on this Roguelike shop management game. DEMO is live on Steam and the Epic Games Store!</p>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
-            <a href="https://store.steampowered.com/app/4768520/Aisle_Survive_Demo/" target="_blank" class="featured-link-text" style="text-decoration: none;"><i class="fab fa-steam"></i> Steam</a>
-            <a href="https://store.epicgames.com/p/aisle-survive-aisle-survive-demo-51194b" target="_blank" class="featured-link-text" style="text-decoration: none;"><i class="fas fa-gamepad"></i> Epic Games</a>
+            <a href="https://store.steampowered.com/app/4768520/Aisle_Survive_Demo/" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fab fa-steam"></i> Steam</a>
+            <a href="https://store.epicgames.com/p/aisle-survive-aisle-survive-demo-51194b" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> Epic Games</a>
           </div>
         </div>
       </div>
