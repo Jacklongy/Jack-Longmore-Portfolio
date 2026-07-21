@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Freelance project card links */
@@ -190,7 +190,7 @@
 }
 
 /* =========================================================
-   WHAT I'VE BUILT â€” EDITORIAL CARD LAYOUT
+   WHAT I'VE BUILT — EDITORIAL CARD LAYOUT
 ========================================================= */
 
 .built-grid {
@@ -248,7 +248,7 @@
   transform: scale(1.05);
 }
 
-/* Gradient edge fade â€” right-edge for featured, bottom for others */
+/* Gradient edge fade — right-edge for featured, bottom for others */
 .built-card--featured .built-card-img::after {
   content: '';
   position: absolute;
@@ -341,17 +341,11 @@
   transition: color 0.2s ease, gap 0.2s ease;
   color: var(--accent);
 }
-.built-card-links a::after {
-  content: 'â†’';
-  font-size: 0.95rem;
-  transition: transform 0.2s ease;
-}
+
 .built-card-links a:hover {
   color: #fff;
 }
-.built-card-links a:hover::after {
-  transform: translateX(4px);
-}
+
 .built-card-links a.link-secondary {
   color: rgba(151, 217, 154,0.6);
 }
@@ -377,7 +371,7 @@
 }
 
 /* =========================================================
-   HOW I WORK â€” PROCESS STEPS
+   HOW I WORK — PROCESS STEPS
 ========================================================= */
 
 .how-steps {
@@ -1591,7 +1585,7 @@ section h2::after {
 #uni-projects .card.highlight li::before,
 #work .card.highlight li::before,
 #events .card.highlight li::before {
-  content: 'âœ“';
+  content: '✓';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -2486,7 +2480,7 @@ footer p {
 }
 
 .collapsible-item li::before {
-  content: 'â–¸';
+  content: '▸';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -2675,7 +2669,7 @@ footer p {
   }
 
   .sidebar::before {
-    content: 'â˜°';
+    content: '☰';
     position: fixed;
     left: 20px;
     top: 25px;
@@ -3902,5 +3896,6 @@ footer p {
     bottom: 0.25rem !important;
   }
 }
+
 
 
