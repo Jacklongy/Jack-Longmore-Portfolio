@@ -28,6 +28,7 @@
     }
     .hero-content-panel {
       max-width: 560px;
+      margin: 0 auto;
       padding: 0;
     }
     @media (max-width: 768px) {
@@ -122,10 +123,10 @@
     <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(14, 16, 15, 0.98) 0%, rgba(14, 16, 15, 0.95) 25%, rgba(14, 16, 15, 0.76) 46%, rgba(14, 16, 15, 0.36) 69%, rgba(14, 16, 15, 0.08) 88%, transparent 100%), radial-gradient(circle at 18% 48%, rgba(151, 217, 154, 0.2) 0%, rgba(151, 217, 154, 0.07) 34%, transparent 62%); z-index: 2;"></div>
     
     <!-- Left Content Side -->
-    <div class="hero-content-panel" style="flex: 0.6; display: flex; flex-direction: column; justify-content: center; text-align: left; z-index: 10; position: relative;">
+    <div class="hero-content-panel" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 10; position: relative;">
       <h1 style="font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 0 0 0.75rem 0; color: #ffffff; font-weight: 800; line-height: 1.06;">Longy Dev</h1>
-      <p style="font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--accent); margin: 0 0 0.5rem 0; font-weight: 700;">Game Developer</p>
-      <p style="font-size: 1rem; color: rgba(255, 255, 255, 0.9); margin: 0 0 1.45rem 0; max-width: 48ch; line-height: 1.6;"></p>
+      <p style="font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--accent); margin: 0 0 0.35rem 0; font-weight: 700;">Game Developer</p>
+      <p style="font-size: clamp(0.85rem, 1.5vw, 1rem); color: rgba(255, 255, 255, 0.72); margin: 0 0 1.45rem 0; max-width: 48ch; line-height: 1.6;">Specialising in 2D Unity, C# Programming &amp; Game Design</p>
       <div style="display: flex; gap: 1rem; z-index: 10; flex-wrap: wrap;">
         <a href="portfolio.html" class="cta-btn" style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; text-decoration: none; width: fit-content; white-space: nowrap; font-weight: 700;"><i class="fas fa-folder-open" style="font-size: 0.95rem;"></i> Portfolio</a>
       </div>
@@ -150,10 +151,11 @@
         <div class="featured-hero-info-mobile">
           <span class="featured-badge">Featured Project</span>
           <h3>Aisle Survive</h3>
-          <p>Main Game Developer for Skerratt Studios, Working on this Roguelike shop management game. DEMO is live on Steam and the Epic Games Store!</p>
+          <p>Sole Game Developer for Studio Skerratt, Working on this Roguelike shop management game. The full game is now available in early access on Steam and the Epic Games Store!</p>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
-            <a href="https://store.steampowered.com/app/4768520/Aisle_Survive_Demo/" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fab fa-steam"></i> Steam</a>
-            <a href="https://store.epicgames.com/p/aisle-survive-aisle-survive-demo-51194b" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> Epic Games</a>
+            <a href="https://store.steampowered.com/app/4596550/Aisle_Survive/" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fab fa-steam"></i> Steam</a>
+            <a href="https://store.epicgames.com/p/aisle-survive-ca7997" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> Epic Games</a>
+            <a href="https://www.gog.com/en/game/aisle_survive" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> GOG</a>
           </div>
         </div>
       </div>
@@ -209,15 +211,13 @@
       <!-- Left Column -->
       <div>
         <h2>About Me</h2>
-        <!-- Divider -->
-        <div style="border-bottom: 2px solid rgba(124, 166, 126, 0.3); margin: 2rem 0; border-image: linear-gradient(to right, transparent, rgba(124, 166, 126, 0.3) 15%, rgba(124, 166, 126, 0.3) 85%, transparent) 1;"></div>
         <div class="about-content">
           <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
           
           <ul class="about-bullets">
             <li>
               <i class="fas fa-gamepad" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Indie Game Developer</strong> — turning ideas into playable, fun experiences</span>
+              <span><strong style="color: var(--accent);">Game Developer</strong> — turning ideas into playable, fun experiences</span>
             </li>
             <li>
               <i class="fas fa-video" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
@@ -225,7 +225,7 @@
             </li>
             <li>
               <i class="fas fa-code" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Code, Design & Creativity</strong> — mechanics, level design, and technical implementation</span>
+              <span><strong style="color: var(--accent);">Specialising in</strong> — 2D Unity, C# programming, and game design</span>
             </li>
             <li>
               <i class="fas fa-vr-cardboard" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
@@ -239,11 +239,6 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- CV Download -->
-    <div style="padding: 2rem; text-align: center;">
-      <a href="Jack Longmore CV PDF.pdf" class="cta-btn" download style="display: inline-block; text-decoration: none;">Download My CV</a>
     </div>
 
     <!-- Divider -->
