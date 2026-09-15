@@ -141,7 +141,7 @@
 
     <!-- Hero Featured Project: Aisle Survive -->
     <div class="featured-hero">
-      <div class="featured-hero-link">
+      <a href="portfolio.html" class="featured-hero-link">
         <div class="featured-hero-video">
           <video autoplay loop muted playsinline>
             <source src="Videos/FeaturedVideos/new demo video.mp4" type="video/mp4">
@@ -151,13 +151,8 @@
           <span class="featured-badge">Featured Project</span>
           <h3>Aisle Survive</h3>
           <p>Sole Game Developer for Studio Skerratt, Working on this Roguelike shop management game. The full game is now available in early access on Steam and the Epic Games Store!</p>
-          <div class="featured-store-links">
-            <a href="https://store.steampowered.com/app/4596550/Aisle_Survive/" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fab fa-steam"></i> Steam</a>
-            <a href="https://store.epicgames.com/p/aisle-survive-ca7997" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> Epic</a>
-            <a href="https://www.gog.com/en/game/aisle_survive" target="_blank" rel="noopener noreferrer" class="featured-link-text featured-store-link" style="text-decoration: none;"><i class="fas fa-gamepad"></i> GOG</a>
-          </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Two Secondary Cards -->
@@ -206,38 +201,23 @@
 
   <!-- About Section -->
   <section id="about" style="margin-top: 4.5rem;">
-    <div style="max-width: 700px; margin: 0 auto;" class="about-grid">
-      <!-- Left Column -->
-      <div>
-        <h2>About Me</h2>
+    <h2 class="about-section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="NewImages/IMG_0127.JPG" alt="Jack Longmore holding his dog">
+      </div>
+      <div class="about-story">
         <div class="about-content">
-          <h3 style="text-align: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600;">I'm Jack AKA Longy Dev</h3>
-          
-          <ul class="about-bullets">
-            <li>
-              <i class="fas fa-gamepad" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Game Developer</strong> — turning ideas into playable, fun experiences</span>
-            </li>
-            <li>
-              <i class="fas fa-video" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Content Creator</strong> — sharing the game dev journey on YouTube & socials</span>
-            </li>
-            <li>
-              <i class="fas fa-code" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Specialising in</strong> — 2D Unity, C# programming, and game design</span>
-            </li>
-            <li>
-              <i class="fas fa-vr-cardboard" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Interactive Experiences</strong> — in education, medical, and entertainment sectors</span>
-            </li>
-            <li>
-              <i class="fas fa-handshake" style="color: var(--accent); font-size: 1.2rem; min-width: 24px;"></i>
-              <span><strong style="color: var(--accent);">Open to Opportunities</strong> — always looking for collaborations and new challenges</span>
-            </li>
-          </ul>
+          <h3>I'm Jack, AKA Longy Dev</h3>
+
+          <p class="about-description">I have always loved the idea of <strong>Game Development</strong> and turning ideas into playable, fun experiences. From drawing characters and making up stories to now creating and <strong>releasing</strong> games for people to enjoy.
+            
+            <br><br>I also enjoy being a <strong>Content Creator</strong>, sharing my game dev journey on YouTube and social media.
+            
+            <br><br>I am <strong>specialising in 2D Unity, C# programming, and game design</strong>, with my main focus being <strong>Game Design Roles</strong>. I have also worked on other types of <strong>Interactive Experiences</strong> across education, medical, and entertainment projects.
+        </p>
         </div>
       </div>
-
     </div>
 
     <!-- Divider -->
@@ -256,7 +236,7 @@
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your message or game idea..." required></textarea>
+          <textarea id="message" name="message" placeholder="Your message..." required></textarea>
         </div>
         
         <div class="form-group">

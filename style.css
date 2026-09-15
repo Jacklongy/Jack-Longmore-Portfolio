@@ -1773,6 +1773,60 @@ footer p {
   margin-bottom: 2rem;
 }
 
+.about-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  position: static;
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(151, 217, 154, 0.35);
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-section-title {
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.about-content h3 {
+  margin: 0 0 1.3rem;
+  color: var(--accent);
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.about-intro {
+  margin: 0 0 1.1rem;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.about-description {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-description strong {
+  color: var(--accent);
+}
+
 .about-bullets {
   list-style: none;
   margin: 0;
@@ -1793,8 +1847,34 @@ footer p {
   border-bottom: 1px solid rgba(151, 217, 154, 0.1);
 }
 
+.about-bullets li i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
 .about-bullets li:last-child {
   border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .about-photo-wrap {
+    position: static;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .about-grid {
+    align-items: start;
+  }
+
+  .about-photo {
+    max-height: 420px;
+  }
+
+  .about-content h3 {
+    text-align: center;
+  }
 }
 
 /* =========================================================
@@ -2109,7 +2189,11 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  background: linear-gradient(135deg, rgba(151, 217, 154, 0.12) 0%, rgba(151, 217, 154, 0.04) 100%);
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.9) 0%, rgba(36, 36, 36, 0.52) 68%, #1a1a1a 100%);
+}
+
+.featured-hero-info-mobile {
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.9) 0%, rgba(36, 36, 36, 0.52) 68%, #1a1a1a 100%);
 }
 
 .featured-tag {
